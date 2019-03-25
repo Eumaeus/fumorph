@@ -18,6 +18,10 @@ trait ConjugatableForm{
 	val voice: Voice
 }
 
+trait DegreeableForm{
+	val degree: Degree
+}
+
 case class FiniteVerbForm(lang:MorphLanguage, surfaceForm:String, lemma:Option[String], person: Person, grammaticalNumber: GrammaticalNumber, tense: Tense, mood: Mood, voice: Voice, info:String = "") extends Form with ConjugatableForm {
 
 	override def toString = {
@@ -53,7 +57,7 @@ case class NounForm(lang:MorphLanguage, surfaceForm:String, lemma:Option[String]
 
 }
 
-case class AdjectiveForm(lang:MorphLanguage, surfaceForm:String, lemma:Option[String], gender: Gender, grammaticalCase: GrammaticalCase, grammaticalNumber: GrammaticalNumber, degree: Degree = Positive, info:String = "") extends Form with DeclinableForm {
+case class AdjectiveForm(lang:MorphLanguage, surfaceForm:String, lemma:Option[String], gender: Gender, grammaticalCase: GrammaticalCase, grammaticalNumber: GrammaticalNumber, degree: Degree = Positive, info:String = "") extends Form with DeclinableForm with DegreeableForm {
 
 	override def toString = {
 		s"""**${surfaceForm}**${if (lemma != None) " (from " + lemma.get + ")" else ""}: adjective, ${gender.abbr}, ${grammaticalCase.abbr}, ${grammaticalNumber.abbr} (${degree.abbr} degree)${if (info.size > 0) " (" + info + ".)" else ""}"""
@@ -87,7 +91,7 @@ case class ArticleForm(lang:MorphLanguage, surfaceForm:String, lemma:Option[Stri
 	}
 }
 
-case class AdverbForm(lang:MorphLanguage, surfaceForm:String, lemma:Option[String], degree: Degree = Positive, info:String = "") extends Form {
+case class AdverbForm(lang:MorphLanguage, surfaceForm:String, lemma:Option[String], degree: Degree = Positive, info:String = "") extends Form with DegreeableForm {
 
 	override def toString = {
 		s"""**${surfaceForm}**${if (lemma != None) " (from " + lemma.get + ")" else ""}: adverb (${degree.abbr} degree)${if (info.size > 0) " (" + info + ".)" else ""}"""

@@ -124,16 +124,7 @@ class FuMorphSpec extends FlatSpec {
 	}
 
 	it should "allow the creation of a ParticipleForm" in {
-		val partF:ParticipleForm = ParticipleForm(
-			lang = Greek,
-			surfaceForm = "οἰκουμένην",
-			lemma = Some("οἰκέω"),
-			tense = Present,
-			voice = Passive,
-			gender = Feminine,
-			grammaticalCase = Accusative,
-			grammaticalNumber = Singular
-		)
+		val partF:ParticipleForm = ParticipleForm(lang = Greek, surfaceForm = "οἰκουμένην", lemma = Some("οἰκέω"), tense = Present, voice = Passive, gender = Feminine, grammaticalCase = Accusative, grammaticalNumber = Singular ) 
 		assert(partF.toString.trim == "**οἰκουμένην** (from οἰκέω): pres. pass. participle, fem. acc. sing.")
 		assert( partF.toPos == "v-spppfa-")
 	}
