@@ -269,6 +269,6 @@ case object Conjunction extends IndeclinablePoS {
 }
 case object Particle extends IndeclinablePoS {
 	val long:String = "particle"
-	val abbr:String = "pcl."
+	val abbr:String = "particle"
 	val short:String = "c"
 }

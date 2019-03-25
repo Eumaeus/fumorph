@@ -1,37 +1,84 @@
 package edu.furman.classics.fumorph
 
-sealed trait Form
-
-object Form {
-  /*
-  def apply(s: String): Form = {
-  }
-  */
+sealed trait Form {
+	val surfaceForm:String
+	val lemma:Option[String]
+	val lang:MorphLanguage
+	val info:String
 }
 
+trait DeclinableForm {
+	val gender: Gender
+	val grammaticalCase: GrammaticalCase
+	val grammaticalNumber: GrammaticalNumber
+}
 
-case class VerbForm(person: Person, grammaticalNumber: GrammaticalNumber, tense: Tense, mood: Mood, voice: Voice) extends Form {}
+trait ConjugatableForm{
+	val tense: Tense 
+	val voice: Voice
+}
 
-case class IndeclinableForm(pos: IndeclinablePoS) extends Form {}
+case class FiniteVerbForm(lang:MorphLanguage, surfaceForm:String, lemma:Option[String], person: Person, grammaticalNumber: GrammaticalNumber, tense: Tense, mood: Mood, voice: Voice, info:String = "") extends Form with ConjugatableForm {
 
-case class NounForm(gender: Gender, grammaticalCase: GrammaticalCase, grammaticalNumber: GrammaticalNumber) extends Form {}
+	override def toString = {
+		s"""**${surfaceForm}**${if (lemma != None) " (from " + lemma.get + ")" else ""}: finite verb, ${person.abbr} ${grammaticalNumber.abbr}, ${tense.abbr} ${voice.abbr} ${mood.abbr} ${if (info.size > 0) " (" + info + ".)" else ""}"""
+	}
 
-case class AdjectiveForm(gender: Gender, grammaticalCase: GrammaticalCase, grammaticalNumber: GrammaticalNumber, degree: Degree) extends Form {}
+	def toPos = {
+		s"v${person.short}${grammaticalNumber.short}${tense.short}${voice.short}${mood.short}---"
+	}
+}
 
-case class PronounForm(gender: Gender, grammaticalCase: GrammaticalCase, grammaticalNumber: GrammaticalNumber, degree: Degree) extends Form {}
+case class IndeclinableForm(lang:MorphLanguage, surfaceForm:String, lemma:Option[String], pos: IndeclinablePoS, info:String = "") extends Form {
 
-case class ArticleForm(gender: Gender, grammaticalCase: GrammaticalCase, grammaticalNumber: GrammaticalNumber, degree: Degree) extends Form {}
+	override def toString = {
+		s"""**${surfaceForm}**: ${pos.abbr}${if (info.size > 0) " (" + info + ".)" else ""}"""
+	}
 
-case class AdverbForm(degree: Degree) extends Form {}
+	def toPos = {
+		"d--------"
+	}
 
-case class InfinitiveForm(tense:Tense, voice:Voice) extends Form {}
+}
 
-case class ParticipleForm(tense:Tense, voice:Voice, gender:Gender, grammaticalCase:GrammaticalCase, grammaticalNumber:GrammaticalNumber) extends Form {}
+case class NounForm(lang:MorphLanguage, surfaceForm:String, lemma:Option[String], gender: Gender, grammaticalCase: GrammaticalCase, grammaticalNumber: GrammaticalNumber, info:String = "") extends Form with DeclinableForm {
 
-case class VerbalAdjectiveForm(gender: Gender, grammaticalCase: GrammaticalCase, grammaticalNumber: GrammaticalNumber) extends Form {}
+	override def toString = {
+		s"""**${surfaceForm}**${if (lemma != None) " (from " + lemma.get + ")" else ""}: noun, ${gender.abbr}, ${grammaticalCase.abbr}, ${grammaticalNumber.abbr}${if (info.size > 0) " (" + info + ".)" else ""}"""
+	}
 
-case class GerundForm(gender: Gender, grammaticalCase: GrammaticalCase, grammaticalNumber: GrammaticalNumber) extends Form {}
+	def toPos = {
+		s"n-${grammaticalNumber.short}---${gender.short}${grammaticalCase.short}-"
+	}
 
-case class GerundiveForm(gender: Gender, grammaticalCase: GrammaticalCase, grammaticalNumber: GrammaticalNumber) extends Form {}
+}
 
-case class SupineForm(gender: Gender, grammaticalCase: GrammaticalCase, grammaticalNumber: GrammaticalNumber) extends Form {}
+case class AdjectiveForm(lang:MorphLanguage, surfaceForm:String, lemma:Option[String], gender: Gender, grammaticalCase: GrammaticalCase, grammaticalNumber: GrammaticalNumber, degree: Degree, info:String = "") extends Form with DeclinableForm {
+}
+
+case class PronounForm(lang:MorphLanguage, surfaceForm:String, lemma:Option[String], gender: Gender, grammaticalCase: GrammaticalCase, grammaticalNumber: GrammaticalNumber, degree: Degree, info:String = "") extends Form with DeclinableForm {
+}
+
+case class ArticleForm(lang:MorphLanguage, surfaceForm:String, lemma:Option[String], gender: Gender, grammaticalCase: GrammaticalCase, grammaticalNumber: GrammaticalNumber, degree: Degree, info:String = "") extends Form with DeclinableForm {
+}
+
+case class AdverbForm(lang:MorphLanguage, surfaceForm:String, lemma:Option[String], degree: Degree = Positive, info:String = "") extends Form {
+}
+
+case class InfinitiveForm(lang:MorphLanguage, surfaceForm:String, lemma:Option[String], tense:Tense, voice:Voice, info:String = "") extends Form with ConjugatableForm{
+}
+
+case class ParticipleForm(lang:MorphLanguage, surfaceForm:String, lemma:Option[String], tense:Tense, voice:Voice, gender:Gender, grammaticalCase:GrammaticalCase, grammaticalNumber:GrammaticalNumber, info:String = "") extends Form with ConjugatableForm with DeclinableForm {
+}
+
+case class VerbalAdjectiveForm(lang:MorphLanguage, surfaceForm:String, lemma:Option[String], gender: Gender, grammaticalCase: GrammaticalCase, grammaticalNumber: GrammaticalNumber, info:String = "") extends Form  with DeclinableForm {
+}
+
+case class GerundForm(lang:MorphLanguage, surfaceForm:String, lemma:Option[String], gender: Gender, grammaticalCase: GrammaticalCase, grammaticalNumber: GrammaticalNumber, info:String = "") extends Form  with DeclinableForm {
+}
+
+case class GerundiveForm(lang:MorphLanguage, surfaceForm:String, lemma:Option[String], gender: Gender, grammaticalCase: GrammaticalCase, grammaticalNumber: GrammaticalNumber, info:String = "") extends Form with DeclinableForm {
+}
+
+case class SupineForm(lang:MorphLanguage, surfaceForm:String, lemma:Option[String], gender: Gender, grammaticalCase: GrammaticalCase, grammaticalNumber: GrammaticalNumber, info:String = "") extends Form with DeclinableForm {
+}
