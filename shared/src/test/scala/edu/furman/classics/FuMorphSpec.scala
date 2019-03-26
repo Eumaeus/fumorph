@@ -105,7 +105,7 @@ class FuMorphSpec extends FlatSpec {
 		val advF:AdverbForm = AdverbForm(
 			lang = Greek,
 			surfaceForm = "καλῶς",
-			lemma = Some("καλῶς"),
+			lemma = Some("καλῶς")
 		)
 		assert(advF.toString.trim == "**καλῶς** (from καλῶς): adverb (pos. degree)")
 		assert( advF.toPos == "d-------p")
@@ -147,7 +147,7 @@ class FuMorphSpec extends FlatSpec {
 			lang = Latin,
 			surfaceForm = "disserendum",
 			lemma = Some("dissero"),
-			grammaticalCase = Nominative,
+			grammaticalCase = Nominative
 		)
 		assert(gerundF.toString.trim == "**disserendum** (from dissero): gerund, neut., nom., sing.")
 		assert( gerundF.toPos == "n-s---nn-")
@@ -160,7 +160,7 @@ class FuMorphSpec extends FlatSpec {
 			lemma = Some("dissero"),
 			grammaticalCase = Genitive,
 			gender = Masculine,
-			grammaticalNumber = Singular,
+			grammaticalNumber = Singular
 		)
 		assert(gerundF.toString.trim == "**disserendi** (from dissero): gerundive, masc., gen., sing.")
 		assert( gerundF.toPos == "a-s---mg-")
@@ -171,7 +171,7 @@ class FuMorphSpec extends FlatSpec {
 			lang = Latin,
 			surfaceForm = "dictū",
 			lemma = Some("dico"),
-			grammaticalCase = Ablative,
+			grammaticalCase = Ablative
 		)
 		assert(supineF.toString.trim == "**dictū** (from dico): supine, neut., abl., sing.")
 		assert( supineF.toPos == "n-s---nb-")

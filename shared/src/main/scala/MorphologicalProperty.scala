@@ -272,3 +272,13 @@ case object Particle extends IndeclinablePoS {
 	val abbr:String = "particle"
 	val short:String = "c"
 }
+case object Preposition extends IndeclinablePoS {
+	val long:String = "Preposition"
+	val abbr:String = "prep."
+	val short:String = "r"
+}
+case object Interjection extends IndeclinablePoS {
+	val long:String = "Interjection"
+	val abbr:String = "interj."
+	val short:String = "i"
+}

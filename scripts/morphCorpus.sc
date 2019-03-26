@@ -44,5 +44,8 @@ def showMe(v:Any):Unit = {
 val bigLib = loadLibrary()
 
 val littleCorp = bigLib.textRepository.get.corpus ~~ CtsUrn("urn:cts:greekLit:tlg0012.tlg001:1.1-1.4")
+val biggerCorp = bigLib.textRepository.get.corpus
 
-val mm:Vector[PersEntry] = PerseusParser.analyzeText(littleCorp, Greek)
+val mm:Vector[PersEntry] = PerseusParser.analyzeText(biggerCorp, Greek)
+
+val fumm:Vector[Form] = PerseusParser.toForms(mm)

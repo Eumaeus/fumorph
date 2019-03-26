@@ -1,6 +1,6 @@
 package edu.furman.classics.fumorph
 
-sealed trait Form {
+abstract class Form {
 	val surfaceForm:String
 	val lemma:Option[String]
 	val lang:MorphLanguage
@@ -13,13 +13,24 @@ trait DeclinableForm {
 	val grammaticalNumber: GrammaticalNumber
 }
 
-trait ConjugatableForm{
+trait ConjugatableForm {
 	val tense: Tense 
 	val voice: Voice
 }
 
-trait DegreeableForm{
+trait DegreeableForm {
 	val degree: Degree
+}
+
+
+case class InvalidForm(lang:MorphLanguage, surfaceForm:String, lemma:Option[String], info:String = "") extends Form {
+	override def toString = {
+		s"""**Invalid Form** "${surfaceForm}" ${if (lemma != None) " (from " + lemma.get + ")" else ""}: ${if (info.size > 0) " " + info + "." else ""}"""
+	}
+
+	def toPos = {
+		s"x--------"
+	}
 }
 
 case class FiniteVerbForm(lang:MorphLanguage, surfaceForm:String, lemma:Option[String], person: Person, grammaticalNumber: GrammaticalNumber, tense: Tense, mood: Mood, voice: Voice, info:String = "") extends Form with ConjugatableForm {
@@ -40,7 +51,7 @@ case class IndeclinableForm(lang:MorphLanguage, surfaceForm:String, lemma:Option
 	}
 
 	def toPos = {
-		"d--------"
+		s"${pos.short}--------"
 	}
 
 }

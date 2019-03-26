@@ -20,7 +20,7 @@ lazy val crossed = crossProject(JSPlatform, JVMPlatform).in(file("."))
 .settings(
       name := "fumorph",
       organization := "edu.furman.classics",
-      version := "0.3.0",
+      version := "0.4.0",
       licenses += ("GPL-3.0",url("https://opensource.org/licenses/gpl-3.0.html")),
       resolvers += Resolver.jcenterRepo,
       resolvers += Resolver.bintrayRepo("eumaeus", "maven"),
@@ -50,15 +50,7 @@ lazy val crossed = crossProject(JSPlatform, JVMPlatform).in(file("."))
     jsSettings(
       skip in packageJSDependencies := false,
       scalaJSUseMainModuleInitializer in Compile := true
-    ).
-jvmSettings(
-  tutTargetDirectory := file("docs"),
-  tutSourceDirectory := file("shared/src/main/tut")
-).
-jsSettings(
-  skip in packageJSDependencies := false,
-  scalaJSUseMainModuleInitializer in Compile := true
-)
+    )
 
 lazy val crossedJVM = crossed.jvm.enablePlugins(TutPlugin)
 lazy val crossedJS = crossed.js
