@@ -95,6 +95,17 @@ case class FuMorph(lang:MorphLanguage) {
 
 		val groupVec:Vector[(Serializable, Vector[Form])] = groupForms(formVec)
 
+		val catalog:String = {
+			val colls:Vector[String] = {
+				groupVec.map( g => {
+					g._2.head.typeName
+				})
+			}
+			cexGetCatalog(colls, nameSpace, versionName, delimiter)
+		}
+
+		val cexProperties:Vector[String] = Vector("properties here!")
+
 		val cexVec:Vector[String] = groupVec.map( gv => {
 			val formType:Serializable = gv._1
 			val header:String = cexHeader(formType, delimiter)
@@ -105,7 +116,7 @@ case class FuMorph(lang:MorphLanguage) {
 			( Vector(header) ++ dataVec ++ Vector("\n"))
 		}).flatten
 
-		cexVec.mkString("\n")
+		( Vector(cexBoilerplate(delimiter)) ++ Vector(catalog) ++ cexProperties ++ cexVec ).mkString("\n")
 	}
 
 	def formCex(formType:Serializable, form:Form, urn:Cite2Urn, delimiter:String = "#"):String = {
@@ -193,6 +204,30 @@ case class FuMorph(lang:MorphLanguage) {
 			case _ => InvalidForm
 		}
 	}
+
+	def cexGetCatalog(colls:Vector[String], nameSpace:String, versionName:String, delimiter:String):String = {
+		val header:String = "#!citecollections\nURN#Description#Labelling property#Ordering property#License"
+		val collsCex:Vector[String] = colls.map( c => {
+			val urn:Cite2Urn = Cite2Urn(s"urn:cite2:${nameSpace}:${c}.${versionName}:")
+			val desc:String = s"Generated collection of ${c}s"
+			val labelProp:Cite2Urn = Cite2Urn(s"urn:cite2:${nameSpace}:${c}.${versionName}.surfaceform:")
+			val license:String = "Public Domain"
+			s"${urn}${delimiter}${desc}${delimiter}${labelProp}${delimiter}${delimiter}${license}"
+		})
+		( Vector(header) ++ collsCex ++ Vector("\n")).mkString("\n")
+	}
+
+	def cexPropertyHeader(delimiter:String = "#"):String = s"#!citeproperties\nProperty${delimiter}Label${delimiter}Type${delimiter}Authority list"
+
+	def cexBoilerplate(delimiter:String = "#"):String = s"""#!cexversion
+3.0
+
+#!citelibrary
+name${delimiter}CEX Library created by FuMorph
+urn${delimiter}urn:cite2:cex:TEMPCOLL.TEMPVERSION:TEMP_ID
+license${delimiter}Public Domain.
+
+"""
 	
 }
 

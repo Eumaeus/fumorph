@@ -251,12 +251,6 @@ import cats.syntax.either._
 	}
 
 	def toForms(pe:PersEntry):Vector[Form] = {
-		/*
-		surfaceForm:String, 
-		lang:MorphLanguage,
-		lexLemma:Option[String],
-		inflections:Vector[InflectionRec]	
-		*/
 		if (pe.inflections.size < 1) {
 			throw new MorphJsonException(s"""Exception: "${pe.surfaceForm}" has no inflections.""")
 		}
@@ -267,7 +261,6 @@ import cats.syntax.either._
 					pos match {
 						case "noun" => {
 							val isSupine:Boolean = (inf.mood == Some("supine"))
-							println(s"${pe.surfaceForm} : isSupine == ${isSupine}; ")
 							if (isSupine) {
 								val grammaticalCase:Option[GrammaticalCase] = getCase(inf.grammaticalCase.getOrElse(""))
 								val grammaticalNumber:Option[GrammaticalNumber] = getNumber(inf.grammaticalNum.getOrElse("singular"))
