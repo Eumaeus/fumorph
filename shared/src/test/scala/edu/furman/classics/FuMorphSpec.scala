@@ -35,6 +35,17 @@ class FuMorphSpec extends FlatSpec {
 
 	}
 
+	it should "allow the creation of a Preposition" in {
+		val indeclf:IndeclinableForm = IndeclinableForm(
+			lang = Greek,
+			surfaceForm = "ἐπί",
+			lemma = Some("ἐπί"),
+			pos = Preposition
+		)
+		assert(indeclf.toString.trim == "**ἐπί**: prep.")
+		assert(indeclf.toPos == "r--------")
+	}
+
 	it should "allow the creation of an NounForm" in {
 		val nounF:NounForm = NounForm(
 			lang = Greek,

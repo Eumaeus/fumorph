@@ -5,6 +5,7 @@ abstract class Form {
 	val lemma:Option[String]
 	val lang:MorphLanguage
 	val info:String
+	val typeName:String
 }
 
 trait DeclinableForm {
@@ -31,6 +32,9 @@ case class InvalidForm(lang:MorphLanguage, surfaceForm:String, lemma:Option[Stri
 	def toPos = {
 		s"x--------"
 	}
+
+	val typeName:String = "InvalidForm"
+
 }
 
 case class FiniteVerbForm(lang:MorphLanguage, surfaceForm:String, lemma:Option[String], person: Person, grammaticalNumber: GrammaticalNumber, tense: Tense, mood: Mood, voice: Voice, info:String = "") extends Form with ConjugatableForm {
@@ -42,6 +46,9 @@ case class FiniteVerbForm(lang:MorphLanguage, surfaceForm:String, lemma:Option[S
 	def toPos = {
 		s"v${person.short}${grammaticalNumber.short}${tense.short}${voice.short}${mood.short}---"
 	}
+
+	val typeName:String = "FiniteVerbForm"
+
 }
 
 case class IndeclinableForm(lang:MorphLanguage, surfaceForm:String, lemma:Option[String], pos: IndeclinablePoS, info:String = "") extends Form {
@@ -54,6 +61,7 @@ case class IndeclinableForm(lang:MorphLanguage, surfaceForm:String, lemma:Option
 		s"${pos.short}--------"
 	}
 
+	val typeName:String = "IndeclinableForm"
 }
 
 case class NounForm(lang:MorphLanguage, surfaceForm:String, lemma:Option[String], gender: Gender, grammaticalCase: GrammaticalCase, grammaticalNumber: GrammaticalNumber, info:String = "") extends Form with DeclinableForm {
@@ -65,6 +73,8 @@ case class NounForm(lang:MorphLanguage, surfaceForm:String, lemma:Option[String]
 	def toPos = {
 		s"n-${grammaticalNumber.short}---${gender.short}${grammaticalCase.short}-"
 	}
+
+	val typeName:String = "NounForm"
 
 }
 
@@ -78,6 +88,8 @@ case class AdjectiveForm(lang:MorphLanguage, surfaceForm:String, lemma:Option[St
 		s"a-${grammaticalNumber.short}---${gender.short}${grammaticalCase.short}${degree.short}"
 	}
 
+	val typeName:String = "AdjectiveForm"
+
 }
 
 case class PronounForm(lang:MorphLanguage, surfaceForm:String, lemma:Option[String], gender: Gender, grammaticalCase: GrammaticalCase, grammaticalNumber: GrammaticalNumber, info:String = "") extends Form with DeclinableForm {
@@ -89,6 +101,8 @@ case class PronounForm(lang:MorphLanguage, surfaceForm:String, lemma:Option[Stri
 	def toPos = {
 		s"p-${grammaticalNumber.short}---${gender.short}${grammaticalCase.short}-"
 	}
+
+	val typeName:String = "PronounForm"
 }
 
 case class ArticleForm(lang:MorphLanguage, surfaceForm:String, lemma:Option[String], gender: Gender, grammaticalCase: GrammaticalCase, grammaticalNumber: GrammaticalNumber, info:String = "") extends Form with DeclinableForm {
@@ -100,6 +114,8 @@ case class ArticleForm(lang:MorphLanguage, surfaceForm:String, lemma:Option[Stri
 	def toPos = {
 		s"l-${grammaticalNumber.short}---${gender.short}${grammaticalCase.short}-"
 	}
+
+	val typeName:String = "ArticleForm"
 }
 
 case class AdverbForm(lang:MorphLanguage, surfaceForm:String, lemma:Option[String], degree: Degree = Positive, info:String = "") extends Form with DegreeableForm {
@@ -112,6 +128,8 @@ case class AdverbForm(lang:MorphLanguage, surfaceForm:String, lemma:Option[Strin
 		s"d-------${degree.short}"
 	}
 
+	val typeName:String = "AdverbForm"
+
 }
 
 case class InfinitiveForm(lang:MorphLanguage, surfaceForm:String, lemma:Option[String], tense:Tense, voice:Voice, info:String = "") extends Form with ConjugatableForm{
@@ -123,6 +141,8 @@ case class InfinitiveForm(lang:MorphLanguage, surfaceForm:String, lemma:Option[S
 	def toPos = {
 		s"v--${tense.short}${voice.short}n---"
 	}
+
+	val typeName:String = "InfinitiveForm"
 }
 
 case class ParticipleForm(lang:MorphLanguage, surfaceForm:String, lemma:Option[String], tense:Tense, voice:Voice, gender:Gender, grammaticalCase:GrammaticalCase, grammaticalNumber:GrammaticalNumber, info:String = "") extends Form with ConjugatableForm with DeclinableForm {
@@ -134,6 +154,8 @@ case class ParticipleForm(lang:MorphLanguage, surfaceForm:String, lemma:Option[S
 	def toPos = {
 		s"v-${grammaticalNumber.short}${tense.short}${voice.short}p${gender.short}${grammaticalCase.short}-"
 	}
+
+	val typeName:String = "ParticipleForm"
 }
 
 case class VerbalAdjectiveForm(lang:MorphLanguage, surfaceForm:String, lemma:Option[String], gender: Gender, grammaticalCase: GrammaticalCase, grammaticalNumber: GrammaticalNumber, info:String = "") extends Form  with DeclinableForm {
@@ -145,6 +167,8 @@ case class VerbalAdjectiveForm(lang:MorphLanguage, surfaceForm:String, lemma:Opt
 	def toPos = {
 		s"a-${grammaticalNumber.short}---${gender.short}${grammaticalCase.short}-"
 	}
+
+	val typeName:String = "VerbalAdjectiveForm"
 }
 
 case class GerundForm(lang:MorphLanguage, surfaceForm:String, lemma:Option[String], gender: Gender = Neuter, grammaticalCase: GrammaticalCase, grammaticalNumber: GrammaticalNumber = Singular, info:String = "") extends Form  with DeclinableForm {
@@ -156,6 +180,8 @@ case class GerundForm(lang:MorphLanguage, surfaceForm:String, lemma:Option[Strin
 	def toPos = {
 		s"n-${grammaticalNumber.short}---${gender.short}${grammaticalCase.short}-"
 	}
+
+	val typeName:String = "GerundForm"
 }
 
 case class GerundiveForm(lang:MorphLanguage, surfaceForm:String, lemma:Option[String], gender: Gender, grammaticalCase: GrammaticalCase, grammaticalNumber: GrammaticalNumber, info:String = "") extends Form with DeclinableForm {
@@ -168,6 +194,8 @@ case class GerundiveForm(lang:MorphLanguage, surfaceForm:String, lemma:Option[St
 		s"a-${grammaticalNumber.short}---${gender.short}${grammaticalCase.short}-"
 	}
 
+	val typeName:String = "GerundiveForm"
+
 }
 
 case class SupineForm(lang:MorphLanguage, surfaceForm:String, lemma:Option[String], gender: Gender = Neuter, grammaticalCase: GrammaticalCase, grammaticalNumber: GrammaticalNumber = Singular, info:String = "") extends Form with DeclinableForm {
@@ -179,4 +207,6 @@ case class SupineForm(lang:MorphLanguage, surfaceForm:String, lemma:Option[Strin
 	def toPos = {
 		s"n-${grammaticalNumber.short}---${gender.short}${grammaticalCase.short}-"
 	}
+
+	val typeName:String = "SupineForm"
 }
