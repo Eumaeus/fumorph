@@ -2,11 +2,152 @@ package edu.furman.classics.fumorph
 import scala.scalajs.js
 import scala.scalajs.js.annotation._
 import edu.holycross.shot.cite._
+import edu.holycross.shot.greek._
 
 @JSExportAll
 case class FuMorph(lang:MorphLanguage) {
 
-
+	def cexProps(formType:Serializable, urn:Cite2Urn, delimiter:String = "#"):String = {
+		val header:String = "#!citeproperties\nProperty#Label#Type#Authority list"
+		val props:Vector[String] = formType match {
+			case InvalidForm => {
+				val fields:Vector[String] = Vector("urn", "surfaceform", "lemma", "lang", "info")
+				val urnRec:String = s"""${urn.addProperty("urn")}${delimiter}urn${delimiter}String${delimiter}"""
+				val others:Vector[String] = fields.tail.map(f => {
+					val purn:Cite2Urn = urn.addProperty(f)
+					s"${purn}${delimiter}${f}${delimiter}String${delimiter}"
+				})
+				( Vector(header) ++ Vector(urnRec) ++ others )
+			}
+			case FiniteVerbForm => {
+				val fields:Vector[String] = Vector("urn", "surfaceform", "lemma", "lang", "person", "number", "tense", "voice", "mood", "info")
+				val urnRec:String = s"""${urn.addProperty("urn")}${delimiter}urn${delimiter}String${delimiter}"""
+				val others:Vector[String] = fields.tail.map(f => {
+					val purn:Cite2Urn = urn.addProperty(f)
+					s"${purn}${delimiter}${f}${delimiter}String${delimiter}"
+				})
+				( Vector(header) ++ Vector(urnRec) ++ others )
+			}
+			case IndeclinableForm => {
+				val fields:Vector[String] = Vector("urn", "surfaceform", "lemma", "lang", "pos", "info")
+				val urnRec:String = s"""${urn.addProperty("urn")}${delimiter}urn${delimiter}String${delimiter}"""
+				val others:Vector[String] = fields.tail.map(f => {
+					val purn:Cite2Urn = urn.addProperty(f)
+					s"${purn}${delimiter}${f}${delimiter}String${delimiter}"
+				})
+				( Vector(header) ++ Vector(urnRec) ++ others )
+			}
+			case NounForm => {
+				val fields:Vector[String] = Vector("urn", "surfaceform", "lemma", "lang", "gender", "case", "number", "info")
+				val urnRec:String = s"""${urn.addProperty("urn")}${delimiter}urn${delimiter}String${delimiter}"""
+				val others:Vector[String] = fields.tail.map(f => {
+					val purn:Cite2Urn = urn.addProperty(f)
+					s"${purn}${delimiter}${f}${delimiter}String${delimiter}"
+				})
+				( Vector(header) ++ Vector(urnRec) ++ others )
+			}
+			case AdjectiveForm => {
+				val fields:Vector[String] = Vector("urn", "surfaceform", "lemma", "lang", "gender", "case", "number", "degree", "info")
+				val urnRec:String = s"""${urn.addProperty("urn")}${delimiter}urn${delimiter}String${delimiter}"""
+				val others:Vector[String] = fields.tail.map(f => {
+					val purn:Cite2Urn = urn.addProperty(f)
+					s"${purn}${delimiter}${f}${delimiter}String${delimiter}"
+				})
+				( Vector(header) ++ Vector(urnRec) ++ others )
+			}
+			case PronounForm => {
+				val fields:Vector[String] = Vector("urn", "surfaceform", "lemma", "lang", "gender", "case", "number", "info")
+				val urnRec:String = s"""${urn.addProperty("urn")}${delimiter}urn${delimiter}String${delimiter}"""
+				val others:Vector[String] = fields.tail.map(f => {
+					val purn:Cite2Urn = urn.addProperty(f)
+					s"${purn}${delimiter}${f}${delimiter}String${delimiter}"
+				})
+				( Vector(header) ++ Vector(urnRec) ++ others )
+			}
+			case ArticleForm => {
+				val fields:Vector[String] = Vector("urn", "surfaceform", "lemma", "lang", "gender", "case", "number", "info")
+				val urnRec:String = s"""${urn.addProperty("urn")}${delimiter}urn${delimiter}String${delimiter}"""
+				val others:Vector[String] = fields.tail.map(f => {
+					val purn:Cite2Urn = urn.addProperty(f)
+					s"${purn}${delimiter}${f}${delimiter}String${delimiter}"
+				})
+				( Vector(header) ++ Vector(urnRec) ++ others )
+			}
+			case AdverbForm => {
+				val fields:Vector[String] = Vector("urn", "surfaceform", "lemma", "lang", "degree", "info")
+				val urnRec:String = s"""${urn.addProperty("urn")}${delimiter}urn${delimiter}String${delimiter}"""
+				val others:Vector[String] = fields.tail.map(f => {
+					val purn:Cite2Urn = urn.addProperty(f)
+					s"${purn}${delimiter}${f}${delimiter}String${delimiter}"
+				})
+				( Vector(header) ++ Vector(urnRec) ++ others )
+			}
+			case InfinitiveForm => {
+				val fields:Vector[String] = Vector("urn", "surfaceform", "lemma", "lang", "tense", "voice", "info")
+				val urnRec:String = s"""${urn.addProperty("urn")}${delimiter}urn${delimiter}String${delimiter}"""
+				val others:Vector[String] = fields.tail.map(f => {
+					val purn:Cite2Urn = urn.addProperty(f)
+					s"${purn}${delimiter}${f}${delimiter}String${delimiter}"
+				})
+				( Vector(header) ++ Vector(urnRec) ++ others )
+			}
+			case ParticipleForm => {
+				val fields:Vector[String] = Vector("urn", "surfaceform", "lemma", "lang", "tense", "voice", "gender", "case", "number", "info")
+				val urnRec:String = s"""${urn.addProperty("urn")}${delimiter}urn${delimiter}String${delimiter}"""
+				val others:Vector[String] = fields.tail.map(f => {
+					val purn:Cite2Urn = urn.addProperty(f)
+					s"${purn}${delimiter}${f}${delimiter}String${delimiter}"
+				})
+				( Vector(header) ++ Vector(urnRec) ++ others )
+			}
+			case VerbalAdjectiveForm => {
+				val fields:Vector[String] = Vector("urn", "surfaceform", "lemma", "lang", "gender", "case", "number", "info")
+				val urnRec:String = s"""${urn.addProperty("urn")}${delimiter}urn${delimiter}String${delimiter}"""
+				val others:Vector[String] = fields.tail.map(f => {
+					val purn:Cite2Urn = urn.addProperty(f)
+					s"${purn}${delimiter}${f}${delimiter}String${delimiter}"
+				})
+				( Vector(header) ++ Vector(urnRec) ++ others )
+			}
+			case GerundForm => {
+				val fields:Vector[String] = Vector("urn", "surfaceform", "lemma", "lang", "gender", "case", "number", "info")
+				val urnRec:String = s"""${urn.addProperty("urn")}${delimiter}urn${delimiter}String${delimiter}"""
+				val others:Vector[String] = fields.tail.map(f => {
+					val purn:Cite2Urn = urn.addProperty(f)
+					s"${purn}${delimiter}${f}${delimiter}String${delimiter}"
+				})
+				( Vector(header) ++ Vector(urnRec) ++ others )
+			}
+			case GerundiveForm => {
+				val fields:Vector[String] = Vector("urn", "surfaceform", "lemma", "lang", "gender", "case", "number", "info")
+				val urnRec:String = s"""${urn.addProperty("urn")}${delimiter}urn${delimiter}String${delimiter}"""
+				val others:Vector[String] = fields.tail.map(f => {
+					val purn:Cite2Urn = urn.addProperty(f)
+					s"${purn}${delimiter}${f}${delimiter}String${delimiter}"
+				})
+				( Vector(header) ++ Vector(urnRec) ++ others )
+			}
+			case SupineForm => {
+				val fields:Vector[String] = Vector("urn", "surfaceform", "lemma", "lang", "gender", "case", "number", "info")
+				val urnRec:String = s"""${urn.addProperty("urn")}${delimiter}urn${delimiter}String${delimiter}"""
+				val others:Vector[String] = fields.tail.map(f => {
+					val purn:Cite2Urn = urn.addProperty(f)
+					s"${purn}${delimiter}${f}${delimiter}String${delimiter}"
+				})
+				( Vector(header) ++ Vector(urnRec) ++ others )
+			}
+			case _ => {
+				val fields:Vector[String] = Vector("urn", "surfaceform", "lemma", "lang", "info")
+				val urnRec:String = s"""${urn.addProperty("urn")}${delimiter}urn${delimiter}String${delimiter}"""
+				val others:Vector[String] = fields.tail.map(f => {
+					val purn:Cite2Urn = urn.addProperty(f)
+					s"${purn}${delimiter}${f}${delimiter}String${delimiter}"
+				})
+				( Vector(header) ++ Vector(urnRec) ++ others )
+			}
+		}
+		props.mkString("\n") + "\n"
+	}
 
 	def cexHeader(formType:Serializable, delimiter:String = "#"):String = {
 		val header:String = "#!citedata"
@@ -15,7 +156,7 @@ case class FuMorph(lang:MorphLanguage) {
 				s"urn${delimiter}surfaceform${delimiter}lemma${delimiter}lang${delimiter}info"
 			}
 			case FiniteVerbForm => {
-				s"urn${delimiter}surfaceform${delimiter}lemma${delimiter}lang${delimiter}info${delimiter}person${delimiter}number${delimiter}tense${delimiter}voice${delimiter}mood${delimiter}info"
+				s"urn${delimiter}surfaceform${delimiter}lemma${delimiter}lang${delimiter}person${delimiter}number${delimiter}tense${delimiter}voice${delimiter}mood${delimiter}info"
 			}
 			case IndeclinableForm => {
 				s"urn${delimiter}surfaceform${delimiter}lemma${delimiter}lang${delimiter}pos${delimiter}info"
@@ -87,11 +228,11 @@ case class FuMorph(lang:MorphLanguage) {
 
 
 
-	def cex(form:Form, nameSpace:String, versionName:String, delimiter:String):String = {
-		cex(Vector(form), nameSpace, versionName, delimiter)
+	def cex(lang:MorphLanguage, form:Form, nameSpace:String, versionName:String, delimiter:String):String = {
+		cex(lang, Vector(form), nameSpace, versionName, delimiter)
 	}
 	
-	def cex(formVec:Vector[Form], nameSpace:String = "fumorph", versionName:String = "temp", delimiter:String = "#"):String = {
+	def cex(lang:MorphLanguage, formVec:Vector[Form], nameSpace:String = "fumorph", versionName:String = "temp", delimiter:String = "#"):String = {
 
 		val groupVec:Vector[(Serializable, Vector[Form])] = groupForms(formVec)
 
@@ -104,13 +245,20 @@ case class FuMorph(lang:MorphLanguage) {
 			cexGetCatalog(colls, nameSpace, versionName, delimiter)
 		}
 
-		val cexProperties:Vector[String] = Vector("properties here!")
+		val cexProperties:Vector[String] = {
+			groupVec.map( g => {
+				val typeName:String = g._2.head.typeName
+				val urn:Cite2Urn = Cite2Urn(s"urn:cite2:${nameSpace}:${typeName}.${versionName}:")
+				cexProps(g._1, urn, delimiter)
+			})
+		}
 
 		val cexVec:Vector[String] = groupVec.map( gv => {
 			val formType:Serializable = gv._1
 			val header:String = cexHeader(formType, delimiter)
 			val dataVec:Vector[String] = gv._2.map( f => {
 				val urn:Cite2Urn = UrnGenerator.get(nameSpace, f.typeName, versionName)
+				var newForm:Form = f
 				formCex(formType, f, urn, delimiter)
 			})
 			( Vector(header) ++ dataVec ++ Vector("\n"))
@@ -123,63 +271,63 @@ case class FuMorph(lang:MorphLanguage) {
 		formType match {
 			case InvalidForm => {
 				val f:InvalidForm = form.asInstanceOf[InvalidForm]
-				s"""${urn}${delimiter}${f.surfaceForm}${delimiter}${f.lemma.getOrElse("")}${delimiter}${f.lang.abbr}${delimiter}${f.info}"""
+				s"""${urn}${delimiter}${greekifySurfaceForm(lang, f.surfaceForm)}${delimiter}${greekifyLemma(lang, f.lemma)}${delimiter}${f.lang.abbr}${delimiter}${f.info}"""
 			}
 			case FiniteVerbForm => {
 				val f:FiniteVerbForm = form.asInstanceOf[FiniteVerbForm]
-				s"""${urn}${delimiter}${f.surfaceForm}${delimiter}${f.lemma.getOrElse("")}${delimiter}${f.lang.abbr}${delimiter}${f.person}${delimiter}${f.grammaticalNumber}${delimiter}${f.tense}${delimiter}${f.voice}${delimiter}${f.mood}${delimiter}${f.info}"""
+				s"""${urn}${delimiter}${greekifySurfaceForm(lang, f.surfaceForm)}${delimiter}${greekifyLemma(lang, f.lemma)}${delimiter}${f.lang.abbr}${delimiter}${f.person}${delimiter}${f.grammaticalNumber}${delimiter}${f.tense}${delimiter}${f.voice}${delimiter}${f.mood}${delimiter}${f.info}"""
 			}
 			case IndeclinableForm => {
 				val f:IndeclinableForm = form.asInstanceOf[IndeclinableForm]
-				s"""${urn}${delimiter}${f.surfaceForm}${delimiter}${f.lemma.getOrElse("")}${delimiter}${f.lang.abbr}${delimiter}${f.pos}${delimiter}${f.info}"""
+				s"""${urn}${delimiter}${greekifySurfaceForm(lang, f.surfaceForm)}${delimiter}${greekifyLemma(lang, f.lemma)}${delimiter}${f.lang.abbr}${delimiter}${f.pos}${delimiter}${f.info}"""
 			}
 			case NounForm => {
 				val f:NounForm = form.asInstanceOf[NounForm]
-				s"""${urn}${delimiter}${f.surfaceForm}${delimiter}${f.lemma.getOrElse("")}${delimiter}${f.lang.abbr}${delimiter}${f.gender}${delimiter}${f.grammaticalCase}${delimiter}${f.grammaticalNumber}${delimiter}${f.info}"""
+				s"""${urn}${delimiter}${greekifySurfaceForm(lang, f.surfaceForm)}${delimiter}${greekifyLemma(lang, f.lemma)}${delimiter}${f.lang.abbr}${delimiter}${f.gender}${delimiter}${f.grammaticalCase}${delimiter}${f.grammaticalNumber}${delimiter}${f.info}"""
 			}
 			case AdjectiveForm => {
 				val f:AdjectiveForm = form.asInstanceOf[AdjectiveForm]
-				s"""${urn}${delimiter}${f.surfaceForm}${delimiter}${f.lemma.getOrElse("")}${delimiter}${f.lang.abbr}${delimiter}${f.gender}${delimiter}${f.grammaticalCase}${delimiter}${f.grammaticalNumber}${delimiter}${f.degree}${delimiter}${f.info}"""
+				s"""${urn}${delimiter}${greekifySurfaceForm(lang, f.surfaceForm)}${delimiter}${greekifyLemma(lang, f.lemma)}${delimiter}${f.lang.abbr}${delimiter}${f.gender}${delimiter}${f.grammaticalCase}${delimiter}${f.grammaticalNumber}${delimiter}${f.degree}${delimiter}${f.info}"""
 			}
 			case PronounForm => {
 				val f:PronounForm = form.asInstanceOf[PronounForm]
-				s"""${urn}${delimiter}${f.surfaceForm}${delimiter}${f.lemma.getOrElse("")}${delimiter}${f.lang.abbr}${delimiter}${f.gender}${delimiter}${f.grammaticalCase}${delimiter}${f.grammaticalNumber}${delimiter}${f.info}"""
+				s"""${urn}${delimiter}${greekifySurfaceForm(lang, f.surfaceForm)}${delimiter}${greekifyLemma(lang, f.lemma)}${delimiter}${f.lang.abbr}${delimiter}${f.gender}${delimiter}${f.grammaticalCase}${delimiter}${f.grammaticalNumber}${delimiter}${f.info}"""
 			}
 			case ArticleForm => {
 				val f:ArticleForm = form.asInstanceOf[ArticleForm]
-				s"""${urn}${delimiter}${f.surfaceForm}${delimiter}${f.lemma.getOrElse("")}${delimiter}${f.lang.abbr}${delimiter}${f.gender}${delimiter}${f.grammaticalCase}${delimiter}${f.grammaticalNumber}${delimiter}${f.info}"""
+				s"""${urn}${delimiter}${greekifySurfaceForm(lang, f.surfaceForm)}${delimiter}${greekifyLemma(lang, f.lemma)}${delimiter}${f.lang.abbr}${delimiter}${f.gender}${delimiter}${f.grammaticalCase}${delimiter}${f.grammaticalNumber}${delimiter}${f.info}"""
 			}
 			case AdverbForm => {
 				val f:AdverbForm = form.asInstanceOf[AdverbForm]
-				s"""${urn}${delimiter}${f.surfaceForm}${delimiter}${f.lemma.getOrElse("")}${delimiter}${f.lang.abbr}${delimiter}${f.degree}${delimiter}${f.info}"""
+				s"""${urn}${delimiter}${greekifySurfaceForm(lang, f.surfaceForm)}${delimiter}${greekifyLemma(lang, f.lemma)}${delimiter}${f.lang.abbr}${delimiter}${f.degree}${delimiter}${f.info}"""
 			}
 			case InfinitiveForm => {
 				val f:InfinitiveForm = form.asInstanceOf[InfinitiveForm]
-				s"""${urn}${delimiter}${f.surfaceForm}${delimiter}${f.lemma.getOrElse("")}${delimiter}${f.lang.abbr}${delimiter}${f.tense}${delimiter}${f.voice}${delimiter}${f.info}"""
+				s"""${urn}${delimiter}${greekifySurfaceForm(lang, f.surfaceForm)}${delimiter}${greekifyLemma(lang, f.lemma)}${delimiter}${f.lang.abbr}${delimiter}${f.tense}${delimiter}${f.voice}${delimiter}${f.info}"""
 			}
 			case ParticipleForm => {
 				val f:ParticipleForm = form.asInstanceOf[ParticipleForm]
-				s"""${urn}${delimiter}${f.surfaceForm}${delimiter}${f.lemma.getOrElse("")}${delimiter}${f.lang.abbr}${delimiter}${f.tense}${delimiter}${f.voice}${delimiter}${f.gender}${delimiter}${f.grammaticalCase}${delimiter}${f.grammaticalNumber}${delimiter}${f.info}"""
+				s"""${urn}${delimiter}${greekifySurfaceForm(lang, f.surfaceForm)}${delimiter}${greekifyLemma(lang, f.lemma)}${delimiter}${f.lang.abbr}${delimiter}${f.tense}${delimiter}${f.voice}${delimiter}${f.gender}${delimiter}${f.grammaticalCase}${delimiter}${f.grammaticalNumber}${delimiter}${f.info}"""
 			}
 			case VerbalAdjectiveForm => {
 				val f:VerbalAdjectiveForm = form.asInstanceOf[VerbalAdjectiveForm]
-				s"""${urn}${delimiter}${f.surfaceForm}${delimiter}${f.lemma.getOrElse("")}${delimiter}${f.lang.abbr}${delimiter}${f.gender}${delimiter}${f.grammaticalCase}${delimiter}${f.grammaticalNumber}${delimiter}${f.info}"""
+				s"""${urn}${delimiter}${greekifySurfaceForm(lang, f.surfaceForm)}${delimiter}${greekifyLemma(lang, f.lemma)}${delimiter}${f.lang.abbr}${delimiter}${f.gender}${delimiter}${f.grammaticalCase}${delimiter}${f.grammaticalNumber}${delimiter}${f.info}"""
 			}
 			case GerundForm => {
 				val f:GerundForm = form.asInstanceOf[GerundForm]
-				s"""${urn}${delimiter}${f.surfaceForm}${delimiter}${f.lemma.getOrElse("")}${delimiter}${f.lang.abbr}${delimiter}${f.gender}${delimiter}${f.grammaticalCase}${delimiter}${f.grammaticalNumber}${delimiter}${f.info}"""
+				s"""${urn}${delimiter}${greekifySurfaceForm(lang, f.surfaceForm)}${delimiter}${greekifyLemma(lang, f.lemma)}${delimiter}${f.lang.abbr}${delimiter}${f.gender}${delimiter}${f.grammaticalCase}${delimiter}${f.grammaticalNumber}${delimiter}${f.info}"""
 			}
 			case GerundiveForm => {
 				val f:GerundiveForm = form.asInstanceOf[GerundiveForm]
-				s"""${urn}${delimiter}${f.surfaceForm}${delimiter}${f.lemma.getOrElse("")}${delimiter}${f.lang.abbr}${delimiter}${f.gender}${delimiter}${f.grammaticalCase}${delimiter}${f.grammaticalNumber}${delimiter}${f.info}"""
+				s"""${urn}${delimiter}${greekifySurfaceForm(lang, f.surfaceForm)}${delimiter}${greekifyLemma(lang, f.lemma)}${delimiter}${f.lang.abbr}${delimiter}${f.gender}${delimiter}${f.grammaticalCase}${delimiter}${f.grammaticalNumber}${delimiter}${f.info}"""
 			}
 			case SupineForm => {
 				val f:SupineForm = form.asInstanceOf[SupineForm]
-				s"""${urn}${delimiter}${f.surfaceForm}${delimiter}${f.lemma.getOrElse("")}${delimiter}${f.lang.abbr}${delimiter}${f.gender}${delimiter}${f.grammaticalCase}${delimiter}${f.grammaticalNumber}${delimiter}${f.info}"""
+				s"""${urn}${delimiter}${greekifySurfaceForm(lang, f.surfaceForm)}${delimiter}${greekifyLemma(lang, f.lemma)}${delimiter}${f.lang.abbr}${delimiter}${f.gender}${delimiter}${f.grammaticalCase}${delimiter}${f.grammaticalNumber}${delimiter}${f.info}"""
 			}
 			case _ => {
 				val f:InvalidForm = form.asInstanceOf[InvalidForm]
-				s"""${urn}${delimiter}${f.surfaceForm}${delimiter}${f.lemma.getOrElse("")}${delimiter}${f.lang.abbr}${delimiter}${f.info}"""
+				s"""${urn}${delimiter}${greekifySurfaceForm(lang, f.surfaceForm)}${delimiter}${greekifyLemma(lang, f.lemma)}${delimiter}${f.lang.abbr}${delimiter}${f.info}"""
 			}
 		}
 	}
@@ -203,6 +351,30 @@ case class FuMorph(lang:MorphLanguage) {
 			case _:SupineForm => SupineForm
 			case _ => InvalidForm
 		}
+	}
+
+	def greekifySurfaceForm(lang:MorphLanguage, s:String):String = {
+		if (lang == Greek) {
+			val lgs:LiteraryGreekString = LiteraryGreekString(s)
+			lgs.ascii
+		} else {
+			s
+		}
+	}
+
+	def greekifyLemma(lang:MorphLanguage, os:Option[String]):String = {
+		os match {
+			case Some(s) => {
+				if (lang == Greek) {
+					val lgs:LiteraryGreekString = LiteraryGreekString(s)
+					lgs.ascii
+				} else {
+					s
+				}
+			}
+			case None => ""
+		}
+		
 	}
 
 	def cexGetCatalog(colls:Vector[String], nameSpace:String, versionName:String, delimiter:String):String = {

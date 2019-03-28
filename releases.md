@@ -1,5 +1,7 @@
 # morphjson: release notes
 
+**0.6.0**:  Better language handling. Working toward an Extended Text Property model.
+
 **0.5.0**:  Writing CEX data for morphology.
 
 **0.4.0**:  Reorganized JVM-only source and tests. Converting Perseus data to CITE objects.
