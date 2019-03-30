@@ -4,7 +4,7 @@
 
 `morphjson` is a cross-platform library for translating morphology from JSON expressions to Scala Objects.
 
-## Current version: 0.6.0
+## Current version: 0.7.0
 
 Status:  **active development**. [Release notes](releases.md)
 

@@ -1,5 +1,7 @@
 # morphjson: release notes
 
+**0.7.0**:  Still better language handling. Improved efforts to ensure that generated URNs are unique. Implemented Data Models for morphology and CITE properties that are LiteraryGreekStrings.
+
 **0.6.0**:  Better language handling. Working toward an Extended Text Property model.
 
 **0.5.0**:  Writing CEX data for morphology.

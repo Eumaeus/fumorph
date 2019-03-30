@@ -1,0 +1,345 @@
+#!cexversion
+3.0
+
+#!citelibrary
+name#CEX Library created by FuMorph
+urn#urn:cite2:cex:TEMPCOLL.TEMPVERSION:TEMP_ID
+license#Public Domain.
+
+
+#!citecollections
+URN#Description#Labelling property#Ordering property#License
+urn:cite2:fumorph_grc:IndeclinableForm.test:#Generated collection of IndeclinableForms#urn:cite2:fumorph_grc:IndeclinableForm.test.surfaceform:##Public Domain
+urn:cite2:fumorph_grc:ArticleForm.test:#Generated collection of ArticleForms#urn:cite2:fumorph_grc:ArticleForm.test.surfaceform:##Public Domain
+urn:cite2:fumorph_grc:NounForm.test:#Generated collection of NounForms#urn:cite2:fumorph_grc:NounForm.test.surfaceform:##Public Domain
+urn:cite2:fumorph_grc:PronounForm.test:#Generated collection of PronounForms#urn:cite2:fumorph_grc:PronounForm.test.surfaceform:##Public Domain
+urn:cite2:fumorph_grc:InvalidForm.test:#Generated collection of InvalidForms#urn:cite2:fumorph_grc:InvalidForm.test.surfaceform:##Public Domain
+urn:cite2:fumorph_grc:FiniteVerbForm.test:#Generated collection of FiniteVerbForms#urn:cite2:fumorph_grc:FiniteVerbForm.test.surfaceform:##Public Domain
+urn:cite2:fumorph_grc:ParticipleForm.test:#Generated collection of ParticipleForms#urn:cite2:fumorph_grc:ParticipleForm.test.surfaceform:##Public Domain
+urn:cite2:fumorph_grc:InfinitiveForm.test:#Generated collection of InfinitiveForms#urn:cite2:fumorph_grc:InfinitiveForm.test.surfaceform:##Public Domain
+urn:cite2:fumorph_grc:AdjectiveForm.test:#Generated collection of AdjectiveForms#urn:cite2:fumorph_grc:AdjectiveForm.test.surfaceform:##Public Domain
+
+
+#!datamodels
+Collection#Model#Label#Description
+// Morphology collections
+urn:cite2:fumorph_grc:IndeclinableForm.test:#urn:cite2:cite:datamodels.v1:fumorph#FU Morphology#Morphological data.
+urn:cite2:fumorph_grc:ArticleForm.test:#urn:cite2:cite:datamodels.v1:fumorph#FU Morphology#Morphological data.
+urn:cite2:fumorph_grc:NounForm.test:#urn:cite2:cite:datamodels.v1:fumorph#FU Morphology#Morphological data.
+urn:cite2:fumorph_grc:PronounForm.test:#urn:cite2:cite:datamodels.v1:fumorph#FU Morphology#Morphological data.
+urn:cite2:fumorph_grc:InvalidForm.test:#urn:cite2:cite:datamodels.v1:fumorph#FU Morphology#Morphological data.
+urn:cite2:fumorph_grc:FiniteVerbForm.test:#urn:cite2:cite:datamodels.v1:fumorph#FU Morphology#Morphological data.
+urn:cite2:fumorph_grc:ParticipleForm.test:#urn:cite2:cite:datamodels.v1:fumorph#FU Morphology#Morphological data.
+urn:cite2:fumorph_grc:InfinitiveForm.test:#urn:cite2:cite:datamodels.v1:fumorph#FU Morphology#Morphological data.
+urn:cite2:fumorph_grc:AdjectiveForm.test:#urn:cite2:cite:datamodels.v1:fumorph#FU Morphology#Morphological data.
+// Greek Fields
+urn:cite2:fumorph_grc:IndeclinableForm.test.surfaceform:#urn:cite2:cite:datamodels.v1:lgs#LiteraryGreekString#Text implements LiteraryGreekString.
+urn:cite2:fumorph_grc:IndeclinableForm.test.lemma:#urn:cite2:cite:datamodels.v1:lgs#LiteraryGreekString#Text implements LiteraryGreekString.
+urn:cite2:fumorph_grc:ArticleForm.test.surfaceform:#urn:cite2:cite:datamodels.v1:lgs#LiteraryGreekString#Text implements LiteraryGreekString.
+urn:cite2:fumorph_grc:ArticleForm.test.lemma:#urn:cite2:cite:datamodels.v1:lgs#LiteraryGreekString#Text implements LiteraryGreekString.
+urn:cite2:fumorph_grc:NounForm.test.surfaceform:#urn:cite2:cite:datamodels.v1:lgs#LiteraryGreekString#Text implements LiteraryGreekString.
+urn:cite2:fumorph_grc:NounForm.test.lemma:#urn:cite2:cite:datamodels.v1:lgs#LiteraryGreekString#Text implements LiteraryGreekString.
+urn:cite2:fumorph_grc:PronounForm.test.surfaceform:#urn:cite2:cite:datamodels.v1:lgs#LiteraryGreekString#Text implements LiteraryGreekString.
+urn:cite2:fumorph_grc:PronounForm.test.lemma:#urn:cite2:cite:datamodels.v1:lgs#LiteraryGreekString#Text implements LiteraryGreekString.
+urn:cite2:fumorph_grc:InvalidForm.test.surfaceform:#urn:cite2:cite:datamodels.v1:lgs#LiteraryGreekString#Text implements LiteraryGreekString.
+urn:cite2:fumorph_grc:InvalidForm.test.lemma:#urn:cite2:cite:datamodels.v1:lgs#LiteraryGreekString#Text implements LiteraryGreekString.
+urn:cite2:fumorph_grc:FiniteVerbForm.test.surfaceform:#urn:cite2:cite:datamodels.v1:lgs#LiteraryGreekString#Text implements LiteraryGreekString.
+urn:cite2:fumorph_grc:FiniteVerbForm.test.lemma:#urn:cite2:cite:datamodels.v1:lgs#LiteraryGreekString#Text implements LiteraryGreekString.
+urn:cite2:fumorph_grc:ParticipleForm.test.surfaceform:#urn:cite2:cite:datamodels.v1:lgs#LiteraryGreekString#Text implements LiteraryGreekString.
+urn:cite2:fumorph_grc:ParticipleForm.test.lemma:#urn:cite2:cite:datamodels.v1:lgs#LiteraryGreekString#Text implements LiteraryGreekString.
+urn:cite2:fumorph_grc:InfinitiveForm.test.surfaceform:#urn:cite2:cite:datamodels.v1:lgs#LiteraryGreekString#Text implements LiteraryGreekString.
+urn:cite2:fumorph_grc:InfinitiveForm.test.lemma:#urn:cite2:cite:datamodels.v1:lgs#LiteraryGreekString#Text implements LiteraryGreekString.
+urn:cite2:fumorph_grc:AdjectiveForm.test.surfaceform:#urn:cite2:cite:datamodels.v1:lgs#LiteraryGreekString#Text implements LiteraryGreekString.
+urn:cite2:fumorph_grc:AdjectiveForm.test.lemma:#urn:cite2:cite:datamodels.v1:lgs#LiteraryGreekString#Text implements LiteraryGreekString.
+
+#!citecollections
+URN#Description#Labelling property#Ordering property#License
+urn:cite2:cite:datamodels.v1:#CITE data models#urn:cite2:cite:datamodels.v1.label:##Public domain
+
+#!citeproperties
+Property#Label#Type#Authority list
+urn:cite2:cite:datamodels.v1.urn:#Data model#Cite2Urn#
+urn:cite2:cite:datamodels.v1.label:#Label#String#
+urn:cite2:cite:datamodels.v1.description:#Description#String#
+
+#!citedata
+urn#label#description
+urn:cite2:cite:datamodels.v1:fumorph#Furman University Morphology Collection#Model of morphology data for Latin and Greek.
+urn:cite2:cite:datamodels.v1:lgs#Literary Greek String#Identifies CITE Properties that contain representations of the LiteraryGreekString class.
+
+#!citeproperties
+Property#Label#Type#Authority list
+urn:cite2:fumorph_grc:IndeclinableForm.test.urn:#urn#String#
+urn:cite2:fumorph_grc:IndeclinableForm.test.surfaceform:#surfaceform#String#
+urn:cite2:fumorph_grc:IndeclinableForm.test.lemma:#lemma#String#
+urn:cite2:fumorph_grc:IndeclinableForm.test.lang:#lang#String#
+urn:cite2:fumorph_grc:IndeclinableForm.test.pos:#pos#String#
+urn:cite2:fumorph_grc:IndeclinableForm.test.info:#info#String#
+
+#!citeproperties
+Property#Label#Type#Authority list
+urn:cite2:fumorph_grc:ArticleForm.test.urn:#urn#String#
+urn:cite2:fumorph_grc:ArticleForm.test.surfaceform:#surfaceform#String#
+urn:cite2:fumorph_grc:ArticleForm.test.lemma:#lemma#String#
+urn:cite2:fumorph_grc:ArticleForm.test.lang:#lang#String#
+urn:cite2:fumorph_grc:ArticleForm.test.gender:#gender#String#
+urn:cite2:fumorph_grc:ArticleForm.test.case:#case#String#
+urn:cite2:fumorph_grc:ArticleForm.test.number:#number#String#
+urn:cite2:fumorph_grc:ArticleForm.test.info:#info#String#
+
+#!citeproperties
+Property#Label#Type#Authority list
+urn:cite2:fumorph_grc:NounForm.test.urn:#urn#String#
+urn:cite2:fumorph_grc:NounForm.test.surfaceform:#surfaceform#String#
+urn:cite2:fumorph_grc:NounForm.test.lemma:#lemma#String#
+urn:cite2:fumorph_grc:NounForm.test.lang:#lang#String#
+urn:cite2:fumorph_grc:NounForm.test.gender:#gender#String#
+urn:cite2:fumorph_grc:NounForm.test.case:#case#String#
+urn:cite2:fumorph_grc:NounForm.test.number:#number#String#
+urn:cite2:fumorph_grc:NounForm.test.info:#info#String#
+
+#!citeproperties
+Property#Label#Type#Authority list
+urn:cite2:fumorph_grc:PronounForm.test.urn:#urn#String#
+urn:cite2:fumorph_grc:PronounForm.test.surfaceform:#surfaceform#String#
+urn:cite2:fumorph_grc:PronounForm.test.lemma:#lemma#String#
+urn:cite2:fumorph_grc:PronounForm.test.lang:#lang#String#
+urn:cite2:fumorph_grc:PronounForm.test.gender:#gender#String#
+urn:cite2:fumorph_grc:PronounForm.test.case:#case#String#
+urn:cite2:fumorph_grc:PronounForm.test.number:#number#String#
+urn:cite2:fumorph_grc:PronounForm.test.info:#info#String#
+
+#!citeproperties
+Property#Label#Type#Authority list
+urn:cite2:fumorph_grc:InvalidForm.test.urn:#urn#String#
+urn:cite2:fumorph_grc:InvalidForm.test.surfaceform:#surfaceform#String#
+urn:cite2:fumorph_grc:InvalidForm.test.lemma:#lemma#String#
+urn:cite2:fumorph_grc:InvalidForm.test.lang:#lang#String#
+urn:cite2:fumorph_grc:InvalidForm.test.info:#info#String#
+
+#!citeproperties
+Property#Label#Type#Authority list
+urn:cite2:fumorph_grc:FiniteVerbForm.test.urn:#urn#String#
+urn:cite2:fumorph_grc:FiniteVerbForm.test.surfaceform:#surfaceform#String#
+urn:cite2:fumorph_grc:FiniteVerbForm.test.lemma:#lemma#String#
+urn:cite2:fumorph_grc:FiniteVerbForm.test.lang:#lang#String#
+urn:cite2:fumorph_grc:FiniteVerbForm.test.person:#person#String#
+urn:cite2:fumorph_grc:FiniteVerbForm.test.number:#number#String#
+urn:cite2:fumorph_grc:FiniteVerbForm.test.tense:#tense#String#
+urn:cite2:fumorph_grc:FiniteVerbForm.test.voice:#voice#String#
+urn:cite2:fumorph_grc:FiniteVerbForm.test.mood:#mood#String#
+urn:cite2:fumorph_grc:FiniteVerbForm.test.info:#info#String#
+
+#!citeproperties
+Property#Label#Type#Authority list
+urn:cite2:fumorph_grc:ParticipleForm.test.urn:#urn#String#
+urn:cite2:fumorph_grc:ParticipleForm.test.surfaceform:#surfaceform#String#
+urn:cite2:fumorph_grc:ParticipleForm.test.lemma:#lemma#String#
+urn:cite2:fumorph_grc:ParticipleForm.test.lang:#lang#String#
+urn:cite2:fumorph_grc:ParticipleForm.test.tense:#tense#String#
+urn:cite2:fumorph_grc:ParticipleForm.test.voice:#voice#String#
+urn:cite2:fumorph_grc:ParticipleForm.test.gender:#gender#String#
+urn:cite2:fumorph_grc:ParticipleForm.test.case:#case#String#
+urn:cite2:fumorph_grc:ParticipleForm.test.number:#number#String#
+urn:cite2:fumorph_grc:ParticipleForm.test.info:#info#String#
+
+#!citeproperties
+Property#Label#Type#Authority list
+urn:cite2:fumorph_grc:InfinitiveForm.test.urn:#urn#String#
+urn:cite2:fumorph_grc:InfinitiveForm.test.surfaceform:#surfaceform#String#
+urn:cite2:fumorph_grc:InfinitiveForm.test.lemma:#lemma#String#
+urn:cite2:fumorph_grc:InfinitiveForm.test.lang:#lang#String#
+urn:cite2:fumorph_grc:InfinitiveForm.test.tense:#tense#String#
+urn:cite2:fumorph_grc:InfinitiveForm.test.voice:#voice#String#
+urn:cite2:fumorph_grc:InfinitiveForm.test.info:#info#String#
+
+#!citeproperties
+Property#Label#Type#Authority list
+urn:cite2:fumorph_grc:AdjectiveForm.test.urn:#urn#String#
+urn:cite2:fumorph_grc:AdjectiveForm.test.surfaceform:#surfaceform#String#
+urn:cite2:fumorph_grc:AdjectiveForm.test.lemma:#lemma#String#
+urn:cite2:fumorph_grc:AdjectiveForm.test.lang:#lang#String#
+urn:cite2:fumorph_grc:AdjectiveForm.test.gender:#gender#String#
+urn:cite2:fumorph_grc:AdjectiveForm.test.case:#case#String#
+urn:cite2:fumorph_grc:AdjectiveForm.test.number:#number#String#
+urn:cite2:fumorph_grc:AdjectiveForm.test.degree:#degree#String#
+urn:cite2:fumorph_grc:AdjectiveForm.test.info:#info#String#
+
+#!citedata
+urn#surfaceform#lemma#lang#pos#info
+urn:cite2:fumorph_grc:IndeclinableForm.test:155391957379099530#de/#de/#grc#Particle#lang: grc; stem: δέ; stemtype: particle; partOfSpeech: particle; morph: indeclform.
+urn:cite2:fumorph_grc:IndeclinableForm.test:155391957379242781#kai/#kai/#grc#Conjunction#lang: grc; stem: καί; stemtype: conj; partOfSpeech: conjunction; morph: indeclform.
+urn:cite2:fumorph_grc:IndeclinableForm.test:155391957379463382#te#te#grc#Particle#lang: grc; stem: τε; stemtype: particle; partOfSpeech: particle; morph: enclitic indeclform.
+urn:cite2:fumorph_grc:IndeclinableForm.test:155391957379554703#dh/#dh/#grc#Particle#lang: grc; stem: δή; stemtype: particle; partOfSpeech: particle; morph: indeclform.
+urn:cite2:fumorph_grc:IndeclinableForm.test:155391957379735324#me/n#me/n#grc#Particle#lang: grc; stem: μέν; stemtype: particle; partOfSpeech: particle; morph: indeclform.
+urn:cite2:fumorph_grc:IndeclinableForm.test:155391957379974225#w(s#w(s#grc#Conjunction#lang: grc; stem: ὡς; stemtype: conj; partOfSpeech: conjunction; morph: proclitic indeclform.
+urn:cite2:fumorph_grc:IndeclinableForm.test:155391957380017256#e)pi/#e)pi/#grc#Preposition#lang: grc; stem: ἐπί; stemtype: prep; partOfSpeech: preposition; morph: indeclform.
+urn:cite2:fumorph_grc:IndeclinableForm.test:155391957380213997#d%27#de/#grc#Particle#lang: grc; stem: δέ; stemtype: particle; partOfSpeech: particle; morph: indeclform.
+
+
+#!citedata
+urn#surfaceform#lemma#lang#gender#case#number#info
+urn:cite2:fumorph_grc:ArticleForm.test:155391957380437510#th/n#o(#grc#Feminine#Accusative#Singular#stem: τήν; stemtype: article; dial: Attic epic Ionic; morph: indeclform.
+urn:cite2:fumorph_grc:ArticleForm.test:155391957380527151#th=s#o(#grc#Feminine#Genitive#Singular#stem: τῆς; stemtype: article; dial: Attic epic Ionic; morph: indeclform.
+urn:cite2:fumorph_grc:ArticleForm.test:155391957380779162#toi=si#o(#grc#Masculine#Dative#Plural#stem: τοῖσι; stemtype: article; dial: epic Ionic Aeolic; morph: indeclform.
+urn:cite2:fumorph_grc:ArticleForm.test:155391957380881513#toi=si#o(#grc#Neuter#Dative#Plural#stem: τοῖσι; stemtype: article; dial: epic Ionic Aeolic; morph: indeclform.
+urn:cite2:fumorph_grc:ArticleForm.test:155391957381072324#tw=n#o(#grc#Feminine#Genitive#Plural#stem: τῶν; stemtype: article; morph: indeclform.
+urn:cite2:fumorph_grc:ArticleForm.test:155391957381118685#tw=n#o(#grc#Masculine#Genitive#Plural#stem: τῶν; stemtype: article; morph: indeclform.
+urn:cite2:fumorph_grc:ArticleForm.test:155391957381364236#tw=n#o(#grc#Neuter#Genitive#Plural#stem: τῶν; stemtype: article; morph: indeclform.
+urn:cite2:fumorph_grc:ArticleForm.test:155391957381472777#h(/#o(#grc#Feminine#Nominative#Singular#stem: ἥ; stemtype: article; morph: proclitic indeclform.
+urn:cite2:fumorph_grc:ArticleForm.test:15539195738163178#h(/#o(#grc#Feminine#Vocative#Singular#stem: ἥ; stemtype: article; morph: proclitic indeclform.
+
+
+#!citedata
+urn#surfaceform#lemma#lang#gender#case#number#info
+urn:cite2:fumorph_grc:NounForm.test:155391957381873750#*ku/rou#*ku/rhs#grc#Masculine#Genitive#Singular#stem: Κυρ; stemtype: hs_ou; suff: ου; decl: 1st.
+urn:cite2:fumorph_grc:NounForm.test:155391957381936271#*ku/rou#*ku=ros#grc#Masculine#Genitive#Singular#stem: Κῡρ; stemtype: os_ou; suff: ου; decl: 2nd.
+urn:cite2:fumorph_grc:NounForm.test:155391957382197632#basilhi/hn#basilei/a#grc#Feminine#Accusative#Singular#stem: βασιληϊ; stemtype: h_hs; suff: ην; dial: epic Ionic; decl: 1st.
+urn:cite2:fumorph_grc:NounForm.test:155391957382264343#*kambu/shs#*kambu/shs#grc#Masculine#Accusative#Plural#stem: Καμβυς; stemtype: hs_eos; suff: ης; dial: Attic epic Doric; morph: contr; decl: 3rd.
+urn:cite2:fumorph_grc:NounForm.test:15539195738241964#*kambu/shs#*kambu/shs#grc#Masculine#Nominative#Plural#stem: Καμβυς; stemtype: hs_eos; suff: ης; dial: Doric Aeolic; morph: contr; decl: 3rd.
+urn:cite2:fumorph_grc:NounForm.test:155391957382599575#*kambu/shs#*kambu/shs#grc#Masculine#Vocative#Plural#stem: Καμβυς; stemtype: hs_eos; suff: ης; dial: Doric Aeolic; morph: contr; decl: 3rd.
+urn:cite2:fumorph_grc:NounForm.test:155391957382753426#*kambu/shs#*kambu/shs#grc#Masculine#Nominative#Singular#stem: Καμβυς; stemtype: hs_eos; suff: ης; decl: 3rd.
+urn:cite2:fumorph_grc:NounForm.test:155391957382842157#*kambu/shs#*kambu/shs#grc#Masculine#Nominative#Singular#stem: Καμβυς; stemtype: hs_ou; suff: ης; decl: 1st.
+urn:cite2:fumorph_grc:NounForm.test:155391957383011678#pai=s#pai=s#grc#Masculine#Nominative#Singular#stem: παῖς; stemtype: irreg_decl3; morph: indeclform; decl: 3rd.
+urn:cite2:fumorph_grc:NounForm.test:155391957383134839#pai=s#pai=s#grc#Feminine#Nominative#Singular#stem: παῖς; stemtype: irreg_decl3; morph: indeclform; decl: 3rd.
+urn:cite2:fumorph_grc:NounForm.test:155391957383341710#*kassanda/nhs#*kassanda/nh#grc#Feminine#Genitive#Singular#stem: Κασσανδαν; stemtype: h_hs; suff: ης; dial: Attic epic Ionic; decl: 1st.
+urn:cite2:fumorph_grc:NounForm.test:1553919573834733711#*farna/spew#*farna/sphs#grc#Masculine#Genitive#Singular#stem: Φαρνασπ; stemtype: hs_ou; suff: εω̆; dial: epic Ionic; decl: 1st.
+urn:cite2:fumorph_grc:NounForm.test:155391957383618112#qugatro/s#quga/thr#grc#Feminine#Genitive#Singular#stem: θυγατρός; stemtype: irreg_decl3; morph: indeclform; decl: 3rd.
+urn:cite2:fumorph_grc:NounForm.test:1553919573837997013#qugatro/s#quga/thr#grc#Feminine#Genitive#Singular#stem: θυγατ; stemtype: hr_eros; suff: ρος; morph: syncope; decl: 3rd.
+urn:cite2:fumorph_grc:NounForm.test:1553919573839752214#*ku=ros#*ku=ros#grc#Masculine#Nominative#Singular#stem: Κῡρ; stemtype: os_ou; suff: ος; decl: 2nd.
+urn:cite2:fumorph_grc:NounForm.test:1553919573840821815#*ku=ros#ku=ros#grc#Neuter#Nominative#Singular#stem: κῡρ; stemtype: hs_eos; suff: ος; decl: 3rd.
+urn:cite2:fumorph_grc:NounForm.test:1553919573842838716#*ku=ros#ku=ros#grc#Neuter#Vocative#Singular#stem: κῡρ; stemtype: hs_eos; suff: ος; decl: 3rd.
+urn:cite2:fumorph_grc:NounForm.test:1553919573843593617#*ku=ros#ku=ros#grc#Neuter#Accusative#Singular#stem: κῡρ; stemtype: hs_eos; suff: ος; decl: 3rd.
+urn:cite2:fumorph_grc:NounForm.test:1553919573844146318#pe/nqos#pe/nqos#grc#Neuter#Nominative#Singular#stem: πενθ; stemtype: hs_eos; suff: ος; decl: 3rd.
+urn:cite2:fumorph_grc:NounForm.test:155391957384621519#pe/nqos#pe/nqos#grc#Neuter#Vocative#Singular#stem: πενθ; stemtype: hs_eos; suff: ος; decl: 3rd.
+urn:cite2:fumorph_grc:NounForm.test:155391957384747520#pe/nqos#pe/nqos#grc#Neuter#Accusative#Singular#stem: πενθ; stemtype: hs_eos; suff: ος; decl: 3rd.
+urn:cite2:fumorph_grc:NounForm.test:1553919573849242321#pa=si#pa=sis#grc#Feminine#Vocative#Singular#stem: πᾱς; stemtype: is_ews; suff: ι; decl: 3rd.
+urn:cite2:fumorph_grc:NounForm.test:155391957385042922#gunaiko/s#gunh/#grc#Feminine#Genitive#Singular#stem: γυναικός; stemtype: irreg_decl3; morph: indeclform; decl: 3rd.
+urn:cite2:fumorph_grc:NounForm.test:1553919573852172923#*ai)ole/as#*ai)oleu/s#grc#Masculine#Accusative#Plural#stem: Αἰολ; stemtype: eus_ews; suff: έᾱς; decl: 3rd.
+urn:cite2:fumorph_grc:NounForm.test:1553919573853402024#dou/lous#dou=los#grc#Masculine#Accusative#Plural#stem: δουλ; stemtype: os_ou; suff: ους; decl: 2nd.
+urn:cite2:fumorph_grc:NounForm.test:1553919573854379525#*ai)/gupton#*ai)/guptos#grc#Feminine#Accusative#Singular#stem: Αἰγυπτ; stemtype: os_ou; suff: ον; decl: 2nd.
+urn:cite2:fumorph_grc:NounForm.test:155391957385615426#*ai)/gupton#*ai)/guptos#grc#Masculine#Accusative#Singular#stem: Αἰγυπτ; stemtype: os_ou; suff: ον; decl: 2nd.
+urn:cite2:fumorph_grc:NounForm.test:1553919573857169627#strathlasi/hn#strathlasi/a#grc#Feminine#Accusative#Singular#stem: στρατηλασι; stemtype: h_hs; suff: ην; dial: epic Ionic; decl: 1st.
+urn:cite2:fumorph_grc:NounForm.test:1553919573859704928#mh=nin#mh=nis#grc#Feminine#Accusative#Singular#stem: μη̄ν; stemtype: is_ews; suff: ιν; decl: 3rd.
+urn:cite2:fumorph_grc:NounForm.test:1553919573860397629#qea/#qea/#grc#Feminine#Nominative#Dual#stem: θε; stemtype: h_hs; suff: ᾱ; decl: 1st.
+urn:cite2:fumorph_grc:NounForm.test:1553919573862274930#qea/#qea/#grc#Feminine#Vocative#Dual#stem: θε; stemtype: h_hs; suff: ᾱ; decl: 1st.
+urn:cite2:fumorph_grc:NounForm.test:155391957386392531#qea/#qea/#grc#Feminine#Accusative#Dual#stem: θε; stemtype: h_hs; suff: ᾱ; decl: 1st.
+urn:cite2:fumorph_grc:NounForm.test:1553919573865453832#qea/#qea/#grc#Feminine#Nominative#Singular#stem: θε; stemtype: h_hs; suff: ᾱ; dial: Attic Doric Aeolic; decl: 1st.
+urn:cite2:fumorph_grc:NounForm.test:155391957386663233#qea/#qea/#grc#Feminine#Vocative#Singular#stem: θε; stemtype: h_hs; suff: ᾱ; dial: Attic Doric Aeolic; decl: 1st.
+urn:cite2:fumorph_grc:NounForm.test:1553919573867365534#a)/lge%27#a)/lgos#grc#Neuter#Nominative#Plural#stem: ἀλγ; stemtype: hs_eos; suff: εα; dial: epic Ionic; decl: 3rd.
+urn:cite2:fumorph_grc:NounForm.test:1553919573869515735#a)/lge%27#a)/lgos#grc#Neuter#Vocative#Plural#stem: ἀλγ; stemtype: hs_eos; suff: εα; dial: epic Ionic; decl: 3rd.
+urn:cite2:fumorph_grc:NounForm.test:1553919573870206136#a)/lge%27#a)/lgos#grc#Neuter#Accusative#Plural#stem: ἀλγ; stemtype: hs_eos; suff: εα; dial: epic Ionic; decl: 3rd.
+urn:cite2:fumorph_grc:NounForm.test:1553919573871364637#a)/lge%27#a)/lgos#grc#Neuter#Nominative#Dual#stem: ἀλγ; stemtype: hs_eos; suff: ει; dial: Attic epic; morph: contr; decl: 3rd.
+urn:cite2:fumorph_grc:NounForm.test:1553919573873628638#a)/lge%27#a)/lgos#grc#Neuter#Vocative#Dual#stem: ἀλγ; stemtype: hs_eos; suff: ει; dial: Attic epic; morph: contr; decl: 3rd.
+urn:cite2:fumorph_grc:NounForm.test:1553919573874734939#a)/lge%27#a)/lgos#grc#Neuter#Accusative#Dual#stem: ἀλγ; stemtype: hs_eos; suff: ει; dial: Attic epic; morph: contr; decl: 3rd.
+urn:cite2:fumorph_grc:NounForm.test:1553919573876191440#a)/lge%27#a)/lgos#grc#Neuter#Dative#Singular#stem: ἀλγ; stemtype: hs_eos; suff: εϊ; dial: epic Ionic; decl: 3rd.
+urn:cite2:fumorph_grc:NounForm.test:1553919573877872741#a)/lge%27#a)/lgos#grc#Neuter#Dative#Singular#stem: ἀλγ; stemtype: hs_eos; suff: ει; morph: contr; decl: 3rd.
+urn:cite2:fumorph_grc:NounForm.test:1553919573879701042#a)/lge%27#a)/lgos#grc#Neuter#Nominative#Dual#stem: ἀλγ; stemtype: hs_eos; suff: εε; dial: epic Ionic; decl: 3rd.
+urn:cite2:fumorph_grc:NounForm.test:1553919573880937443#a)/lge%27#a)/lgos#grc#Neuter#Vocative#Dual#stem: ἀλγ; stemtype: hs_eos; suff: εε; dial: epic Ionic; decl: 3rd.
+urn:cite2:fumorph_grc:NounForm.test:1553919573882971644#a)/lge%27#a)/lgos#grc#Neuter#Accusative#Dual#stem: ἀλγ; stemtype: hs_eos; suff: εε; dial: epic Ionic; decl: 3rd.
+urn:cite2:fumorph_grc:NounForm.test:1553919573883551445#yuxa/s#yuxh/#grc#Feminine#Accusative#Plural#stem: ψῡχ; stemtype: h_hs; suff: ᾱς; decl: 1st.
+urn:cite2:fumorph_grc:NounForm.test:155391957388485246#h(rw/wn#h(/rws#grc#Masculine#Genitive#Plural#stem: ἡρ; stemtype: ws_oos; suff: ώων; dial: epic; morph: poetic; decl: 3rd.
+urn:cite2:fumorph_grc:NounForm.test:1553919573886995547#h(rw/wn#h(/rws#grc#Masculine#Genitive#Plural#stem: ἡρ; stemtype: ws_wos; suff: ώ̆ων; decl: 3rd.
+urn:cite2:fumorph_grc:NounForm.test:1553919573887141248#e(lw/ria#e(lw/rion#grc#Neuter#Nominative#Plural#stem: ἑλωρι; stemtype: os_ou; suff: α; decl: 2nd.
+urn:cite2:fumorph_grc:NounForm.test:1553919573889327249#e(lw/ria#e(lw/rion#grc#Neuter#Vocative#Plural#stem: ἑλωρι; stemtype: os_ou; suff: α; decl: 2nd.
+urn:cite2:fumorph_grc:NounForm.test:1553919573890808250#e(lw/ria#e(lw/rion#grc#Neuter#Accusative#Plural#stem: ἑλωρι; stemtype: os_ou; suff: α; decl: 2nd.
+urn:cite2:fumorph_grc:NounForm.test:1553919573892841151#ku/nessin#ku/wn#grc#Masculine#Dative#Plural#stem: κύνεσσιν; stemtype: irreg_decl3; dial: epic Aeolic; morph: nu_movable indeclform; decl: 3rd.
+urn:cite2:fumorph_grc:NounForm.test:1553919573893684452#ku/nessin#ku/wn#grc#Feminine#Dative#Plural#stem: κύνεσσιν; stemtype: irreg_decl3; dial: epic Aeolic; morph: nu_movable indeclform; decl: 3rd.
+urn:cite2:fumorph_grc:NounForm.test:1553919573894546753#oi)wnoi=si/#oi)wno/s#grc#Masculine#Dative#Plural#stem: οἰων; stemtype: os_ou; suff: οισι; dial: epic Ionic Aeolic; decl: 2nd.
+urn:cite2:fumorph_grc:NounForm.test:1553919573896519554#*dio/s#*zeu/s#grc#Masculine#Genitive#Singular#stem: Διός; stemtype: irreg_decl3; morph: indeclform; decl: 3rd.
+urn:cite2:fumorph_grc:NounForm.test:155391957389777055#boulh/#boulh/#grc#Feminine#Nominative#Singular#stem: βουλ; stemtype: h_hs; suff: η; dial: Attic epic Ionic; decl: 1st.
+urn:cite2:fumorph_grc:NounForm.test:1553919573899874256#boulh/#boulh/#grc#Feminine#Vocative#Singular#stem: βουλ; stemtype: h_hs; suff: η; dial: Attic epic Ionic; decl: 1st.
+
+
+#!citedata
+urn#surfaceform#lemma#lang#gender#case#number#info
+urn:cite2:fumorph_grc:PronounForm.test:155391957390073210#au)to/s#au)to/s#grc#Masculine#Nominative#Singular#stem: αὐτ; stemtype: art_adj; suff: ος.
+urn:cite2:fumorph_grc:PronounForm.test:155391957390145331#a)/lloisi#a)/llos#grc#Neuter#Dative#Plural#stem: ἀλλ; stemtype: art_adj; suff: οισι; dial: epic Ionic Aeolic.
+urn:cite2:fumorph_grc:PronounForm.test:15539195739034352#a)/lloisi#a)/llos#grc#Masculine#Dative#Plural#stem: ἀλλ; stemtype: art_adj; suff: οισι; dial: epic Ionic Aeolic.
+urn:cite2:fumorph_grc:PronounForm.test:15539195739043903#*tau/ths#ou(=tos#grc#Feminine#Genitive#Singular#stem: ταύτης; stemtype: pron_adj1; dial: Attic epic Ionic; morph: indeclform.
+urn:cite2:fumorph_grc:PronounForm.test:155391957390584394#a)/llous#a)/llos#grc#Masculine#Accusative#Plural#stem: ἀλλ; stemtype: art_adj; suff: ους.
+urn:cite2:fumorph_grc:PronounForm.test:155391957390782695#h(/#o(/s#grc#Feminine#Nominative#Singular#stem: ἥ; stemtype: relative; dial: Attic Homeric Ionic; morph: indeclform.
+urn:cite2:fumorph_grc:PronounForm.test:155391957390848266#au)tou/s#au)to/s#grc#Masculine#Accusative#Plural#stem: αὐτ; stemtype: art_adj; suff: ους.
+
+
+#!citedata
+urn#surfaceform#lemma#lang#info
+urn:cite2:fumorph_grc:InvalidForm.test:155391957390950900#toi=si#ti/s#grc#lang: grc; stem: τοῖσι; stemtype: indecl; partOfSpeech: irregular; dial: Attic; grammaticalNum: plural; grammaticalCase: dative; morph: indeclform.
+
+
+#!citedata
+urn#surfaceform#lemma#lang#person#number#tense#voice#mood#info
+urn:cite2:fumorph_grc:FiniteVerbForm.test:155391957391176910#*ku/rou#kure/w#grc#Second#Singular#Present#MedioPassive#Imperative#stem: κῡρ; stemtype: w_stem; suff: ου; dial: Attic epic Doric; morph: contr; derivtype: reg_conj.
+urn:cite2:fumorph_grc:FiniteVerbForm.test:15539195739136261#*ku/rou#kure/w#grc#Second#Singular#Imperfect#MedioPassive#Indicative#stem: κῡρ; stemtype: w_stem; suff: ου; dial: Attic epic Doric; morph: contr unaugmented; derivtype: reg_conj.
+urn:cite2:fumorph_grc:FiniteVerbForm.test:155391957391474252#*ku/rou#kuro/w#grc#Second#Singular#Present#Active#Imperative#stem: κῡρ; stemtype: ow_pr; suff: ου; morph: contr; derivtype: ow_denom.
+urn:cite2:fumorph_grc:FiniteVerbForm.test:155391957391596323#*ku/rou#kuro/w#grc#Third#Singular#Imperfect#Active#Indicative#stem: κῡρ; stemtype: ow_pr; suff: ου; dial: Homeric Ionic; morph: contr unaugmented; derivtype: ow_denom.
+urn:cite2:fumorph_grc:FiniteVerbForm.test:155391957391711824#pare/labe#paralamba/nw#grc#Third#Singular#Aorist#Active#Indicative#stem: παρά:ἐ:λαβ; stemtype: aor2; suff: ε; derivtype: anw.
+urn:cite2:fumorph_grc:FiniteVerbForm.test:155391957391923895#e)poih/sato#poie/w#grc#Third#Singular#Aorist#Middle#Indicative#stem: ἐ:ποιης; stemtype: aor1; suff: ατο; derivtype: ew_denom.
+urn:cite2:fumorph_grc:FiniteVerbForm.test:155391957392047326#proei=pe#proei=pon#grc#Third#Singular#Aorist#Active#Indicative#stem: πρό:εἰπ; stemtype: aor1; suff: ε; dial: epic Ionic; morph: raw_preverb.
+urn:cite2:fumorph_grc:FiniteVerbForm.test:155391957392177147#proei=pe#proei=pon#grc#Third#Singular#Aorist#Active#Indicative#stem: πρό:εἰπ; stemtype: aor2; suff: ε; morph: raw_preverb.
+urn:cite2:fumorph_grc:FiniteVerbForm.test:155391957392327698#h)=rxe#a)/rxw#grc#Second#Singular#Perfect#Active#Imperative#stem: ἠρχ; stemtype: perf_act; suff: ε; derivtype: reg_conj.
+urn:cite2:fumorph_grc:FiniteVerbForm.test:155391957392468709#h)=rxe#a)/rxw#grc#Third#Singular#Perfect#Active#Indicative#stem: ἠρχ; stemtype: perf_act; suff: ε; derivtype: reg_conj.
+urn:cite2:fumorph_grc:FiniteVerbForm.test:155391957392689410#h)=rxe#a)/rxw#grc#Third#Singular#Imperfect#Active#Indicative#stem: ἀρχ; stemtype: w_stem; suff: ε; dial: Attic epic Ionic; derivtype: reg_conj.
+urn:cite2:fumorph_grc:FiniteVerbForm.test:1553919573927633111#dou/lous#doulo/w#grc#Second#Singular#Imperfect#Active#Indicative#stem: δουλ; stemtype: ow_pr; suff: ους; dial: Homeric Ionic; morph: contr unaugmented; derivtype: ow_denom.
+urn:cite2:fumorph_grc:FiniteVerbForm.test:1553919573928703212#e)no/mize#nomi/zw#grc#Third#Singular#Imperfect#Active#Indicative#stem: ἐ:νομιζ; stemtype: w_stem; suff: ε; derivtype: izw.
+urn:cite2:fumorph_grc:FiniteVerbForm.test:155391957393052013#e)poie/eto#poie/w#grc#Third#Singular#Imperfect#MedioPassive#Indicative#stem: ἐ:ποι; stemtype: ew_pr; suff: έετο; dial: epic Ionic; derivtype: ew_denom.
+urn:cite2:fumorph_grc:FiniteVerbForm.test:155391957393176514#e)pekra/tee#e)pikrate/w#grc#Third#Singular#Imperfect#Active#Indicative#stem: ἐπί:ἐ:κρατ; stemtype: ew_pr; suff: εε; dial: epic Ionic; derivtype: ew_denom.
+urn:cite2:fumorph_grc:FiniteVerbForm.test:1553919573933105915#a)/eide#a)ei/dw#grc#Third#Singular#Imperfect#Active#Indicative#stem: ἀειδ; stemtype: w_stem; suff: ε; dial: epic Doric Ionic Aeolic; derivtype: reg_conj.
+urn:cite2:fumorph_grc:FiniteVerbForm.test:1553919573934214616#a)/eide#a)ei/dw#grc#Second#Singular#Present#Active#Imperative#stem: ἀειδ; stemtype: w_stem; suff: ε; dial: epic Ionic; derivtype: reg_conj.
+urn:cite2:fumorph_grc:FiniteVerbForm.test:155391957393635317#a)/eide#a)ei/dw#grc#Third#Singular#Imperfect#Active#Indicative#stem: ἀειδ; stemtype: w_stem; suff: ε; dial: epic Doric Ionic Aeolic; morph: unaugmented; derivtype: reg_conj.
+urn:cite2:fumorph_grc:FiniteVerbForm.test:1553919573937806818#a)/lge%27#a)lge/w#grc#Third#Singular#Imperfect#Active#Indicative#stem: ἀλγ; stemtype: ew_pr; suff: ει; dial: Attic epic Doric Aeolic; morph: contr; derivtype: ew_denom.
+urn:cite2:fumorph_grc:FiniteVerbForm.test:1553919573938331119#a)/lge%27#a)lge/w#grc#Second#Singular#Present#Active#Imperative#stem: ἀλγ; stemtype: ew_pr; suff: ει; dial: Attic epic; morph: contr; derivtype: ew_denom.
+urn:cite2:fumorph_grc:FiniteVerbForm.test:1553919573940958620#a)/lge%27#a)lge/w#grc#Third#Singular#Imperfect#Active#Indicative#stem: ἀλγ; stemtype: ew_pr; suff: εε; dial: epic Doric Ionic Aeolic; derivtype: ew_denom.
+urn:cite2:fumorph_grc:FiniteVerbForm.test:1553919573941339621#a)/lge%27#a)lge/w#grc#Second#Singular#Present#Active#Imperative#stem: ἀλγ; stemtype: ew_pr; suff: εε; dial: epic Ionic; derivtype: ew_denom.
+urn:cite2:fumorph_grc:FiniteVerbForm.test:1553919573943392222#a)/lge%27#a)lge/w#grc#Second#Singular#Present#MedioPassive#Indicative#stem: ἀλγ; stemtype: ew_pr; suff: εαι; dial: epic Doric Ionic Aeolic; morph: poetic; derivtype: ew_denom.
+urn:cite2:fumorph_grc:FiniteVerbForm.test:1553919573944207723#a)/lge%27#a)lge/w#grc#Third#Singular#Imperfect#Active#Indicative#stem: ἀλγ; stemtype: ew_pr; suff: ει; dial: Attic epic; morph: contr unaugmented; derivtype: ew_denom.
+urn:cite2:fumorph_grc:FiniteVerbForm.test:1553919573946764524#a)/lge%27#a)lge/w#grc#Third#Singular#Imperfect#Active#Indicative#stem: ἀλγ; stemtype: ew_pr; suff: εε; dial: epic Ionic; morph: unaugmented; derivtype: ew_denom.
+urn:cite2:fumorph_grc:FiniteVerbForm.test:155391957394774425#e)/qhke#ti/qhmi#grc#Third#Singular#Aorist#Active#Indicative#stem: ἐ:θηκ; stemtype: aor1; suff: ε.
+urn:cite2:fumorph_grc:FiniteVerbForm.test:155391957394951526#teu=xe#teu/xw#grc#Second#Singular#Present#Active#Imperative#stem: τευχ; stemtype: w_stem; suff: ε; derivtype: reg_conj.
+urn:cite2:fumorph_grc:FiniteVerbForm.test:155391957395018427#teu=xe#teu/xw#grc#Third#Singular#Imperfect#Active#Indicative#stem: τευχ; stemtype: w_stem; suff: ε; dial: Homeric Ionic; morph: unaugmented; derivtype: reg_conj.
+urn:cite2:fumorph_grc:FiniteVerbForm.test:155391957395288028#e)telei/eto#tele/w#grc#Third#Singular#Imperfect#MedioPassive#Indicative#stem: ἐ:τελει; stemtype: w_stem; suff: ετο; derivtype: e_stem.
+
+
+#!citedata
+urn#surfaceform#lemma#lang#tense#voice#gender#case#number#info
+urn:cite2:fumorph_grc:ParticipleForm.test:155391957395340150#*teleuth/santos#teleuta/w#grc#Aorist#Active#Masculine#Genitive#Singular#stem: τελευτης; stemtype: aor1; suff: αντος; dial: Attic Ionic; derivtype: aw_denom.
+urn:cite2:fumorph_grc:ParticipleForm.test:15539195739549141#*teleuth/santos#teleuta/w#grc#Aorist#Active#Neuter#Genitive#Singular#stem: τελευτης; stemtype: aor1; suff: αντος; dial: Attic Ionic; derivtype: aw_denom.
+urn:cite2:fumorph_grc:ParticipleForm.test:155391957395649192#e)w/n#ei)mi/#grc#Present#Active#Masculine#Nominative#Singular#stem: ἐών; stemtype: irreg_mi; dial: epic Doric Ionic.
+urn:cite2:fumorph_grc:ParticipleForm.test:155391957395868663#proapoqanou/shs#proapoqnh/skw#grc#Aorist#Active#Feminine#Genitive#Singular#stem: πρό,ἀπό:θαν; stemtype: aor2; suff: ούσης; dial: Attic epic Ionic.
+urn:cite2:fumorph_grc:ParticipleForm.test:155391957395945444#e)o/ntas#ei)mi/#grc#Present#Active#Masculine#Accusative#Plural#stem: ἐόντας; stemtype: irreg_mi; dial: epic Doric Ionic.
+urn:cite2:fumorph_grc:ParticipleForm.test:155391957396022735#paralabw/n#paralamba/nw#grc#Aorist#Active#Masculine#Nominative#Singular#stem: παρά:λαβ; stemtype: aor2; suff: ών; derivtype: anw.
+
+
+#!citedata
+urn#surfaceform#lemma#lang#tense#voice#info
+urn:cite2:fumorph_grc:InfinitiveForm.test:155391957396270150#poie/esqai#poie/w#grc#Present#MedioPassive#stem: ποι; stemtype: ew_pr; suff: έεσθαι; dial: epic Ionic; derivtype: ew_denom.
+
+
+#!citedata
+urn#surfaceform#lemma#lang#gender#case#number#degree#info
+urn:cite2:fumorph_grc:AdjectiveForm.test:155391957396381520#basilhi/hn#basi/leios#grc#Feminine#Accusative#Singular#Positive#stem: βασιληϊ; stemtype: os_h_on; suff: ην; dial: epic Ionic; decl: 1st & 2nd.
+urn:cite2:fumorph_grc:AdjectiveForm.test:155391957396519111#pai=s#pa=s#grc#Masculine#Nominative#Singular#Positive#stem: παῖς; stemtype: irreg_adj3; dial: Doric Aeolic; morph: contr indeclform; decl: 3rd.
+urn:cite2:fumorph_grc:AdjectiveForm.test:155391957396667582#pai=s#pa=s#grc#Masculine#Vocative#Singular#Positive#stem: παῖς; stemtype: irreg_adj3; dial: Doric Aeolic; morph: contr indeclform; decl: 3rd.
+urn:cite2:fumorph_grc:AdjectiveForm.test:155391957396724563#me/ga#me/gas#grc#Neuter#Nominative#Singular#Positive#stem: μέγα; stemtype: irreg_adj3; morph: indeclform; decl: 3rd.
+urn:cite2:fumorph_grc:AdjectiveForm.test:1553919573969264#me/ga#me/gas#grc#Neuter#Vocative#Singular#Positive#stem: μέγα; stemtype: irreg_adj3; morph: indeclform; decl: 3rd.
+urn:cite2:fumorph_grc:AdjectiveForm.test:155391957397029535#me/ga#me/gas#grc#Neuter#Accusative#Singular#Positive#stem: μέγα; stemtype: irreg_adj3; morph: indeclform; decl: 3rd.
+urn:cite2:fumorph_grc:AdjectiveForm.test:155391957397299146#pa=si#pa=s#grc#Masculine#Dative#Plural#Positive#stem: πᾶσι; stemtype: irreg_adj3; dial: Attic epic Ionic; morph: indeclform; decl: 3rd.
+urn:cite2:fumorph_grc:AdjectiveForm.test:155391957397362917#pa=si#pa=s#grc#Neuter#Dative#Plural#Positive#stem: πᾶσι; stemtype: irreg_adj3; dial: Attic epic Ionic; morph: indeclform; decl: 3rd.
+urn:cite2:fumorph_grc:AdjectiveForm.test:155391957397580128#dou/lous#dou=los#grc#Masculine#Accusative#Plural#Positive#stem: δουλ; stemtype: os_h_on; suff: ους; decl: 1st & 2nd.
+urn:cite2:fumorph_grc:AdjectiveForm.test:155391957397645699#patrwi/ous#patrw/ios#grc#Masculine#Accusative#Plural#Positive#stem: πατρωϊ; stemtype: os_h_on; suff: ους; decl: 1st & 2nd.
+urn:cite2:fumorph_grc:AdjectiveForm.test:1553919573978776310#patrwi/ous#patrw=|os#grc#Masculine#Accusative#Plural#Positive#stem: πατρωϊ; stemtype: os_on; suff: ους; dial: Ionic; decl: 1st & 2nd.
+urn:cite2:fumorph_grc:AdjectiveForm.test:1553919573979481511#patrwi/ous#patrw=|os#grc#Feminine#Accusative#Plural#Positive#stem: πατρωϊ; stemtype: os_on; suff: ους; dial: Ionic; decl: 1st & 2nd.
+urn:cite2:fumorph_grc:AdjectiveForm.test:1553919573981802612#patrwi/ous#patrw=|os#grc#Masculine#Accusative#Plural#Positive#stem: πατρωϊ; stemtype: os_h_on; suff: ους; dial: Ionic; decl: 1st & 2nd.
+urn:cite2:fumorph_grc:AdjectiveForm.test:1553919573983772713#ou)lome/nhn#ou)lo/menos#grc#Feminine#Accusative#Singular#Positive#stem: οὐλομεν; stemtype: os_h_on; suff: ην; dial: Attic epic Ionic; decl: 1st & 2nd.
+urn:cite2:fumorph_grc:AdjectiveForm.test:1553919573984402214#muri/%27#muri/os#grc#Neuter#Nominative#Plural#Positive#stem: μῡρι; stemtype: os_h_on; suff: α; decl: 1st & 2nd.
+urn:cite2:fumorph_grc:AdjectiveForm.test:1553919573986767115#muri/%27#muri/os#grc#Neuter#Vocative#Plural#Positive#stem: μῡρι; stemtype: os_h_on; suff: α; decl: 1st & 2nd.
+urn:cite2:fumorph_grc:AdjectiveForm.test:1553919573988264316#muri/%27#muri/os#grc#Neuter#Accusative#Plural#Positive#stem: μῡρι; stemtype: os_h_on; suff: α; decl: 1st & 2nd.
+urn:cite2:fumorph_grc:AdjectiveForm.test:155391957398983217#muri/%27#muri/os#grc#Masculine#Vocative#Singular#Positive#stem: μῡρι; stemtype: os_h_on; suff: ε; decl: 1st & 2nd.
+urn:cite2:fumorph_grc:AdjectiveForm.test:1553919573990242118#muri/%27#muri/os#grc#Feminine#Dative#Singular#Positive#stem: μῡρι; stemtype: os_h_on; suff: ᾱͅ; dial: Attic Doric Aeolic; morph: poetic; decl: 1st & 2nd.
+urn:cite2:fumorph_grc:AdjectiveForm.test:1553919573992428119#muri/%27#muri/os#grc#Feminine#Nominative#Plural#Positive#stem: μῡρι; stemtype: os_h_on; suff: αι; morph: poetic; decl: 1st & 2nd.
+urn:cite2:fumorph_grc:AdjectiveForm.test:155391957399327020#muri/%27#muri/os#grc#Feminine#Vocative#Plural#Positive#stem: μῡρι; stemtype: os_h_on; suff: αι; morph: poetic; decl: 1st & 2nd.
+urn:cite2:fumorph_grc:AdjectiveForm.test:1553919573995715921#polla/s#polu/s#grc#Feminine#Accusative#Plural#Positive#stem: πολλ; stemtype: os_h_on; suff: ᾱς; decl: 1st & 2nd.
+urn:cite2:fumorph_grc:AdjectiveForm.test:1553919573996104322#i)fqi/mous#i)/fqimos#grc#Masculine#Accusative#Plural#Positive#stem: ἰφθῑμ; stemtype: os_h_on; suff: ους; decl: 1st & 2nd.
+urn:cite2:fumorph_grc:AdjectiveForm.test:155391957399817323#i)fqi/mous#i)/fqimos#grc#Masculine#Accusative#Plural#Positive#stem: ἰφθῑμ; stemtype: os_on; suff: ους; decl: 1st & 2nd.
+urn:cite2:fumorph_grc:AdjectiveForm.test:1553919573999518824#i)fqi/mous#i)/fqimos#grc#Feminine#Accusative#Plural#Positive#stem: ἰφθῑμ; stemtype: os_on; suff: ους; decl: 1st & 2nd.
+
