@@ -1,5 +1,7 @@
 package edu.furman.classics.fumorph
 
+import edu.holycross.shot.cite._
+
 abstract class Form {
 	val surfaceForm:String
 	val lemma:Option[String]
@@ -23,6 +25,7 @@ trait DegreeableForm {
 	val degree: Degree
 }
 
+case class CitableMorphology(urn:Cite2Urn, form:Form)
 
 case class InvalidForm(lang:MorphLanguage, surfaceForm:String, lemma:Option[String], info:String = "") extends Form {
 	override def toString = {

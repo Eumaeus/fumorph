@@ -7,10 +7,10 @@ import cats.syntax.either._
 import io.circe._, io.circe.generic.auto._, io.circe.parser._, io.circe.syntax._
 import org.scalatest.FlatSpec
 
-class FuMorphObjectSpec extends FlatSpec {
+class MorphCexObjectSpec extends FlatSpec {
 
-	"The FuMorph Object" should "say have a language" in {
-		val fmo:FuMorph = new FuMorph(Greek)
+	"The MorphCex Object" should "say have a language" in {
+		val fmo:MorphCex = new MorphCex(Greek)
 		assert ( fmo.lang.abbr == "grc" )
 	}
 

@@ -1,5 +1,7 @@
 # morphjson: release notes
 
+**0.8.0**:  Perseus JSON > Forms > CEX > Forms implemented.
+
 **0.7.0**:  Still better language handling. Improved efforts to ensure that generated URNs are unique. Implemented Data Models for morphology and CITE properties that are LiteraryGreekStrings.
 
 **0.6.0**:  Better language handling. Working toward an Extended Text Property model.

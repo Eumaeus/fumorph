@@ -1,0 +1,598 @@
+#!cexversion
+3.0
+
+#!citelibrary
+name#CEX Library created by FuMorph
+urn#urn:cite2:cex:TEMPCOLL.TEMPVERSION:TEMP_ID
+license#Public Domain.
+
+
+#!citecollections
+URN#Description#Labelling property#Ordering property#License
+urn:cite2:fumorph_lat:AdjectiveForm.test:#Generated collection of AdjectiveForms#urn:cite2:fumorph_lat:AdjectiveForm.test.surfaceform:##Public Domain
+urn:cite2:fumorph_lat:IndeclinableForm.test:#Generated collection of IndeclinableForms#urn:cite2:fumorph_lat:IndeclinableForm.test.surfaceform:##Public Domain
+urn:cite2:fumorph_lat:FiniteVerbForm.test:#Generated collection of FiniteVerbForms#urn:cite2:fumorph_lat:FiniteVerbForm.test.surfaceform:##Public Domain
+urn:cite2:fumorph_lat:AdverbForm.test:#Generated collection of AdverbForms#urn:cite2:fumorph_lat:AdverbForm.test.surfaceform:##Public Domain
+urn:cite2:fumorph_lat:InvalidForm.test:#Generated collection of InvalidForms#urn:cite2:fumorph_lat:InvalidForm.test.surfaceform:##Public Domain
+urn:cite2:fumorph_lat:ParticipleForm.test:#Generated collection of ParticipleForms#urn:cite2:fumorph_lat:ParticipleForm.test.surfaceform:##Public Domain
+urn:cite2:fumorph_lat:InfinitiveForm.test:#Generated collection of InfinitiveForms#urn:cite2:fumorph_lat:InfinitiveForm.test.surfaceform:##Public Domain
+urn:cite2:fumorph_lat:PronounForm.test:#Generated collection of PronounForms#urn:cite2:fumorph_lat:PronounForm.test.surfaceform:##Public Domain
+urn:cite2:fumorph_lat:NounForm.test:#Generated collection of NounForms#urn:cite2:fumorph_lat:NounForm.test.surfaceform:##Public Domain
+urn:cite2:fumorph_lat:SupineForm.test:#Generated collection of SupineForms#urn:cite2:fumorph_lat:SupineForm.test.surfaceform:##Public Domain
+
+
+#!datamodels
+Collection#Model#Label#Description
+// Morphology collections
+urn:cite2:fumorph_lat:AdjectiveForm.test:#urn:cite2:cite:datamodels.v1:fumorph#FU Morphology#Morphological data.
+urn:cite2:fumorph_lat:IndeclinableForm.test:#urn:cite2:cite:datamodels.v1:fumorph#FU Morphology#Morphological data.
+urn:cite2:fumorph_lat:FiniteVerbForm.test:#urn:cite2:cite:datamodels.v1:fumorph#FU Morphology#Morphological data.
+urn:cite2:fumorph_lat:AdverbForm.test:#urn:cite2:cite:datamodels.v1:fumorph#FU Morphology#Morphological data.
+urn:cite2:fumorph_lat:InvalidForm.test:#urn:cite2:cite:datamodels.v1:fumorph#FU Morphology#Morphological data.
+urn:cite2:fumorph_lat:ParticipleForm.test:#urn:cite2:cite:datamodels.v1:fumorph#FU Morphology#Morphological data.
+urn:cite2:fumorph_lat:InfinitiveForm.test:#urn:cite2:cite:datamodels.v1:fumorph#FU Morphology#Morphological data.
+urn:cite2:fumorph_lat:PronounForm.test:#urn:cite2:cite:datamodels.v1:fumorph#FU Morphology#Morphological data.
+urn:cite2:fumorph_lat:NounForm.test:#urn:cite2:cite:datamodels.v1:fumorph#FU Morphology#Morphological data.
+urn:cite2:fumorph_lat:SupineForm.test:#urn:cite2:cite:datamodels.v1:fumorph#FU Morphology#Morphological data.
+
+#!citecollections
+URN#Description#Labelling property#Ordering property#License
+urn:cite2:cite:datamodels.v1:#CITE data models#urn:cite2:cite:datamodels.v1.label:##Public domain
+
+#!citeproperties
+Property#Label#Type#Authority list
+urn:cite2:cite:datamodels.v1.urn:#Data model#Cite2Urn#
+urn:cite2:cite:datamodels.v1.label:#Label#String#
+urn:cite2:cite:datamodels.v1.description:#Description#String#
+
+#!citedata
+urn#label#description
+urn:cite2:cite:datamodels.v1:fumorph#Furman University Morphology Collection#Model of morphology data for Latin and Greek.
+urn:cite2:cite:datamodels.v1:lgs#Literary Greek String#Identifies CITE Properties that contain representations of the LiteraryGreekString class.
+
+#!citeproperties
+Property#Label#Type#Authority list
+urn:cite2:fumorph_lat:AdjectiveForm.test.urn:#urn#String#
+urn:cite2:fumorph_lat:AdjectiveForm.test.surfaceform:#surfaceform#String#
+urn:cite2:fumorph_lat:AdjectiveForm.test.lemma:#lemma#String#
+urn:cite2:fumorph_lat:AdjectiveForm.test.lang:#lang#String#
+urn:cite2:fumorph_lat:AdjectiveForm.test.gender:#gender#String#
+urn:cite2:fumorph_lat:AdjectiveForm.test.case:#case#String#
+urn:cite2:fumorph_lat:AdjectiveForm.test.number:#number#String#
+urn:cite2:fumorph_lat:AdjectiveForm.test.degree:#degree#String#
+urn:cite2:fumorph_lat:AdjectiveForm.test.info:#info#String#
+
+#!citeproperties
+Property#Label#Type#Authority list
+urn:cite2:fumorph_lat:IndeclinableForm.test.urn:#urn#String#
+urn:cite2:fumorph_lat:IndeclinableForm.test.surfaceform:#surfaceform#String#
+urn:cite2:fumorph_lat:IndeclinableForm.test.lemma:#lemma#String#
+urn:cite2:fumorph_lat:IndeclinableForm.test.lang:#lang#String#
+urn:cite2:fumorph_lat:IndeclinableForm.test.pos:#pos#String#
+urn:cite2:fumorph_lat:IndeclinableForm.test.info:#info#String#
+
+#!citeproperties
+Property#Label#Type#Authority list
+urn:cite2:fumorph_lat:FiniteVerbForm.test.urn:#urn#String#
+urn:cite2:fumorph_lat:FiniteVerbForm.test.surfaceform:#surfaceform#String#
+urn:cite2:fumorph_lat:FiniteVerbForm.test.lemma:#lemma#String#
+urn:cite2:fumorph_lat:FiniteVerbForm.test.lang:#lang#String#
+urn:cite2:fumorph_lat:FiniteVerbForm.test.person:#person#String#
+urn:cite2:fumorph_lat:FiniteVerbForm.test.number:#number#String#
+urn:cite2:fumorph_lat:FiniteVerbForm.test.tense:#tense#String#
+urn:cite2:fumorph_lat:FiniteVerbForm.test.voice:#voice#String#
+urn:cite2:fumorph_lat:FiniteVerbForm.test.mood:#mood#String#
+urn:cite2:fumorph_lat:FiniteVerbForm.test.info:#info#String#
+
+#!citeproperties
+Property#Label#Type#Authority list
+urn:cite2:fumorph_lat:AdverbForm.test.urn:#urn#String#
+urn:cite2:fumorph_lat:AdverbForm.test.surfaceform:#surfaceform#String#
+urn:cite2:fumorph_lat:AdverbForm.test.lemma:#lemma#String#
+urn:cite2:fumorph_lat:AdverbForm.test.lang:#lang#String#
+urn:cite2:fumorph_lat:AdverbForm.test.degree:#degree#String#
+urn:cite2:fumorph_lat:AdverbForm.test.info:#info#String#
+
+#!citeproperties
+Property#Label#Type#Authority list
+urn:cite2:fumorph_lat:InvalidForm.test.urn:#urn#String#
+urn:cite2:fumorph_lat:InvalidForm.test.surfaceform:#surfaceform#String#
+urn:cite2:fumorph_lat:InvalidForm.test.lemma:#lemma#String#
+urn:cite2:fumorph_lat:InvalidForm.test.lang:#lang#String#
+urn:cite2:fumorph_lat:InvalidForm.test.info:#info#String#
+
+#!citeproperties
+Property#Label#Type#Authority list
+urn:cite2:fumorph_lat:ParticipleForm.test.urn:#urn#String#
+urn:cite2:fumorph_lat:ParticipleForm.test.surfaceform:#surfaceform#String#
+urn:cite2:fumorph_lat:ParticipleForm.test.lemma:#lemma#String#
+urn:cite2:fumorph_lat:ParticipleForm.test.lang:#lang#String#
+urn:cite2:fumorph_lat:ParticipleForm.test.tense:#tense#String#
+urn:cite2:fumorph_lat:ParticipleForm.test.voice:#voice#String#
+urn:cite2:fumorph_lat:ParticipleForm.test.gender:#gender#String#
+urn:cite2:fumorph_lat:ParticipleForm.test.case:#case#String#
+urn:cite2:fumorph_lat:ParticipleForm.test.number:#number#String#
+urn:cite2:fumorph_lat:ParticipleForm.test.info:#info#String#
+
+#!citeproperties
+Property#Label#Type#Authority list
+urn:cite2:fumorph_lat:InfinitiveForm.test.urn:#urn#String#
+urn:cite2:fumorph_lat:InfinitiveForm.test.surfaceform:#surfaceform#String#
+urn:cite2:fumorph_lat:InfinitiveForm.test.lemma:#lemma#String#
+urn:cite2:fumorph_lat:InfinitiveForm.test.lang:#lang#String#
+urn:cite2:fumorph_lat:InfinitiveForm.test.tense:#tense#String#
+urn:cite2:fumorph_lat:InfinitiveForm.test.voice:#voice#String#
+urn:cite2:fumorph_lat:InfinitiveForm.test.info:#info#String#
+
+#!citeproperties
+Property#Label#Type#Authority list
+urn:cite2:fumorph_lat:PronounForm.test.urn:#urn#String#
+urn:cite2:fumorph_lat:PronounForm.test.surfaceform:#surfaceform#String#
+urn:cite2:fumorph_lat:PronounForm.test.lemma:#lemma#String#
+urn:cite2:fumorph_lat:PronounForm.test.lang:#lang#String#
+urn:cite2:fumorph_lat:PronounForm.test.gender:#gender#String#
+urn:cite2:fumorph_lat:PronounForm.test.case:#case#String#
+urn:cite2:fumorph_lat:PronounForm.test.number:#number#String#
+urn:cite2:fumorph_lat:PronounForm.test.info:#info#String#
+
+#!citeproperties
+Property#Label#Type#Authority list
+urn:cite2:fumorph_lat:NounForm.test.urn:#urn#String#
+urn:cite2:fumorph_lat:NounForm.test.surfaceform:#surfaceform#String#
+urn:cite2:fumorph_lat:NounForm.test.lemma:#lemma#String#
+urn:cite2:fumorph_lat:NounForm.test.lang:#lang#String#
+urn:cite2:fumorph_lat:NounForm.test.gender:#gender#String#
+urn:cite2:fumorph_lat:NounForm.test.case:#case#String#
+urn:cite2:fumorph_lat:NounForm.test.number:#number#String#
+urn:cite2:fumorph_lat:NounForm.test.info:#info#String#
+
+#!citeproperties
+Property#Label#Type#Authority list
+urn:cite2:fumorph_lat:SupineForm.test.urn:#urn#String#
+urn:cite2:fumorph_lat:SupineForm.test.surfaceform:#surfaceform#String#
+urn:cite2:fumorph_lat:SupineForm.test.lemma:#lemma#String#
+urn:cite2:fumorph_lat:SupineForm.test.lang:#lang#String#
+urn:cite2:fumorph_lat:SupineForm.test.gender:#gender#String#
+urn:cite2:fumorph_lat:SupineForm.test.case:#case#String#
+urn:cite2:fumorph_lat:SupineForm.test.number:#number#String#
+urn:cite2:fumorph_lat:SupineForm.test.info:#info#String#
+
+#!citedata
+urn#surfaceform#lemma#lang#gender#case#number#degree#info
+urn:cite2:fumorph_lat:AdjectiveForm.test:155395529603464240#cano#canus#lat#Neuter#Ablative#Singular#Positive#stem: ca_n; stemtype: us_a_um; suff: o_; decl: 1st & 2nd.
+urn:cite2:fumorph_lat:AdjectiveForm.test:15539552960341661#cano#canus#lat#Masculine#Ablative#Singular#Positive#stem: ca_n; stemtype: us_a_um; suff: o_; decl: 1st & 2nd.
+urn:cite2:fumorph_lat:AdjectiveForm.test:155395529603435292#cano#canus#lat#Neuter#Dative#Singular#Positive#stem: ca_n; stemtype: us_a_um; suff: o_; decl: 1st & 2nd.
+urn:cite2:fumorph_lat:AdjectiveForm.test:15539552960341673#cano#canus#lat#Masculine#Dative#Singular#Positive#stem: ca_n; stemtype: us_a_um; suff: o_; decl: 1st & 2nd.
+urn:cite2:fumorph_lat:AdjectiveForm.test:15539552960347024#primus#primus#lat#Masculine#Nominative#Singular#Positive#stem: pri_m; stemtype: us_a_um; suff: us; decl: 1st & 2nd.
+urn:cite2:fumorph_lat:AdjectiveForm.test:155395529603477905#profugus#profugus#lat#Masculine#Nominative#Singular#Positive#stem: profug; stemtype: us_a_um; suff: us; decl: 1st & 2nd.
+urn:cite2:fumorph_lat:AdjectiveForm.test:15539552960348446#multum#multus#lat#Neuter#Genitive#Plural#Positive#stem: mult; stemtype: us_a_um; suff: u_m; morph: poetic; decl: 1st & 2nd.
+urn:cite2:fumorph_lat:AdjectiveForm.test:15539552960344687#multum#multus#lat#Masculine#Genitive#Plural#Positive#stem: mult; stemtype: us_a_um; suff: u_m; morph: poetic; decl: 1st & 2nd.
+urn:cite2:fumorph_lat:AdjectiveForm.test:15539552960344288#multum#multus#lat#Masculine#Accusative#Singular#Positive#stem: mult; stemtype: us_a_um; suff: um; decl: 1st & 2nd.
+urn:cite2:fumorph_lat:AdjectiveForm.test:155395529603477929#multum#multus#lat#Neuter#Nominative#Singular#Positive#stem: mult; stemtype: us_a_um; suff: um; decl: 1st & 2nd.
+urn:cite2:fumorph_lat:AdjectiveForm.test:1553955296034851610#multum#multus#lat#Neuter#Vocative#Singular#Positive#stem: mult; stemtype: us_a_um; suff: um; decl: 1st & 2nd.
+urn:cite2:fumorph_lat:AdjectiveForm.test:1553955296034359011#multum#multus#lat#Neuter#Accusative#Singular#Positive#stem: mult; stemtype: us_a_um; suff: um; decl: 1st & 2nd.
+urn:cite2:fumorph_lat:AdjectiveForm.test:1553955296034148912#alto#altus1#lat#Neuter#Ablative#Singular#Positive#stem: alt; stemtype: us_a_um; suff: o_; decl: 1st & 2nd.
+urn:cite2:fumorph_lat:AdjectiveForm.test:1553955296034569713#alto#altus1#lat#Masculine#Ablative#Singular#Positive#stem: alt; stemtype: us_a_um; suff: o_; decl: 1st & 2nd.
+urn:cite2:fumorph_lat:AdjectiveForm.test:155395529603426014#alto#altus1#lat#Neuter#Dative#Singular#Positive#stem: alt; stemtype: us_a_um; suff: o_; decl: 1st & 2nd.
+urn:cite2:fumorph_lat:AdjectiveForm.test:1553955296034277115#alto#altus1#lat#Masculine#Dative#Singular#Positive#stem: alt; stemtype: us_a_um; suff: o_; decl: 1st & 2nd.
+urn:cite2:fumorph_lat:AdjectiveForm.test:1553955296034702716#superum#superus#lat#Neuter#Genitive#Plural#Positive#stem: super; stemtype: us_a_um; suff: u_m; morph: poetic; decl: 1st & 2nd.
+urn:cite2:fumorph_lat:AdjectiveForm.test:1553955296034482717#superum#superus#lat#Masculine#Genitive#Plural#Positive#stem: super; stemtype: us_a_um; suff: u_m; morph: poetic; decl: 1st & 2nd.
+urn:cite2:fumorph_lat:AdjectiveForm.test:155395529603453118#superum#superus#lat#Masculine#Accusative#Singular#Positive#stem: super; stemtype: us_a_um; suff: um; decl: 1st & 2nd.
+urn:cite2:fumorph_lat:AdjectiveForm.test:155395529603469019#superum#superus#lat#Neuter#Nominative#Singular#Positive#stem: super; stemtype: us_a_um; suff: um; decl: 1st & 2nd.
+urn:cite2:fumorph_lat:AdjectiveForm.test:1553955296034897220#superum#superus#lat#Neuter#Vocative#Singular#Positive#stem: super; stemtype: us_a_um; suff: um; decl: 1st & 2nd.
+urn:cite2:fumorph_lat:AdjectiveForm.test:1553955296034267321#superum#superus#lat#Neuter#Accusative#Singular#Positive#stem: super; stemtype: us_a_um; suff: um; decl: 1st & 2nd.
+urn:cite2:fumorph_lat:AdjectiveForm.test:155395529603481522#saevae#saevus#lat#Feminine#Nominative#Plural#Positive#stem: saev; stemtype: us_a_um; suff: ae; decl: 1st & 2nd.
+urn:cite2:fumorph_lat:AdjectiveForm.test:1553955296034393323#saevae#saevus#lat#Feminine#Vocative#Plural#Positive#stem: saev; stemtype: us_a_um; suff: ae; decl: 1st & 2nd.
+urn:cite2:fumorph_lat:AdjectiveForm.test:1553955296034995124#saevae#saevus#lat#Feminine#Dative#Singular#Positive#stem: saev; stemtype: us_a_um; suff: ae; decl: 1st & 2nd.
+urn:cite2:fumorph_lat:AdjectiveForm.test:1553955296034187425#saevae#saevus#lat#Feminine#Genitive#Singular#Positive#stem: saev; stemtype: us_a_um; suff: ae; decl: 1st & 2nd.
+urn:cite2:fumorph_lat:AdjectiveForm.test:1553955296034225726#memorem#memor1#lat#Masculine#Accusative#Singular#Positive#stem: memor; stemtype: 0_adj3; suff: em; decl: 3rd.
+urn:cite2:fumorph_lat:AdjectiveForm.test:1553955296034121727#memorem#memor1#lat#Feminine#Accusative#Singular#Positive#stem: memor; stemtype: 0_adj3; suff: em; decl: 3rd.
+urn:cite2:fumorph_lat:AdjectiveForm.test:1553955296034354328#multa#multus#lat#Neuter#Nominative#Plural#Positive#stem: mult; stemtype: us_a_um; suff: a; decl: 1st & 2nd.
+urn:cite2:fumorph_lat:AdjectiveForm.test:1553955296034128029#multa#multus#lat#Neuter#Vocative#Plural#Positive#stem: mult; stemtype: us_a_um; suff: a; decl: 1st & 2nd.
+urn:cite2:fumorph_lat:AdjectiveForm.test:1553955296034469130#multa#multus#lat#Neuter#Accusative#Plural#Positive#stem: mult; stemtype: us_a_um; suff: a; decl: 1st & 2nd.
+urn:cite2:fumorph_lat:AdjectiveForm.test:1553955296034919631#multa#multus#lat#Feminine#Ablative#Singular#Positive#stem: mult; stemtype: us_a_um; suff: a_; decl: 1st & 2nd.
+urn:cite2:fumorph_lat:AdjectiveForm.test:1553955296034582132#multa#multus#lat#Feminine#Nominative#Singular#Positive#stem: mult; stemtype: us_a_um; suff: a; decl: 1st & 2nd.
+urn:cite2:fumorph_lat:AdjectiveForm.test:1553955296034682233#multa#multus#lat#Feminine#Vocative#Singular#Positive#stem: mult; stemtype: us_a_um; suff: a; decl: 1st & 2nd.
+urn:cite2:fumorph_lat:AdjectiveForm.test:155395529603425934#bello#bellus#lat#Neuter#Ablative#Singular#Positive#stem: bell; stemtype: us_a_um; suff: o_; decl: 1st & 2nd.
+urn:cite2:fumorph_lat:AdjectiveForm.test:1553955296034445035#bello#bellus#lat#Masculine#Ablative#Singular#Positive#stem: bell; stemtype: us_a_um; suff: o_; decl: 1st & 2nd.
+urn:cite2:fumorph_lat:AdjectiveForm.test:1553955296034703236#bello#bellus#lat#Neuter#Dative#Singular#Positive#stem: bell; stemtype: us_a_um; suff: o_; decl: 1st & 2nd.
+urn:cite2:fumorph_lat:AdjectiveForm.test:1553955296034508437#bello#bellus#lat#Masculine#Dative#Singular#Positive#stem: bell; stemtype: us_a_um; suff: o_; decl: 1st & 2nd.
+urn:cite2:fumorph_lat:AdjectiveForm.test:1553955296034521038#altae#altus1#lat#Feminine#Nominative#Plural#Positive#stem: alt; stemtype: us_a_um; suff: ae; decl: 1st & 2nd.
+urn:cite2:fumorph_lat:AdjectiveForm.test:1553955296034731139#altae#altus1#lat#Feminine#Vocative#Plural#Positive#stem: alt; stemtype: us_a_um; suff: ae; decl: 1st & 2nd.
+urn:cite2:fumorph_lat:AdjectiveForm.test:1553955296034886940#altae#altus1#lat#Feminine#Dative#Singular#Positive#stem: alt; stemtype: us_a_um; suff: ae; decl: 1st & 2nd.
+urn:cite2:fumorph_lat:AdjectiveForm.test:1553955296034147941#altae#altus1#lat#Feminine#Genitive#Singular#Positive#stem: alt; stemtype: us_a_um; suff: ae; decl: 1st & 2nd.
+urn:cite2:fumorph_lat:AdjectiveForm.test:1553955296034726142#insignem#insignis#lat#Masculine#Accusative#Singular#Positive#stem: insign; stemtype: is_e; suff: em; decl: 3rd.
+urn:cite2:fumorph_lat:AdjectiveForm.test:1553955296034214743#insignem#insignis#lat#Feminine#Accusative#Singular#Positive#stem: insign; stemtype: is_e; suff: em; decl: 3rd.
+urn:cite2:fumorph_lat:AdjectiveForm.test:1553955296034988444#multi#multus#lat#Masculine#Nominative#Plural#Positive#stem: mult; stemtype: us_a_um; suff: i_; decl: 1st & 2nd.
+urn:cite2:fumorph_lat:AdjectiveForm.test:155395529603496845#multi#multus#lat#Masculine#Vocative#Plural#Positive#stem: mult; stemtype: us_a_um; suff: i_; decl: 1st & 2nd.
+urn:cite2:fumorph_lat:AdjectiveForm.test:1553955296034522646#multi#multus#lat#Neuter#Genitive#Singular#Positive#stem: mult; stemtype: us_a_um; suff: i_; decl: 1st & 2nd.
+urn:cite2:fumorph_lat:AdjectiveForm.test:155395529603582147#multi#multus#lat#Masculine#Genitive#Singular#Positive#stem: mult; stemtype: us_a_um; suff: i_; decl: 1st & 2nd.
+urn:cite2:fumorph_lat:AdjectiveForm.test:155395529603551548#ministri#minister#lat#Masculine#Nominative#Plural#Positive#stem: minist; stemtype: er_ra_rum; suff: ri_; decl: 1st & 2nd.
+urn:cite2:fumorph_lat:AdjectiveForm.test:1553955296035384749#ministri#minister#lat#Masculine#Vocative#Plural#Positive#stem: minist; stemtype: er_ra_rum; suff: ri_; decl: 1st & 2nd.
+urn:cite2:fumorph_lat:AdjectiveForm.test:1553955296035621150#ministri#minister#lat#Neuter#Genitive#Singular#Positive#stem: minist; stemtype: er_ra_rum; suff: ri_; decl: 1st & 2nd.
+urn:cite2:fumorph_lat:AdjectiveForm.test:1553955296035179351#ministri#minister#lat#Masculine#Genitive#Singular#Positive#stem: minist; stemtype: er_ra_rum; suff: ri_; decl: 1st & 2nd.
+urn:cite2:fumorph_lat:AdjectiveForm.test:1553955296035887252#omnia#omnis#lat#Neuter#Nominative#Plural#Positive#stem: omn; stemtype: is_e; suff: ia; decl: 3rd.
+urn:cite2:fumorph_lat:AdjectiveForm.test:1553955296035297053#omnia#omnis#lat#Neuter#Vocative#Plural#Positive#stem: omn; stemtype: is_e; suff: ia; decl: 3rd.
+urn:cite2:fumorph_lat:AdjectiveForm.test:155395529603516054#omnia#omnis#lat#Neuter#Accusative#Plural#Positive#stem: omn; stemtype: is_e; suff: ia; decl: 3rd.
+urn:cite2:fumorph_lat:AdjectiveForm.test:1553955296035666755#optime#bonus#lat#Neuter#Vocative#Singular#Positive#stem: optim; stemtype: us_a_um; suff: e; morph: irreg_superl; decl: 1st & 2nd.
+urn:cite2:fumorph_lat:AdjectiveForm.test:15539552960356456#optime#bonus#lat#Masculine#Vocative#Singular#Positive#stem: optim; stemtype: us_a_um; suff: e; morph: irreg_superl; decl: 1st & 2nd.
+
+
+#!citedata
+urn#surfaceform#lemma#lang#pos#info
+urn:cite2:fumorph_lat:IndeclinableForm.test:155395529603567530#ab#ab#lat#Preposition#lang: lat; stem: ab; stemtype: prep; partOfSpeech: preposition; morph: indeclform.
+urn:cite2:fumorph_lat:IndeclinableForm.test:155395529603559621#et#et#lat#Conjunction#lang: lat; stem: et; stemtype: conj; partOfSpeech: conjunction; morph: indeclform.
+urn:cite2:fumorph_lat:IndeclinableForm.test:155395529603559232#ob#ob#lat#Preposition#lang: lat; stem: ob; stemtype: prep; partOfSpeech: preposition; morph: indeclform.
+urn:cite2:fumorph_lat:IndeclinableForm.test:155395529603555203#dum#dum#lat#Conjunction#lang: lat; stem: dum; stemtype: conj; partOfSpeech: conjunction; morph: indeclform.
+urn:cite2:fumorph_lat:IndeclinableForm.test:15539552960353614#atque#atque#lat#Conjunction#lang: lat; stem: atque; stemtype: conj; partOfSpeech: conjunction; morph: indeclform.
+urn:cite2:fumorph_lat:IndeclinableForm.test:155395529603516485#in#in#lat#Preposition#lang: lat; stem: in; stemtype: prep; partOfSpeech: preposition; morph: indeclform.
+urn:cite2:fumorph_lat:IndeclinableForm.test:155395529603578216#sicut#sicut#lat#Conjunction#lang: lat; stem: sicut; stemtype: conj; partOfSpeech: conjunction; morph: indeclform.
+urn:cite2:fumorph_lat:IndeclinableForm.test:155395529603567537#a#ab#lat#Preposition#lang: lat; stem: a; stemtype: prep; partOfSpeech: preposition; morph: indeclform.
+urn:cite2:fumorph_lat:IndeclinableForm.test:155395529603569598#ex#ex#lat#Preposition#lang: lat; stem: ex; stemtype: prep; partOfSpeech: preposition; morph: indeclform.
+urn:cite2:fumorph_lat:IndeclinableForm.test:155395529603561229#de#de#lat#Preposition#lang: lat; stem: de_; stemtype: prep; partOfSpeech: preposition; morph: indeclform.
+
+
+#!citedata
+urn#surfaceform#lemma#lang#person#number#tense#voice#mood#info
+urn:cite2:fumorph_lat:FiniteVerbForm.test:155395529603580400#ARMA#armo#lat#Second#Singular#Present#Active#Imperative#stem: arm; stemtype: conj1; suff: a_; derivtype: are_vb.
+urn:cite2:fumorph_lat:FiniteVerbForm.test:155395529603561331#cano#cano#lat#First#Singular#Present#Active#Indicative#stem: can; stemtype: conj3; suff: o_.
+urn:cite2:fumorph_lat:FiniteVerbForm.test:155395529603559272#fato#for#lat#Third#Singular#Future#Active#Imperative#stem: f; stemtype: conj1; suff: a_to_.
+urn:cite2:fumorph_lat:FiniteVerbForm.test:155395529603597213#fato#for#lat#Second#Singular#Future#Active#Imperative#stem: f; stemtype: conj1; suff: a_to_.
+urn:cite2:fumorph_lat:FiniteVerbForm.test:155395529603586294#venit#venio#lat#Third#Singular#Present#Active#Indicative#stem: ven; stemtype: conj4; suff: it.
+urn:cite2:fumorph_lat:FiniteVerbForm.test:155395529603548145#venit#venio#lat#Third#Singular#Perfect#Active#Indicative#stem: ve_n; stemtype: perfstem; suff: it.
+urn:cite2:fumorph_lat:FiniteVerbForm.test:15539552960359576#alto#alto#lat#First#Singular#Present#Active#Indicative#stem: alt; stemtype: conj1; suff: o_; derivtype: are_vb.
+urn:cite2:fumorph_lat:FiniteVerbForm.test:15539552960353887#memorem#memoro#lat#First#Singular#Present#Active#Subjunctive#stem: memor; stemtype: conj1; suff: em; derivtype: are_vb.
+urn:cite2:fumorph_lat:FiniteVerbForm.test:155395529603549948#multa#multo2#lat#Second#Singular#Present#Active#Imperative#stem: mult; stemtype: conj1; suff: a_; derivtype: are_vb.
+urn:cite2:fumorph_lat:FiniteVerbForm.test:155395529603521559#bello#bello#lat#First#Singular#Present#Active#Indicative#stem: bell; stemtype: conj1; suff: o_; derivtype: are_vb.
+urn:cite2:fumorph_lat:FiniteVerbForm.test:1553955296035341110#conderet#condo#lat#Third#Singular#Imperfect#Active#Subjunctive#stem: cond; stemtype: conj3; suff: eret.
+urn:cite2:fumorph_lat:FiniteVerbForm.test:155395529603562211#patres#patro#lat#Second#Singular#Present#Active#Subjunctive#stem: pa_tr; stemtype: conj1; suff: e_s; derivtype: are_vb.
+urn:cite2:fumorph_lat:FiniteVerbForm.test:1553955296035262912#memora#memoro#lat#Second#Singular#Present#Active#Imperative#stem: memor; stemtype: conj1; suff: a_; derivtype: are_vb.
+urn:cite2:fumorph_lat:FiniteVerbForm.test:1553955296035671813#volvere#volvo#lat#Second#Singular#Future#Passive#Indicative#stem: volv; stemtype: conj3; suff: e_re.
+urn:cite2:fumorph_lat:FiniteVerbForm.test:1553955296035432814#volvere#volvo#lat#Second#Singular#Present#Passive#Imperative#stem: volv; stemtype: conj3; suff: ere.
+urn:cite2:fumorph_lat:FiniteVerbForm.test:1553955296035436315#volvere#volvo#lat#Second#Singular#Present#Passive#Indicative#stem: volv; stemtype: conj3; suff: ere.
+urn:cite2:fumorph_lat:FiniteVerbForm.test:1553955296035496416#insignem#insigno#lat#First#Singular#Present#Active#Subjunctive#stem: insign; stemtype: conj1; suff: em; derivtype: are_vb.
+urn:cite2:fumorph_lat:FiniteVerbForm.test:1553955296035259517#insignem#insigno#lat#First#Singular#Present#Active#Subjunctive#stem: in:sign; stemtype: conj1; suff: em; derivtype: are_vb.
+urn:cite2:fumorph_lat:FiniteVerbForm.test:1553955296035196318#labores#laboro#lat#Second#Singular#Present#Active#Subjunctive#stem: labo_r; stemtype: conj1; suff: e_s; derivtype: are_vb.
+urn:cite2:fumorph_lat:FiniteVerbForm.test:1553955296035467419#sunt#sum1#lat#Third#Plural#Present#Active#Indicative#stem: sunt; stemtype: irreg_pp1.
+urn:cite2:fumorph_lat:FiniteVerbForm.test:1553955296035149620#ordinare#ordino#lat#Second#Singular#Present#Passive#Imperative#stem: ordin; stemtype: conj1; suff: a_re; derivtype: are_vb.
+urn:cite2:fumorph_lat:FiniteVerbForm.test:1553955296035114521#ordinare#ordino#lat#Second#Singular#Present#Passive#Indicative#stem: ordin; stemtype: conj1; suff: a_re; derivtype: are_vb.
+urn:cite2:fumorph_lat:FiniteVerbForm.test:1553955296035301722#tradiderunt#trado#lat#Third#Plural#Perfect#Active#Indicative#stem: tradid; stemtype: perfstem; suff: e_runt.
+urn:cite2:fumorph_lat:FiniteVerbForm.test:1553955296035126223#initio#initio#lat#First#Singular#Present#Active#Indicative#stem: initi; stemtype: conj1; suff: o_; derivtype: are_vb.
+urn:cite2:fumorph_lat:FiniteVerbForm.test:1553955296035799224#viderunt#video#lat#Third#Plural#Perfect#Active#Indicative#stem: vi_d; stemtype: perfstem; suff: e_runt.
+urn:cite2:fumorph_lat:FiniteVerbForm.test:1553955296035212125#fuerunt#sum1#lat#Third#Plural#Perfect#Active#Indicative#stem: fu; stemtype: perfstem; suff: e_runt.
+urn:cite2:fumorph_lat:FiniteVerbForm.test:1553955296035574226#est#edo1#lat#Third#Singular#Present#Active#Indicative#stem: e_st; stemtype: irreg_pp1.
+urn:cite2:fumorph_lat:FiniteVerbForm.test:155395529603516727#est#sum1#lat#Third#Singular#Present#Active#Indicative#stem: est; stemtype: irreg_pp1.
+urn:cite2:fumorph_lat:FiniteVerbForm.test:1553955296035872128#principio#principio#lat#First#Singular#Present#Active#Indicative#stem: principi; stemtype: conj1; suff: o_; derivtype: are_vb.
+urn:cite2:fumorph_lat:FiniteVerbForm.test:1553955296036702029#scribere#scribo#lat#Second#Singular#Future#Passive#Indicative#stem: scri_b; stemtype: conj3; suff: e_re.
+urn:cite2:fumorph_lat:FiniteVerbForm.test:1553955296036905630#scribere#scribo#lat#Second#Singular#Present#Passive#Imperative#stem: scri_b; stemtype: conj3; suff: ere.
+urn:cite2:fumorph_lat:FiniteVerbForm.test:1553955296036807131#scribere#scribo#lat#Second#Singular#Present#Passive#Indicative#stem: scri_b; stemtype: conj3; suff: ere.
+urn:cite2:fumorph_lat:FiniteVerbForm.test:1553955296036215332#cognoscas#cognosco#lat#Second#Singular#Present#Active#Subjunctive#stem: cognosc; stemtype: conj3; suff: a_s.
+urn:cite2:fumorph_lat:FiniteVerbForm.test:1553955296036498133#es#edo1#lat#Second#Singular#Present#Active#Indicative#stem: e_s; stemtype: irreg_pp1.
+urn:cite2:fumorph_lat:FiniteVerbForm.test:1553955296036518634#es#sum1#lat#Second#Singular#Present#Active#Imperative#stem: es; stemtype: irreg_pp1.
+urn:cite2:fumorph_lat:FiniteVerbForm.test:1553955296036384235#es#sum1#lat#Second#Singular#Present#Active#Indicative#stem: es; stemtype: irreg_pp1.
+urn:cite2:fumorph_lat:FiniteVerbForm.test:1553955296036377736#Fuit#sum1#lat#Third#Singular#Perfect#Active#Indicative#stem: fu; stemtype: perfstem; suff: it.
+urn:cite2:fumorph_lat:FiniteVerbForm.test:1553955296036873437#regis#rego#lat#Second#Singular#Present#Active#Indicative#stem: reg; stemtype: conj3; suff: is.
+urn:cite2:fumorph_lat:FiniteVerbForm.test:1553955296036663538#Aaron#a-aro#lat#First#Singular#Present#Active#Indicative#stem: a:ar; stemtype: conj1; suff: o_; derivtype: are_vb.
+
+
+#!citedata
+urn#surfaceform#lemma#lang#degree#info
+urn:cite2:fumorph_lat:AdverbForm.test:155395529603650200#quoque#quoque#lat#Positive#stem: quoque; stemtype: adverb; morph: indeclform.
+urn:cite2:fumorph_lat:AdverbForm.test:155395529603637121#unde#unde#lat#Positive#stem: unde; stemtype: adverb; morph: indeclform.
+urn:cite2:fumorph_lat:AdverbForm.test:15539552960366622#quo#quo#lat#Positive#stem: quo_; stemtype: adverb; morph: indeclform.
+urn:cite2:fumorph_lat:AdverbForm.test:155395529603657583#Quoniam#quoniam#lat#Positive#stem: quoniam; stemtype: adverb; morph: indeclform.
+urn:cite2:fumorph_lat:AdverbForm.test:155395529603619284#quidem#quidem#lat#Positive#stem: quidem; stemtype: adverb; morph: indeclform.
+urn:cite2:fumorph_lat:AdverbForm.test:155395529603685725#diligenter#diligens#lat#Positive#stem: dilig; stemtype: ens_adj; suff: enter; decl: 3rd.
+urn:cite2:fumorph_lat:AdverbForm.test:155395529603611746#diligenter#diligenter#lat#Positive#stem: di_ligenter; stemtype: adverb; morph: indeclform.
+urn:cite2:fumorph_lat:AdverbForm.test:155395529603659667#optime#bonus#lat#Positive#stem: optim; stemtype: us_a_um; suff: e_; morph: irreg_superl; decl: 1st & 2nd.
+urn:cite2:fumorph_lat:AdverbForm.test:155395529603648858#optime#optime#lat#Positive#stem: optime_; stemtype: adverb; morph: indeclform.
+urn:cite2:fumorph_lat:AdverbForm.test:155395529603647149#optime#optume#lat#Positive#stem: optime_; stemtype: adverb; morph: indeclform.
+urn:cite2:fumorph_lat:AdverbForm.test:1553955296036929310#ut#ut#lat#Positive#stem: ut; stemtype: adverb; morph: indeclform.
+urn:cite2:fumorph_lat:AdverbForm.test:1553955296036292511#de#de#lat#Positive#stem: de_; stemtype: adverb; morph: indeclform.
+
+
+#!citedata
+urn#surfaceform#lemma#lang#info
+urn:cite2:fumorph_lat:InvalidForm.test:155395529603626300#inferretque#infero#lat#lang: lat; stem: in:ferret; stemtype: irreg_pp1; partOfSpeech: verb; grammaticalNum: singular; pers: 3rd; tense: imperfect; voice: active.
+urn:cite2:fumorph_lat:InvalidForm.test:155395529603695191#dolens#doleo#lat#lang: lat; stem: dol; stemtype: conj2; suff: e_ns; partOfSpeech: verb participle; grammaticalNum: singular; tense: present; mood: participle; grammaticalCase: accusative; gend: neuter.
+urn:cite2:fumorph_lat:InvalidForm.test:155395529603627972#dolens#doleo#lat#lang: lat; stem: dol; stemtype: conj2; suff: e_ns; partOfSpeech: verb participle; grammaticalNum: singular; tense: present; mood: participle; grammaticalCase: nominative; gend: masculine.
+urn:cite2:fumorph_lat:InvalidForm.test:15539552960364123#dolens#doleo#lat#lang: lat; stem: dol; stemtype: conj2; suff: e_ns; partOfSpeech: verb participle; grammaticalNum: singular; tense: present; mood: participle; grammaticalCase: nominative; gend: feminine.
+urn:cite2:fumorph_lat:InvalidForm.test:15539552960364974#dolens#doleo#lat#lang: lat; stem: dol; stemtype: conj2; suff: e_ns; partOfSpeech: verb participle; grammaticalNum: singular; tense: present; mood: participle; grammaticalCase: nominative; gend: neuter.
+urn:cite2:fumorph_lat:InvalidForm.test:15539552960368475#dolens#doleo#lat#lang: lat; stem: dol; stemtype: conj2; suff: e_ns; partOfSpeech: verb participle; grammaticalNum: singular; tense: present; mood: participle; grammaticalCase: vocative; gend: masculine.
+urn:cite2:fumorph_lat:InvalidForm.test:15539552960362116#dolens#doleo#lat#lang: lat; stem: dol; stemtype: conj2; suff: e_ns; partOfSpeech: verb participle; grammaticalNum: singular; tense: present; mood: participle; grammaticalCase: vocative; gend: feminine.
+urn:cite2:fumorph_lat:InvalidForm.test:15539552960362407#dolens#doleo#lat#lang: lat; stem: dol; stemtype: conj2; suff: e_ns; partOfSpeech: verb participle; grammaticalNum: singular; tense: present; mood: participle; grammaticalCase: vocative; gend: neuter.
+urn:cite2:fumorph_lat:InvalidForm.test:155395529603631798#tot#tot#lat#lang: lat; stem: tot; stemtype: indecl; partOfSpeech: irregular; morph: indeclform.
+urn:cite2:fumorph_lat:InvalidForm.test:155395529603612799#a#a#lat#lang: lat; stem: a_; stemtype: exclam; partOfSpeech: exclamation; morph: indeclform.
+urn:cite2:fumorph_lat:InvalidForm.test:1553955296036999510#es#edo1#lat#lang: lat; stem: e_s; stemtype: irreg_pp1; partOfSpeech: verb; pers: 2nd; tense: present; mood: imperative.
+
+
+#!citedata
+urn#surfaceform#lemma#lang#tense#voice#gender#case#number#info
+urn:cite2:fumorph_lat:ParticipleForm.test:155395529603662620#fato#for#lat#Perfect#Passive#Neuter#Ablative#Singular#stem: fa_t; stemtype: pp4; suff: o_.
+urn:cite2:fumorph_lat:ParticipleForm.test:155395529603779131#fato#for#lat#Perfect#Passive#Masculine#Ablative#Singular#stem: fa_t; stemtype: pp4; suff: o_.
+urn:cite2:fumorph_lat:ParticipleForm.test:155395529603799602#fato#for#lat#Perfect#Passive#Neuter#Dative#Singular#stem: fa_t; stemtype: pp4; suff: o_.
+urn:cite2:fumorph_lat:ParticipleForm.test:155395529603727623#fato#for#lat#Perfect#Passive#Masculine#Dative#Singular#stem: fa_t; stemtype: pp4; suff: o_.
+urn:cite2:fumorph_lat:ParticipleForm.test:15539552960376744#iactatus#jacto#lat#Perfect#Passive#Masculine#Nominative#Singular#stem: jacta_t; stemtype: pp4; suff: us; derivtype: are_vb.
+urn:cite2:fumorph_lat:ParticipleForm.test:155395529603751175#alto#alo#lat#Perfect#Passive#Neuter#Ablative#Singular#stem: alt; stemtype: pp4; suff: o_.
+urn:cite2:fumorph_lat:ParticipleForm.test:155395529603736966#alto#alo#lat#Perfect#Passive#Masculine#Ablative#Singular#stem: alt; stemtype: pp4; suff: o_.
+urn:cite2:fumorph_lat:ParticipleForm.test:155395529603799987#alto#alo#lat#Perfect#Passive#Neuter#Dative#Singular#stem: alt; stemtype: pp4; suff: o_.
+urn:cite2:fumorph_lat:ParticipleForm.test:155395529603753728#alto#alo#lat#Perfect#Passive#Masculine#Dative#Singular#stem: alt; stemtype: pp4; suff: o_.
+urn:cite2:fumorph_lat:ParticipleForm.test:155395529603773469#passus#patior#lat#Perfect#Passive#Masculine#Nominative#Singular#stem: pass; stemtype: pp4; suff: us.
+urn:cite2:fumorph_lat:ParticipleForm.test:1553955296037119310#altae#alo#lat#Perfect#Passive#Feminine#Nominative#Plural#stem: alt; stemtype: pp4; suff: ae.
+urn:cite2:fumorph_lat:ParticipleForm.test:1553955296037133611#altae#alo#lat#Perfect#Passive#Feminine#Vocative#Plural#stem: alt; stemtype: pp4; suff: ae.
+urn:cite2:fumorph_lat:ParticipleForm.test:1553955296037123512#altae#alo#lat#Perfect#Passive#Feminine#Dative#Singular#stem: alt; stemtype: pp4; suff: ae.
+urn:cite2:fumorph_lat:ParticipleForm.test:1553955296037739513#altae#alo#lat#Perfect#Passive#Feminine#Genitive#Singular#stem: alt; stemtype: pp4; suff: ae.
+urn:cite2:fumorph_lat:ParticipleForm.test:155395529603715714#laeso#laedo#lat#Perfect#Passive#Neuter#Ablative#Singular#stem: laes; stemtype: pp4; suff: o_.
+urn:cite2:fumorph_lat:ParticipleForm.test:1553955296037816915#laeso#laedo#lat#Perfect#Passive#Masculine#Ablative#Singular#stem: laes; stemtype: pp4; suff: o_.
+urn:cite2:fumorph_lat:ParticipleForm.test:1553955296037346816#laeso#laedo#lat#Perfect#Passive#Neuter#Dative#Singular#stem: laes; stemtype: pp4; suff: o_.
+urn:cite2:fumorph_lat:ParticipleForm.test:1553955296037654017#laeso#laedo#lat#Perfect#Passive#Masculine#Dative#Singular#stem: laes; stemtype: pp4; suff: o_.
+urn:cite2:fumorph_lat:ParticipleForm.test:155395529603721418#casus#cado#lat#Perfect#Passive#Masculine#Nominative#Singular#stem: ca_s; stemtype: pp4; suff: us.
+urn:cite2:fumorph_lat:ParticipleForm.test:1553955296037904319#conati#conor#lat#Perfect#Passive#Masculine#Nominative#Plural#stem: co_na_t; stemtype: pp4; suff: i_; derivtype: are_vb.
+urn:cite2:fumorph_lat:ParticipleForm.test:1553955296037937120#conati#conor#lat#Perfect#Passive#Masculine#Vocative#Plural#stem: co_na_t; stemtype: pp4; suff: i_; derivtype: are_vb.
+urn:cite2:fumorph_lat:ParticipleForm.test:1553955296037718821#conati#conor#lat#Perfect#Passive#Neuter#Genitive#Singular#stem: co_na_t; stemtype: pp4; suff: i_; derivtype: are_vb.
+urn:cite2:fumorph_lat:ParticipleForm.test:1553955296037212622#conati#conor#lat#Perfect#Passive#Masculine#Genitive#Singular#stem: co_na_t; stemtype: pp4; suff: i_; derivtype: are_vb.
+urn:cite2:fumorph_lat:ParticipleForm.test:155395529603720523#completae#compleo#lat#Perfect#Passive#Feminine#Nominative#Plural#stem: comple_t; stemtype: pp4; suff: ae.
+urn:cite2:fumorph_lat:ParticipleForm.test:155395529603720724#completae#compleo#lat#Perfect#Passive#Feminine#Vocative#Plural#stem: comple_t; stemtype: pp4; suff: ae.
+urn:cite2:fumorph_lat:ParticipleForm.test:1553955296037586925#completae#compleo#lat#Perfect#Passive#Feminine#Dative#Singular#stem: comple_t; stemtype: pp4; suff: ae.
+urn:cite2:fumorph_lat:ParticipleForm.test:155395529603766226#completae#compleo#lat#Perfect#Passive#Feminine#Genitive#Singular#stem: comple_t; stemtype: pp4; suff: ae.
+urn:cite2:fumorph_lat:ParticipleForm.test:155395529603772227#visum#video#lat#Perfect#Passive#Neuter#Genitive#Plural#stem: vi_s; stemtype: pp4; suff: u_m; morph: poetic.
+urn:cite2:fumorph_lat:ParticipleForm.test:1553955296037903128#visum#video#lat#Perfect#Passive#Masculine#Genitive#Plural#stem: vi_s; stemtype: pp4; suff: u_m; morph: poetic.
+urn:cite2:fumorph_lat:ParticipleForm.test:155395529603741129#visum#video#lat#Perfect#Passive#Masculine#Accusative#Singular#stem: vi_s; stemtype: pp4; suff: um.
+urn:cite2:fumorph_lat:ParticipleForm.test:155395529603722330#visum#video#lat#Perfect#Passive#Neuter#Nominative#Singular#stem: vi_s; stemtype: pp4; suff: um.
+urn:cite2:fumorph_lat:ParticipleForm.test:1553955296037382231#visum#video#lat#Perfect#Passive#Neuter#Vocative#Singular#stem: vi_s; stemtype: pp4; suff: um.
+urn:cite2:fumorph_lat:ParticipleForm.test:1553955296037852432#visum#video#lat#Perfect#Passive#Neuter#Accusative#Singular#stem: vi_s; stemtype: pp4; suff: um.
+urn:cite2:fumorph_lat:ParticipleForm.test:1553955296037141333#visum#viso#lat#Perfect#Passive#Neuter#Genitive#Plural#stem: vi_s; stemtype: pp4; suff: u_m; morph: poetic.
+urn:cite2:fumorph_lat:ParticipleForm.test:1553955296037479034#visum#viso#lat#Perfect#Passive#Masculine#Genitive#Plural#stem: vi_s; stemtype: pp4; suff: u_m; morph: poetic.
+urn:cite2:fumorph_lat:ParticipleForm.test:1553955296037481835#visum#viso#lat#Perfect#Passive#Masculine#Accusative#Singular#stem: vi_s; stemtype: pp4; suff: um.
+urn:cite2:fumorph_lat:ParticipleForm.test:1553955296037809136#visum#viso#lat#Perfect#Passive#Neuter#Nominative#Singular#stem: vi_s; stemtype: pp4; suff: um.
+urn:cite2:fumorph_lat:ParticipleForm.test:1553955296037961037#visum#viso#lat#Perfect#Passive#Neuter#Vocative#Singular#stem: vi_s; stemtype: pp4; suff: um.
+urn:cite2:fumorph_lat:ParticipleForm.test:155395529603792938#visum#viso#lat#Perfect#Passive#Neuter#Accusative#Singular#stem: vi_s; stemtype: pp4; suff: um.
+urn:cite2:fumorph_lat:ParticipleForm.test:1553955296038546239#assecuto#ad-sequor#lat#Perfect#Passive#Neuter#Ablative#Singular#stem: ad:secu_t; stemtype: pp4; suff: o_.
+urn:cite2:fumorph_lat:ParticipleForm.test:155395529603830240#assecuto#ad-sequor#lat#Perfect#Passive#Masculine#Ablative#Singular#stem: ad:secu_t; stemtype: pp4; suff: o_.
+urn:cite2:fumorph_lat:ParticipleForm.test:155395529603854141#assecuto#ad-sequor#lat#Perfect#Passive#Neuter#Dative#Singular#stem: ad:secu_t; stemtype: pp4; suff: o_.
+urn:cite2:fumorph_lat:ParticipleForm.test:1553955296038377742#assecuto#ad-sequor#lat#Perfect#Passive#Masculine#Dative#Singular#stem: ad:secu_t; stemtype: pp4; suff: o_.
+urn:cite2:fumorph_lat:ParticipleForm.test:1553955296038946243#eruditus#erudio#lat#Perfect#Passive#Masculine#Nominative#Singular#stem: e_rudi_t; stemtype: pp4; suff: us.
+
+
+#!citedata
+urn#surfaceform#lemma#lang#tense#voice#info
+urn:cite2:fumorph_lat:InfinitiveForm.test:155395529603834800#volvere#volvo#lat#Present#Active#stem: volv; stemtype: conj3; suff: ere.
+urn:cite2:fumorph_lat:InfinitiveForm.test:155395529603875721#adire#adeo1#lat#Present#Active#stem: ad:i_re; stemtype: irreg_pp1.
+urn:cite2:fumorph_lat:InfinitiveForm.test:155395529603894732#ordinare#ordino#lat#Present#Active#stem: ordin; stemtype: conj1; suff: a_re; derivtype: are_vb.
+urn:cite2:fumorph_lat:InfinitiveForm.test:155395529603873353#scribere#scribo#lat#Present#Active#stem: scri_b; stemtype: conj3; suff: ere.
+
+
+#!citedata
+urn#surfaceform#lemma#lang#gender#case#number#info
+urn:cite2:fumorph_lat:PronounForm.test:15539552960389710#qui#qui2#lat#Masculine#Nominative#Plural#stem: qui_; stemtype: relative; morph: indeclform.
+urn:cite2:fumorph_lat:PronounForm.test:155395529603842331#qui#qui2#lat#Masculine#Nominative#Singular#stem: qui_; stemtype: relative; morph: indeclform.
+urn:cite2:fumorph_lat:PronounForm.test:155395529603846212#qui#quis2#lat#Masculine#Nominative#Plural#stem: qui_; stemtype: indef; morph: indeclform.
+urn:cite2:fumorph_lat:PronounForm.test:15539552960382933#ille#ille#lat#Masculine#Nominative#Singular#stem: ille; stemtype: demonstr; morph: indeclform.
+urn:cite2:fumorph_lat:PronounForm.test:155395529603861784#mihi#ego#lat#Masculine#Dative#Singular#stem: mihi; stemtype: pron1; morph: indeclform.
+urn:cite2:fumorph_lat:PronounForm.test:155395529603868395#mihi#ego#lat#Feminine#Dative#Singular#stem: mihi; stemtype: pron1; morph: indeclform.
+urn:cite2:fumorph_lat:PronounForm.test:15539552960388126#quo#qui2#lat#Masculine#Ablative#Singular#stem: quo_; stemtype: relative; morph: indeclform.
+urn:cite2:fumorph_lat:PronounForm.test:155395529603812737#quo#qui2#lat#Neuter#Ablative#Singular#stem: quo_; stemtype: relative; morph: indeclform.
+urn:cite2:fumorph_lat:PronounForm.test:15539552960386558#quo#quis2#lat#Masculine#Ablative#Singular#stem: quo_; stemtype: indef; morph: indeclform.
+urn:cite2:fumorph_lat:PronounForm.test:155395529603860349#quo#quis2#lat#Feminine#Ablative#Singular#stem: quo_; stemtype: indef; morph: indeclform.
+urn:cite2:fumorph_lat:PronounForm.test:1553955296038458210#quo#quis2#lat#Neuter#Ablative#Singular#stem: quo_; stemtype: indef; morph: indeclform.
+urn:cite2:fumorph_lat:PronounForm.test:1553955296038399711#quidve#quis2#lat#Neuter#Nominative#Singular#stem: quid; stemtype: indef; morph: indeclform.
+urn:cite2:fumorph_lat:PronounForm.test:1553955296038104612#quidve#quis2#lat#Neuter#Accusative#Singular#stem: quid; stemtype: indef; morph: indeclform.
+urn:cite2:fumorph_lat:PronounForm.test:1553955296038842513#quae#qui2#lat#Feminine#Nominative#Plural#stem: quae; stemtype: relative; morph: indeclform.
+urn:cite2:fumorph_lat:PronounForm.test:1553955296038105914#quae#qui2#lat#Feminine#Nominative#Singular#stem: quae; stemtype: relative; morph: indeclform.
+urn:cite2:fumorph_lat:PronounForm.test:155395529603895415#quae#qui2#lat#Neuter#Nominative#Plural#stem: quae; stemtype: relative; morph: indeclform.
+urn:cite2:fumorph_lat:PronounForm.test:1553955296038798716#quae#qui2#lat#Neuter#Accusative#Plural#stem: quae; stemtype: relative; morph: indeclform.
+urn:cite2:fumorph_lat:PronounForm.test:1553955296038659917#quae#quis2#lat#Feminine#Nominative#Plural#stem: quae; stemtype: indef; morph: indeclform.
+urn:cite2:fumorph_lat:PronounForm.test:1553955296038434618#quae#quis2#lat#Neuter#Nominative#Plural#stem: quae; stemtype: indef; morph: indeclform.
+urn:cite2:fumorph_lat:PronounForm.test:1553955296038959719#quae#quis2#lat#Neuter#Accusative#Plural#stem: quae; stemtype: indef; morph: indeclform.
+urn:cite2:fumorph_lat:PronounForm.test:155395529603877120#nobis#nos#lat#Masculine#Ablative#Plural#stem: no_bis; stemtype: pron1; morph: indeclform.
+urn:cite2:fumorph_lat:PronounForm.test:155395529603813621#nobis#nos#lat#Feminine#Ablative#Plural#stem: no_bis; stemtype: pron1; morph: indeclform.
+urn:cite2:fumorph_lat:PronounForm.test:155395529603887122#nobis#nos#lat#Masculine#Dative#Plural#stem: no_bis; stemtype: pron1; morph: indeclform.
+urn:cite2:fumorph_lat:PronounForm.test:1553955296038237723#nobis#nos#lat#Feminine#Dative#Plural#stem: no_bis; stemtype: pron1; morph: indeclform.
+urn:cite2:fumorph_lat:PronounForm.test:1553955296038271224#ipsi#ipse#lat#Masculine#Dative#Singular#stem: ipsi_; stemtype: demonstr; morph: indeclform.
+urn:cite2:fumorph_lat:PronounForm.test:1553955296038889025#ipsi#ipse#lat#Feminine#Dative#Singular#stem: ipsi_; stemtype: demonstr; morph: indeclform.
+urn:cite2:fumorph_lat:PronounForm.test:1553955296038735926#ipsi#ipse#lat#Neuter#Dative#Singular#stem: ipsi_; stemtype: demonstr; morph: indeclform.
+urn:cite2:fumorph_lat:PronounForm.test:1553955296038417527#ipsi#ipse#lat#Masculine#Nominative#Plural#stem: ipsi_; stemtype: demonstr; morph: indeclform.
+urn:cite2:fumorph_lat:PronounForm.test:1553955296038912128#ipsi#ipse#lat#Masculine#Vocative#Plural#stem: ipsi_; stemtype: demonstr; morph: indeclform.
+urn:cite2:fumorph_lat:PronounForm.test:1553955296038108729#tibi#tu#lat#Masculine#Dative#Singular#stem: tibi; stemtype: pron2; morph: indeclform.
+urn:cite2:fumorph_lat:PronounForm.test:1553955296038887630#tibi#tu#lat#Feminine#Dative#Singular#stem: tibi; stemtype: pron2; morph: indeclform.
+urn:cite2:fumorph_lat:PronounForm.test:1553955296038475331#eorum#is#lat#Masculine#Genitive#Plural#stem: eo_rum; stemtype: pron3; morph: indeclform.
+urn:cite2:fumorph_lat:PronounForm.test:1553955296038627032#eorum#is#lat#Neuter#Genitive#Plural#stem: eo_rum; stemtype: pron3; morph: indeclform.
+urn:cite2:fumorph_lat:PronounForm.test:1553955296038886733#quibus#qui2#lat#Masculine#Ablative#Plural#stem: quibus; stemtype: relative; morph: indeclform.
+urn:cite2:fumorph_lat:PronounForm.test:1553955296038193134#quibus#qui2#lat#Feminine#Ablative#Plural#stem: quibus; stemtype: relative; morph: indeclform.
+urn:cite2:fumorph_lat:PronounForm.test:1553955296038713435#quibus#qui2#lat#Neuter#Ablative#Plural#stem: quibus; stemtype: relative; morph: indeclform.
+urn:cite2:fumorph_lat:PronounForm.test:155395529603889036#quibus#qui2#lat#Masculine#Dative#Plural#stem: quibus; stemtype: relative; morph: indeclform.
+urn:cite2:fumorph_lat:PronounForm.test:155395529603862437#quibus#qui2#lat#Feminine#Dative#Plural#stem: quibus; stemtype: relative; morph: indeclform.
+urn:cite2:fumorph_lat:PronounForm.test:155395529603849238#quibus#qui2#lat#Neuter#Dative#Plural#stem: quibus; stemtype: relative; morph: indeclform.
+urn:cite2:fumorph_lat:PronounForm.test:1553955296038225639#quibus#quis2#lat#Masculine#Ablative#Plural#stem: quibus; stemtype: indef; morph: indeclform.
+urn:cite2:fumorph_lat:PronounForm.test:1553955296038455140#quibus#quis2#lat#Feminine#Ablative#Plural#stem: quibus; stemtype: indef; morph: indeclform.
+urn:cite2:fumorph_lat:PronounForm.test:1553955296038215241#quibus#quis2#lat#Neuter#Ablative#Plural#stem: quibus; stemtype: indef; morph: indeclform.
+urn:cite2:fumorph_lat:PronounForm.test:1553955296039746642#quibus#quis2#lat#Masculine#Dative#Plural#stem: quibus; stemtype: indef; morph: indeclform.
+urn:cite2:fumorph_lat:PronounForm.test:155395529603918043#quibus#quis2#lat#Feminine#Dative#Plural#stem: quibus; stemtype: indef; morph: indeclform.
+urn:cite2:fumorph_lat:PronounForm.test:1553955296039249044#quibus#quis2#lat#Neuter#Dative#Plural#stem: quibus; stemtype: indef; morph: indeclform.
+urn:cite2:fumorph_lat:PronounForm.test:1553955296039869045#quidam#quidam#lat#Masculine#Nominative#Plural#stem: qui_dam; stemtype: indef; morph: indeclform.
+urn:cite2:fumorph_lat:PronounForm.test:1553955296039956946#quidam#quidam#lat#Masculine#Nominative#Singular#stem: qui_dam; stemtype: indef; morph: indeclform.
+urn:cite2:fumorph_lat:PronounForm.test:1553955296039227047#illius#ille#lat#Masculine#Genitive#Singular#stem: illius; stemtype: demonstr; morph: indeclform.
+urn:cite2:fumorph_lat:PronounForm.test:1553955296039205548#illius#ille#lat#Feminine#Genitive#Singular#stem: illius; stemtype: demonstr; morph: indeclform.
+urn:cite2:fumorph_lat:PronounForm.test:1553955296039373049#illius#ille#lat#Neuter#Genitive#Singular#stem: illius; stemtype: demonstr; morph: indeclform.
+urn:cite2:fumorph_lat:PronounForm.test:1553955296039212150#eius#is#lat#Masculine#Genitive#Singular#stem: eius; stemtype: pron3; morph: indeclform.
+urn:cite2:fumorph_lat:PronounForm.test:1553955296039763651#eius#is#lat#Feminine#Genitive#Singular#stem: eius; stemtype: pron3; morph: indeclform.
+urn:cite2:fumorph_lat:PronounForm.test:1553955296039214352#eius#is#lat#Neuter#Genitive#Singular#stem: eius; stemtype: pron3; morph: indeclform.
+urn:cite2:fumorph_lat:PronounForm.test:1553955296039103653#eius#is#lat#Masculine#Genitive#Singular#stem: ejus; stemtype: pron3; morph: indeclform.
+urn:cite2:fumorph_lat:PronounForm.test:1553955296039226854#eius#is#lat#Feminine#Genitive#Singular#stem: ejus; stemtype: pron3; morph: indeclform.
+urn:cite2:fumorph_lat:PronounForm.test:1553955296039982055#eius#is#lat#Neuter#Genitive#Singular#stem: ejus; stemtype: pron3; morph: indeclform.
+
+
+#!citedata
+urn#surfaceform#lemma#lang#gender#case#number#info
+urn:cite2:fumorph_lat:NounForm.test:155395529603923990#ARMA#arma#lat#Neuter#Nominative#Plural#stem: arm; stemtype: us_i; suff: a; decl: 2nd.
+urn:cite2:fumorph_lat:NounForm.test:155395529603996651#ARMA#arma#lat#Neuter#Vocative#Plural#stem: arm; stemtype: us_i; suff: a; decl: 2nd.
+urn:cite2:fumorph_lat:NounForm.test:155395529603982552#ARMA#arma#lat#Neuter#Accusative#Plural#stem: arm; stemtype: us_i; suff: a; decl: 2nd.
+urn:cite2:fumorph_lat:NounForm.test:155395529603959723#virumque#vir#lat#Masculine#Genitive#Plural#stem: vir; stemtype: 0_i; suff: u_m; morph: poetic; decl: 2nd.
+urn:cite2:fumorph_lat:NounForm.test:155395529603955274#virumque#vir#lat#Masculine#Accusative#Singular#stem: vir; stemtype: 0_i; suff: um; decl: 2nd.
+urn:cite2:fumorph_lat:NounForm.test:155395529603968435#virumque#virus#lat#Neuter#Nominative#Singular#stem: vi_rum; stemtype: irreg_nom2; morph: indeclform; decl: 2nd.
+urn:cite2:fumorph_lat:NounForm.test:155395529603919656#virumque#virus#lat#Neuter#Vocative#Singular#stem: vi_rum; stemtype: irreg_nom2; morph: indeclform; decl: 2nd.
+urn:cite2:fumorph_lat:NounForm.test:155395529603972157#virumque#virus#lat#Neuter#Accusative#Singular#stem: vi_rum; stemtype: irreg_nom2; morph: indeclform; decl: 2nd.
+urn:cite2:fumorph_lat:NounForm.test:155395529603963508#virumque#virus#lat#Neuter#Genitive#Plural#stem: vi_r; stemtype: us_i; suff: u_m; morph: poetic; decl: 2nd.
+urn:cite2:fumorph_lat:NounForm.test:155395529603937359#virumque#virus#lat#Neuter#Nominative#Singular#stem: vi_r; stemtype: us_i; suff: um; decl: 2nd.
+urn:cite2:fumorph_lat:NounForm.test:1553955296039178310#virumque#virus#lat#Neuter#Vocative#Singular#stem: vi_r; stemtype: us_i; suff: um; decl: 2nd.
+urn:cite2:fumorph_lat:NounForm.test:1553955296039111511#virumque#virus#lat#Neuter#Accusative#Singular#stem: vi_r; stemtype: us_i; suff: um; decl: 2nd.
+urn:cite2:fumorph_lat:NounForm.test:1553955296039306612#qui#qui1#lat#Masculine#Nominative#Plural#stem: qui_; stemtype: interrog; morph: indeclform; decl: 3rd.
+urn:cite2:fumorph_lat:NounForm.test:1553955296039913913#qui#qui1#lat#Masculine#Nominative#Singular#stem: qui_; stemtype: interrog; morph: indeclform; decl: 3rd.
+urn:cite2:fumorph_lat:NounForm.test:15539552960397714#qui#quis1#lat#Masculine#Nominative#Plural#stem: qui_; stemtype: interrog; morph: indeclform; decl: 3rd.
+urn:cite2:fumorph_lat:NounForm.test:1553955296039307415#oris#aurum#lat#Neuter#Ablative#Plural#stem: o_r; stemtype: us_i; suff: i_s; decl: 2nd.
+urn:cite2:fumorph_lat:NounForm.test:1553955296039177416#oris#aurum#lat#Neuter#Dative#Plural#stem: o_r; stemtype: us_i; suff: i_s; decl: 2nd.
+urn:cite2:fumorph_lat:NounForm.test:15539552960397717#oris#ora1#lat#Feminine#Ablative#Plural#stem: o_r; stemtype: a_ae; suff: i_s; decl: 1st.
+urn:cite2:fumorph_lat:NounForm.test:1553955296039996818#oris#ora1#lat#Feminine#Dative#Plural#stem: o_r; stemtype: a_ae; suff: i_s; decl: 1st.
+urn:cite2:fumorph_lat:NounForm.test:155395529603930319#oris#os1#lat#Neuter#Genitive#Singular#stem: o_ris; stemtype: irreg_nom3; morph: indeclform; decl: 3rd.
+urn:cite2:fumorph_lat:NounForm.test:1553955296039905820#fato#fatum#lat#Neuter#Ablative#Singular#stem: fa_t; stemtype: us_i; suff: o_; decl: 2nd.
+urn:cite2:fumorph_lat:NounForm.test:1553955296039289721#fato#fatum#lat#Neuter#Dative#Singular#stem: fa_t; stemtype: us_i; suff: o_; decl: 2nd.
+urn:cite2:fumorph_lat:NounForm.test:1553955296039934522#litora#litus3#lat#Neuter#Nominative#Plural#stem: li_t; stemtype: us_oris; suff: ora; decl: 3rd.
+urn:cite2:fumorph_lat:NounForm.test:1553955296039609623#litora#litus3#lat#Neuter#Vocative#Plural#stem: li_t; stemtype: us_oris; suff: ora; decl: 3rd.
+urn:cite2:fumorph_lat:NounForm.test:1553955296039609924#litora#litus3#lat#Neuter#Accusative#Plural#stem: li_t; stemtype: us_oris; suff: ora; decl: 3rd.
+urn:cite2:fumorph_lat:NounForm.test:1553955296039853925#multum#multa#lat#Neuter#Genitive#Plural#stem: mult; stemtype: us_i; suff: u_m; morph: poetic; decl: 2nd.
+urn:cite2:fumorph_lat:NounForm.test:1553955296039889126#multum#multi#lat#Masculine#Genitive#Plural#stem: mult; stemtype: us_i; suff: u_m; morph: poetic; decl: 2nd.
+urn:cite2:fumorph_lat:NounForm.test:1553955296039351927#terris#terra#lat#Feminine#Ablative#Plural#stem: terr; stemtype: a_ae; suff: i_s; decl: 1st.
+urn:cite2:fumorph_lat:NounForm.test:155395529603959328#terris#terra#lat#Feminine#Dative#Plural#stem: terr; stemtype: a_ae; suff: i_s; decl: 1st.
+urn:cite2:fumorph_lat:NounForm.test:1553955296039281329#iactatus#jactatus#lat#Masculine#Accusative#Plural#stem: jacta_t; stemtype: us_us; suff: u_s; decl: 4th.
+urn:cite2:fumorph_lat:NounForm.test:1553955296039506930#iactatus#jactatus#lat#Masculine#Nominative#Plural#stem: jacta_t; stemtype: us_us; suff: u_s; decl: 4th.
+urn:cite2:fumorph_lat:NounForm.test:1553955296039517931#iactatus#jactatus#lat#Masculine#Genitive#Singular#stem: jacta_t; stemtype: us_us; suff: u_s; decl: 4th.
+urn:cite2:fumorph_lat:NounForm.test:1553955296039663032#iactatus#jactatus#lat#Masculine#Nominative#Singular#stem: jacta_t; stemtype: us_us; suff: us; decl: 4th.
+urn:cite2:fumorph_lat:NounForm.test:1553955296039278533#alto#altum#lat#Neuter#Ablative#Singular#stem: alt; stemtype: us_i; suff: o_; decl: 2nd.
+urn:cite2:fumorph_lat:NounForm.test:1553955296039487934#alto#altum#lat#Neuter#Dative#Singular#stem: alt; stemtype: us_i; suff: o_; decl: 2nd.
+urn:cite2:fumorph_lat:NounForm.test:1553955296039587335#vi#vis#lat#Feminine#Dative#Singular#stem: vi_; stemtype: irreg_nom3; morph: indeclform; decl: 3rd.
+urn:cite2:fumorph_lat:NounForm.test:1553955296039986236#superum#supera#lat#Neuter#Genitive#Plural#stem: super; stemtype: us_i; suff: u_m; morph: poetic; decl: 2nd.
+urn:cite2:fumorph_lat:NounForm.test:1553955296039706937#iram#ira#lat#Feminine#Accusative#Singular#stem: i_r; stemtype: a_ae; suff: am; decl: 1st.
+urn:cite2:fumorph_lat:NounForm.test:1553955296039723738#multa#multa#lat#Neuter#Nominative#Plural#stem: mult; stemtype: us_i; suff: a; decl: 2nd.
+urn:cite2:fumorph_lat:NounForm.test:1553955296039621339#multa#multa#lat#Neuter#Vocative#Plural#stem: mult; stemtype: us_i; suff: a; decl: 2nd.
+urn:cite2:fumorph_lat:NounForm.test:1553955296039439940#multa#multa#lat#Neuter#Accusative#Plural#stem: mult; stemtype: us_i; suff: a; decl: 2nd.
+urn:cite2:fumorph_lat:NounForm.test:1553955296039674141#multa#multa1#lat#Feminine#Ablative#Singular#stem: mult; stemtype: a_ae; suff: a_; decl: 1st.
+urn:cite2:fumorph_lat:NounForm.test:1553955296039337842#multa#multa1#lat#Feminine#Nominative#Singular#stem: mult; stemtype: a_ae; suff: a; decl: 1st.
+urn:cite2:fumorph_lat:NounForm.test:155395529603993643#multa#multa1#lat#Feminine#Vocative#Singular#stem: mult; stemtype: a_ae; suff: a; decl: 1st.
+urn:cite2:fumorph_lat:NounForm.test:1553955296039397544#bello#bellum#lat#Neuter#Ablative#Singular#stem: bell; stemtype: us_i; suff: o_; decl: 2nd.
+urn:cite2:fumorph_lat:NounForm.test:1553955296039615945#bello#bellum#lat#Neuter#Dative#Singular#stem: bell; stemtype: us_i; suff: o_; decl: 2nd.
+urn:cite2:fumorph_lat:NounForm.test:1553955296039133246#passus#passus3#lat#Masculine#Accusative#Plural#stem: pass; stemtype: us_us; suff: u_s; decl: 4th.
+urn:cite2:fumorph_lat:NounForm.test:1553955296039487347#passus#passus3#lat#Masculine#Nominative#Plural#stem: pass; stemtype: us_us; suff: u_s; decl: 4th.
+urn:cite2:fumorph_lat:NounForm.test:1553955296039915848#passus#passus3#lat#Masculine#Genitive#Singular#stem: pass; stemtype: us_us; suff: u_s; decl: 4th.
+urn:cite2:fumorph_lat:NounForm.test:155395529603921449#passus#passus3#lat#Masculine#Nominative#Singular#stem: pass; stemtype: us_us; suff: us; decl: 4th.
+urn:cite2:fumorph_lat:NounForm.test:1553955296039461250#urbem#urbs#lat#Feminine#Accusative#Singular#stem: urb; stemtype: s_is; suff: em; decl: 3rd.
+urn:cite2:fumorph_lat:NounForm.test:1553955296040923051#deos#deus#lat#Masculine#Accusative#Plural#stem: de; stemtype: us_i; suff: o_s; decl: 2nd.
+urn:cite2:fumorph_lat:NounForm.test:1553955296040677952#Latio#latio#lat#Feminine#Nominative#Singular#stem: la_ti; stemtype: o_oLnis; suff: o_; decl: 3rd.
+urn:cite2:fumorph_lat:NounForm.test:1553955296040395853#Latio#latio#lat#Feminine#Vocative#Singular#stem: la_ti; stemtype: o_oLnis; suff: o_; decl: 3rd.
+urn:cite2:fumorph_lat:NounForm.test:155395529604052054#genus#genu#lat#Neuter#Genitive#Singular#stem: gen; stemtype: us_us; suff: u_s; decl: 4th.
+urn:cite2:fumorph_lat:NounForm.test:1553955296040918555#genus#genus#lat#Masculine#Nominative#Singular#stem: gen; stemtype: us_i; suff: us; decl: 2nd.
+urn:cite2:fumorph_lat:NounForm.test:1553955296040605656#genus#genus1#lat#Neuter#Nominative#Singular#stem: gen; stemtype: us_eris; suff: us; decl: 3rd.
+urn:cite2:fumorph_lat:NounForm.test:1553955296040801857#genus#genus1#lat#Neuter#Vocative#Singular#stem: gen; stemtype: us_eris; suff: us; decl: 3rd.
+urn:cite2:fumorph_lat:NounForm.test:155395529604064758#genus#genus1#lat#Neuter#Accusative#Singular#stem: gen; stemtype: us_eris; suff: us; decl: 3rd.
+urn:cite2:fumorph_lat:NounForm.test:1553955296040565059#patres#pater#lat#Masculine#Accusative#Plural#stem: pat; stemtype: er_ris; suff: re_s; decl: 3rd.
+urn:cite2:fumorph_lat:NounForm.test:155395529604031060#patres#pater#lat#Masculine#Nominative#Plural#stem: pat; stemtype: er_ris; suff: re_s; decl: 3rd.
+urn:cite2:fumorph_lat:NounForm.test:1553955296040459261#patres#pater#lat#Masculine#Vocative#Plural#stem: pat; stemtype: er_ris; suff: re_s; decl: 3rd.
+urn:cite2:fumorph_lat:NounForm.test:155395529604092162#moenia#moenia1#lat#Neuter#Nominative#Plural#stem: moen; stemtype: is_is; suff: ia; decl: 3rd.
+urn:cite2:fumorph_lat:NounForm.test:1553955296040745363#moenia#moenia1#lat#Neuter#Vocative#Plural#stem: moen; stemtype: is_is; suff: ia; decl: 3rd.
+urn:cite2:fumorph_lat:NounForm.test:1553955296040525864#moenia#moenia1#lat#Neuter#Accusative#Plural#stem: moen; stemtype: is_is; suff: ia; decl: 3rd.
+urn:cite2:fumorph_lat:NounForm.test:1553955296040197165#moenia#munia#lat#Neuter#Nominative#Plural#stem: moeni; stemtype: us_i; suff: a; decl: 2nd.
+urn:cite2:fumorph_lat:NounForm.test:1553955296040757766#moenia#munia#lat#Neuter#Vocative#Plural#stem: moeni; stemtype: us_i; suff: a; decl: 2nd.
+urn:cite2:fumorph_lat:NounForm.test:155395529604048267#moenia#munia#lat#Neuter#Accusative#Plural#stem: moeni; stemtype: us_i; suff: a; decl: 2nd.
+urn:cite2:fumorph_lat:NounForm.test:1553955296040489868#causas#causa#lat#Feminine#Accusative#Plural#stem: caus; stemtype: a_ae; suff: a_s; decl: 1st.
+urn:cite2:fumorph_lat:NounForm.test:1553955296040219269#quo#quis1#lat#Masculine#Ablative#Singular#stem: quo_; stemtype: interrog; morph: indeclform; decl: 3rd.
+urn:cite2:fumorph_lat:NounForm.test:155395529604014070#quo#quis1#lat#Feminine#Ablative#Singular#stem: quo_; stemtype: interrog; morph: indeclform; decl: 3rd.
+urn:cite2:fumorph_lat:NounForm.test:1553955296040911871#quo#quis1#lat#Neuter#Ablative#Singular#stem: quo_; stemtype: interrog; morph: indeclform; decl: 3rd.
+urn:cite2:fumorph_lat:NounForm.test:155395529604082872#numine#numen#lat#Neuter#Ablative#Singular#stem: nu_; stemtype: men_minis; suff: mi^ne; decl: 3rd.
+urn:cite2:fumorph_lat:NounForm.test:1553955296040817273#quidve#quis1#lat#Neuter#Nominative#Singular#stem: quid; stemtype: interrog; morph: indeclform; decl: 3rd.
+urn:cite2:fumorph_lat:NounForm.test:155395529604033074#quidve#quis1#lat#Neuter#Accusative#Singular#stem: quid; stemtype: interrog; morph: indeclform; decl: 3rd.
+urn:cite2:fumorph_lat:NounForm.test:1553955296040989675#regina#regina#lat#Feminine#Ablative#Singular#stem: re_gi_n; stemtype: a_ae; suff: a_; decl: 1st.
+urn:cite2:fumorph_lat:NounForm.test:155395529604063176#regina#regina#lat#Feminine#Nominative#Singular#stem: re_gi_n; stemtype: a_ae; suff: a; decl: 1st.
+urn:cite2:fumorph_lat:NounForm.test:1553955296040547777#regina#regina#lat#Feminine#Vocative#Singular#stem: re_gi_n; stemtype: a_ae; suff: a; decl: 1st.
+urn:cite2:fumorph_lat:NounForm.test:155395529604016778#deum#deus#lat#Masculine#Genitive#Plural#stem: de; stemtype: us_i; suff: u_m; morph: poetic; decl: 2nd.
+urn:cite2:fumorph_lat:NounForm.test:1553955296040641179#deum#deus#lat#Masculine#Accusative#Singular#stem: de; stemtype: us_i; suff: um; decl: 2nd.
+urn:cite2:fumorph_lat:NounForm.test:1553955296040255580#casus#casus1#lat#Masculine#Nominative#Singular#stem: ca_s; stemtype: us_i; suff: us; decl: 2nd.
+urn:cite2:fumorph_lat:NounForm.test:155395529604018381#casus#casus1#lat#Masculine#Accusative#Plural#stem: ca_s; stemtype: us_us; suff: u_s; decl: 4th.
+urn:cite2:fumorph_lat:NounForm.test:155395529604022482#casus#casus1#lat#Masculine#Nominative#Plural#stem: ca_s; stemtype: us_us; suff: u_s; decl: 4th.
+urn:cite2:fumorph_lat:NounForm.test:1553955296040532083#casus#casus1#lat#Masculine#Genitive#Singular#stem: ca_s; stemtype: us_us; suff: u_s; decl: 4th.
+urn:cite2:fumorph_lat:NounForm.test:1553955296040356984#casus#casus1#lat#Masculine#Nominative#Singular#stem: ca_s; stemtype: us_us; suff: us; decl: 4th.
+urn:cite2:fumorph_lat:NounForm.test:1553955296040859285#pietate#pietas1#lat#Feminine#Ablative#Singular#stem: pie; stemtype: tas_tatis; suff: ta_te; decl: 3rd.
+urn:cite2:fumorph_lat:NounForm.test:1553955296040682686#virum#vir#lat#Masculine#Genitive#Plural#stem: vir; stemtype: 0_i; suff: u_m; morph: poetic; decl: 2nd.
+urn:cite2:fumorph_lat:NounForm.test:1553955296040977887#virum#vir#lat#Masculine#Accusative#Singular#stem: vir; stemtype: 0_i; suff: um; decl: 2nd.
+urn:cite2:fumorph_lat:NounForm.test:1553955296040141488#virum#virus#lat#Neuter#Nominative#Singular#stem: vi_rum; stemtype: irreg_nom2; morph: indeclform; decl: 2nd.
+urn:cite2:fumorph_lat:NounForm.test:1553955296040568689#virum#virus#lat#Neuter#Vocative#Singular#stem: vi_rum; stemtype: irreg_nom2; morph: indeclform; decl: 2nd.
+urn:cite2:fumorph_lat:NounForm.test:1553955296040737090#virum#virus#lat#Neuter#Accusative#Singular#stem: vi_rum; stemtype: irreg_nom2; morph: indeclform; decl: 2nd.
+urn:cite2:fumorph_lat:NounForm.test:1553955296040517691#virum#virus#lat#Neuter#Genitive#Plural#stem: vi_r; stemtype: us_i; suff: u_m; morph: poetic; decl: 2nd.
+urn:cite2:fumorph_lat:NounForm.test:1553955296040372092#virum#virus#lat#Neuter#Nominative#Singular#stem: vi_r; stemtype: us_i; suff: um; decl: 2nd.
+urn:cite2:fumorph_lat:NounForm.test:1553955296040673393#virum#virus#lat#Neuter#Vocative#Singular#stem: vi_r; stemtype: us_i; suff: um; decl: 2nd.
+urn:cite2:fumorph_lat:NounForm.test:1553955296040784794#virum#virus#lat#Neuter#Accusative#Singular#stem: vi_r; stemtype: us_i; suff: um; decl: 2nd.
+urn:cite2:fumorph_lat:NounForm.test:155395529604072695#labores#labor2#lat#Masculine#Accusative#Plural#stem: lab; stemtype: or_oLris; suff: o_re_s; decl: 3rd.
+urn:cite2:fumorph_lat:NounForm.test:1553955296040742396#labores#labor2#lat#Masculine#Nominative#Plural#stem: lab; stemtype: or_oLris; suff: o_re_s; decl: 3rd.
+urn:cite2:fumorph_lat:NounForm.test:1553955296040597597#labores#labor2#lat#Masculine#Vocative#Plural#stem: lab; stemtype: or_oLris; suff: o_re_s; decl: 3rd.
+urn:cite2:fumorph_lat:NounForm.test:1553955296040768998#multi#multi#lat#Masculine#Nominative#Plural#stem: mult; stemtype: us_i; suff: i_; decl: 2nd.
+urn:cite2:fumorph_lat:NounForm.test:1553955296040443499#multi#multi#lat#Masculine#Vocative#Plural#stem: mult; stemtype: us_i; suff: i_; decl: 2nd.
+urn:cite2:fumorph_lat:NounForm.test:1553955296040582100#conati#conatum#lat#Neuter#Genitive#Singular#stem: co_na_t; stemtype: us_i; suff: i_; decl: 2nd.
+urn:cite2:fumorph_lat:NounForm.test:15539552960406025101#narrationem#narratio#lat#Feminine#Accusative#Singular#stem: narra_ti; stemtype: o_oLnis; suff: o_nem; decl: 3rd.
+urn:cite2:fumorph_lat:NounForm.test:1553955296040049102#quae#qui1#lat#Feminine#Nominative#Plural#stem: quae; stemtype: interrog; morph: indeclform; decl: 3rd.
+urn:cite2:fumorph_lat:NounForm.test:1553955296040622103#quae#qui1#lat#Feminine#Nominative#Singular#stem: quae; stemtype: interrog; morph: indeclform; decl: 3rd.
+urn:cite2:fumorph_lat:NounForm.test:15539552960409614104#quae#qui1#lat#Neuter#Nominative#Plural#stem: quae; stemtype: interrog; morph: indeclform; decl: 3rd.
+urn:cite2:fumorph_lat:NounForm.test:1553955296040793105#quae#qui1#lat#Neuter#Accusative#Plural#stem: quae; stemtype: interrog; morph: indeclform; decl: 3rd.
+urn:cite2:fumorph_lat:NounForm.test:15539552960407528106#quae#quis1#lat#Feminine#Nominative#Plural#stem: quae; stemtype: interrog; morph: indeclform; decl: 3rd.
+urn:cite2:fumorph_lat:NounForm.test:1553955296040368107#quae#quis1#lat#Neuter#Nominative#Plural#stem: quae; stemtype: interrog; morph: indeclform; decl: 3rd.
+urn:cite2:fumorph_lat:NounForm.test:15539552960407819108#quae#quis1#lat#Neuter#Accusative#Plural#stem: quae; stemtype: interrog; morph: indeclform; decl: 3rd.
+urn:cite2:fumorph_lat:NounForm.test:15539552960407648109#rerum:#res#lat#Feminine#Genitive#Plural#stem: r; stemtype: es_ei; suff: e_rum; decl: 5th.
+urn:cite2:fumorph_lat:NounForm.test:15539552960407837110#initio#initium#lat#Neuter#Ablative#Singular#stem: init; stemtype: ius_i; suff: io_; decl: 2nd.
+urn:cite2:fumorph_lat:NounForm.test:15539552960403060111#initio#initium#lat#Neuter#Dative#Singular#stem: init; stemtype: ius_i; suff: io_; decl: 2nd.
+urn:cite2:fumorph_lat:NounForm.test:15539552960401444112#ministri#minister#lat#Masculine#Nominative#Plural#stem: minist; stemtype: er_ri; suff: ri_; decl: 2nd.
+urn:cite2:fumorph_lat:NounForm.test:15539552960408875113#ministri#minister#lat#Masculine#Vocative#Plural#stem: minist; stemtype: er_ri; suff: ri_; decl: 2nd.
+urn:cite2:fumorph_lat:NounForm.test:15539552960407098114#ministri#minister#lat#Masculine#Genitive#Singular#stem: minist; stemtype: er_ri; suff: ri_; decl: 2nd.
+urn:cite2:fumorph_lat:NounForm.test:1553955296040246115#sermonis:#sermo#lat#Masculine#Genitive#Singular#stem: serm; stemtype: o_oLnis; suff: o_nis; decl: 3rd.
+urn:cite2:fumorph_lat:NounForm.test:15539552960405487116#visum#visum#lat#Neuter#Genitive#Plural#stem: vi_s; stemtype: us_i; suff: u_m; morph: poetic; decl: 2nd.
+urn:cite2:fumorph_lat:NounForm.test:1553955296040088117#visum#visum#lat#Neuter#Nominative#Singular#stem: vi_s; stemtype: us_i; suff: um; decl: 2nd.
+urn:cite2:fumorph_lat:NounForm.test:15539552960404935118#visum#visum#lat#Neuter#Vocative#Singular#stem: vi_s; stemtype: us_i; suff: um; decl: 2nd.
+urn:cite2:fumorph_lat:NounForm.test:15539552960409759119#visum#visum#lat#Neuter#Accusative#Singular#stem: vi_s; stemtype: us_i; suff: um; decl: 2nd.
+urn:cite2:fumorph_lat:NounForm.test:15539552960406472120#visum#visus2#lat#Masculine#Accusative#Singular#stem: vi_s; stemtype: us_us; suff: um; decl: 4th.
+urn:cite2:fumorph_lat:NounForm.test:15539552960406451121#omnia#omne#lat#Neuter#Nominative#Plural#stem: omn; stemtype: is_is; suff: ia; decl: 3rd.
+urn:cite2:fumorph_lat:NounForm.test:15539552960405191122#omnia#omne#lat#Neuter#Vocative#Plural#stem: omn; stemtype: is_is; suff: ia; decl: 3rd.
+urn:cite2:fumorph_lat:NounForm.test:1553955296040041123#omnia#omne#lat#Neuter#Accusative#Plural#stem: omn; stemtype: is_is; suff: ia; decl: 3rd.
+urn:cite2:fumorph_lat:NounForm.test:15539552960407017124#omnia#omnia#lat#Neuter#Nominative#Plural#stem: omn; stemtype: is_is; suff: ia; decl: 3rd.
+urn:cite2:fumorph_lat:NounForm.test:15539552960409711125#omnia#omnia#lat#Neuter#Vocative#Plural#stem: omn; stemtype: is_is; suff: ia; decl: 3rd.
+urn:cite2:fumorph_lat:NounForm.test:15539552960403476126#omnia#omnia#lat#Neuter#Accusative#Plural#stem: omn; stemtype: is_is; suff: ia; decl: 3rd.
+urn:cite2:fumorph_lat:NounForm.test:15539552960401480127#principio#principium#lat#Neuter#Ablative#Singular#stem: princip; stemtype: ius_i; suff: io_; decl: 2nd.
+urn:cite2:fumorph_lat:NounForm.test:15539552960405836128#principio#principium#lat#Neuter#Dative#Singular#stem: princip; stemtype: ius_i; suff: io_; decl: 2nd.
+urn:cite2:fumorph_lat:NounForm.test:15539552960406756129#ordine#ordo#lat#Masculine#Ablative#Singular#stem: ord; stemtype: o_inis; suff: i^ne; decl: 3rd.
+urn:cite2:fumorph_lat:NounForm.test:15539552960403356130#optime#optimum#lat#Neuter#Vocative#Singular#stem: optim; stemtype: us_i; suff: e; decl: 2nd.
+urn:cite2:fumorph_lat:NounForm.test:15539552960408657131#verborum#verbum#lat#Neuter#Genitive#Plural#stem: verb; stemtype: us_i; suff: o_rum; decl: 2nd.
+urn:cite2:fumorph_lat:NounForm.test:15539552960408630132#quibus#qui1#lat#Masculine#Ablative#Plural#stem: quibus; stemtype: interrog; morph: indeclform; decl: 3rd.
+urn:cite2:fumorph_lat:NounForm.test:1553955296040394133#quibus#qui1#lat#Feminine#Ablative#Plural#stem: quibus; stemtype: interrog; morph: indeclform; decl: 3rd.
+urn:cite2:fumorph_lat:NounForm.test:15539552960409656134#quibus#qui1#lat#Neuter#Ablative#Plural#stem: quibus; stemtype: interrog; morph: indeclform; decl: 3rd.
+urn:cite2:fumorph_lat:NounForm.test:15539552960403987135#quibus#qui1#lat#Masculine#Dative#Plural#stem: quibus; stemtype: interrog; morph: indeclform; decl: 3rd.
+urn:cite2:fumorph_lat:NounForm.test:15539552960405372136#quibus#qui1#lat#Feminine#Dative#Plural#stem: quibus; stemtype: interrog; morph: indeclform; decl: 3rd.
+urn:cite2:fumorph_lat:NounForm.test:15539552960406192137#quibus#qui1#lat#Neuter#Dative#Plural#stem: quibus; stemtype: interrog; morph: indeclform; decl: 3rd.
+urn:cite2:fumorph_lat:NounForm.test:1553955296040671138#quibus#quis1#lat#Masculine#Ablative#Plural#stem: quibus; stemtype: interrog; morph: indeclform; decl: 3rd.
+urn:cite2:fumorph_lat:NounForm.test:15539552960407268139#quibus#quis1#lat#Feminine#Ablative#Plural#stem: quibus; stemtype: interrog; morph: indeclform; decl: 3rd.
+urn:cite2:fumorph_lat:NounForm.test:15539552960408482140#quibus#quis1#lat#Neuter#Ablative#Plural#stem: quibus; stemtype: interrog; morph: indeclform; decl: 3rd.
+urn:cite2:fumorph_lat:NounForm.test:15539552960405425141#quibus#quis1#lat#Masculine#Dative#Plural#stem: quibus; stemtype: interrog; morph: indeclform; decl: 3rd.
+urn:cite2:fumorph_lat:NounForm.test:15539552960419289142#quibus#quis1#lat#Feminine#Dative#Plural#stem: quibus; stemtype: interrog; morph: indeclform; decl: 3rd.
+urn:cite2:fumorph_lat:NounForm.test:1553955296041395143#quibus#quis1#lat#Neuter#Dative#Plural#stem: quibus; stemtype: interrog; morph: indeclform; decl: 3rd.
+urn:cite2:fumorph_lat:NounForm.test:15539552960415473144#eruditus#eruditus2#lat#Masculine#Accusative#Plural#stem: e_rudi_t; stemtype: us_us; suff: u_s; decl: 4th.
+urn:cite2:fumorph_lat:NounForm.test:15539552960418777145#eruditus#eruditus2#lat#Masculine#Nominative#Plural#stem: e_rudi_t; stemtype: us_us; suff: u_s; decl: 4th.
+urn:cite2:fumorph_lat:NounForm.test:1553955296041402146#eruditus#eruditus2#lat#Masculine#Genitive#Singular#stem: e_rudi_t; stemtype: us_us; suff: u_s; decl: 4th.
+urn:cite2:fumorph_lat:NounForm.test:15539552960419339147#eruditus#eruditus2#lat#Masculine#Nominative#Singular#stem: e_rudi_t; stemtype: us_us; suff: us; decl: 4th.
+urn:cite2:fumorph_lat:NounForm.test:15539552960416462148#veritatem#veritas#lat#Feminine#Accusative#Singular#stem: ve_ri; stemtype: tas_tatis; suff: ta_tem; decl: 3rd.
+urn:cite2:fumorph_lat:NounForm.test:15539552960419577149#diebus#dies#lat#Masculine#Ablative#Plural#stem: di; stemtype: es_ei; suff: e_bus; decl: 5th.
+urn:cite2:fumorph_lat:NounForm.test:15539552960413678150#diebus#dies#lat#Feminine#Ablative#Plural#stem: di; stemtype: es_ei; suff: e_bus; decl: 5th.
+urn:cite2:fumorph_lat:NounForm.test:15539552960417967151#diebus#dies#lat#Masculine#Dative#Plural#stem: di; stemtype: es_ei; suff: e_bus; decl: 5th.
+urn:cite2:fumorph_lat:NounForm.test:15539552960415711152#diebus#dies#lat#Feminine#Dative#Plural#stem: di; stemtype: es_ei; suff: e_bus; decl: 5th.
+urn:cite2:fumorph_lat:NounForm.test:1553955296041363153#regis#rex#lat#Masculine#Genitive#Singular#stem: re_; stemtype: x_gis; suff: gis; decl: 3rd.
+urn:cite2:fumorph_lat:NounForm.test:15539552960411492154#sacerdos#sacerdos1#lat#Masculine#Nominative#Singular#stem: sacerdo; stemtype: s_tis; suff: s; decl: 3rd.
+urn:cite2:fumorph_lat:NounForm.test:1553955296041031155#sacerdos#sacerdos1#lat#Feminine#Nominative#Singular#stem: sacerdo; stemtype: s_tis; suff: s; decl: 3rd.
+urn:cite2:fumorph_lat:NounForm.test:15539552960412686156#nomine#nomen#lat#Neuter#Ablative#Singular#stem: no_; stemtype: men_minis; suff: mi^ne; decl: 3rd.
+urn:cite2:fumorph_lat:NounForm.test:155395529604137157#vice#vicis#lat#Feminine#Ablative#Singular#stem: vic; stemtype: is_is; suff: e; decl: 3rd.
+urn:cite2:fumorph_lat:NounForm.test:15539552960413044158#vice#vicus#lat#Masculine#Vocative#Singular#stem: vi_c; stemtype: us_i; suff: e; decl: 2nd.
+urn:cite2:fumorph_lat:NounForm.test:15539552960412845159#uxor#uxor#lat#Feminine#Nominative#Singular#stem: ux; stemtype: or_oLris; suff: or; decl: 3rd.
+urn:cite2:fumorph_lat:NounForm.test:15539552960415446160#uxor#uxor#lat#Feminine#Vocative#Singular#stem: ux; stemtype: or_oLris; suff: or; decl: 3rd.
+urn:cite2:fumorph_lat:NounForm.test:15539552960419199161#nomen#nome#lat#Feminine#Accusative#Singular#stem: nom; stemtype: e_es; suff: e_n; decl: 1st.
+urn:cite2:fumorph_lat:NounForm.test:1553955296041322162#nomen#nomen#lat#Neuter#Accusative#Singular#stem: no_; stemtype: men_minis; suff: men; decl: 3rd.
+urn:cite2:fumorph_lat:NounForm.test:15539552960412248163#nomen#nomen#lat#Neuter#Nominative#Singular#stem: no_; stemtype: men_minis; suff: men; decl: 3rd.
+urn:cite2:fumorph_lat:NounForm.test:15539552960419436164#nomen#nomen#lat#Neuter#Vocative#Singular#stem: no_; stemtype: men_minis; suff: men; decl: 3rd.
+
+
+#!citedata
+urn#surfaceform#lemma#lang#gender#case#number#info
+urn:cite2:fumorph_lat:SupineForm.test:155395529604197440#visum#video#lat#Neuter#Nominative#Singular#stem: vi_s; stemtype: pp4; suff: um.
+urn:cite2:fumorph_lat:SupineForm.test:155395529604193631#visum#viso#lat#Neuter#Nominative#Singular#stem: vi_s; stemtype: pp4; suff: um.
+
