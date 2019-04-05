@@ -365,11 +365,13 @@ case class MorphCex(lang:MorphLanguage) {
 	}
 
 	def formsFromCiteObjects(lib:CiteLibrary, lang:MorphLanguage = lang):Vector[CitableMorphology] = {
+		println(s"Got here: formsFromCiteObjects")
 		lib.collectionRepository match {
 			case Some(cr) => {
 				// Get collections for each category
 					val objsInvalidForm:Vector[CitableMorphology] = {
 						val colls:Vector[Cite2Urn] = lib.collectionsForModel(Cite2Urn("urn:cite2:cite:datamodels.v1:InvalidForm"))
+						println(s"\n\ncolls:\n\n${colls}\n\n")
 					 	val urns:Vector[Cite2Urn] = colls.map( c => {
 					 		cr.collectionsMap(c)
 					 	}).flatten

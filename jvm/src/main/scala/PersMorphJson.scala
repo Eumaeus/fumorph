@@ -97,10 +97,10 @@ import cats.syntax.either._
 						}
 						val gs:LiteraryGreekString = LiteraryGreekString(str)
 						if (elided) {
-							val emended:String = gs.ascii.replaceAll("#","") + "%27"
-							emended
+							val emended:String = gs.ascii.replaceAll("#","") + "'"
+							LiteraryGreekString(emended).ucode
 						} else {
-							gs.ascii.replaceAll("#","").replaceAll("\\\\","/")
+							LiteraryGreekString(gs.ascii.replaceAll("#","").replaceAll("\\\\","/").replaceAll("\\+","")).ucode
 						}
 					} else {
 						str

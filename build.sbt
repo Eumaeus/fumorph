@@ -20,7 +20,7 @@ lazy val crossed = crossProject(JSPlatform, JVMPlatform).in(file("."))
 .settings(
       name := "fumorph",
       organization := "edu.furman.classics",
-      version := "0.8.0",
+      version := "0.9.0",
       licenses += ("GPL-3.0",url("https://opensource.org/licenses/gpl-3.0.html")),
       resolvers += Resolver.jcenterRepo,
       resolvers += Resolver.bintrayRepo("eumaeus", "maven"),
@@ -32,7 +32,7 @@ lazy val crossed = crossProject(JSPlatform, JVMPlatform).in(file("."))
         "edu.holycross.shot.cite" %%% "xcite" % "4.0.2",
         "edu.holycross.shot" %%% "citeobj" % "7.3.0",
         "edu.holycross.shot" %%% "citerelations" % "2.4.0",
-        "edu.holycross.shot" %%% "greek" % "1.4.0",
+        "edu.holycross.shot" %%% "greek" % "2.3.2",
         "edu.holycross.shot" %%% "ohco2" % "10.12.5",
         "edu.holycross.shot" %%% "dse" % "3.1.0",
         "edu.holycross.shot" %%% "scm" % "6.2.0"
