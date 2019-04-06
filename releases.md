@@ -1,5 +1,7 @@
 # morphjson: release notes
 
+**0.10.0**: Added method to serialize archived forms to CEX.
+
 **0.9.1**:  Innumerable minor fixes for publication.
 
 **0.9.0**:  End-user cycle: Load CEX and Text Library; parse; export CEX.

@@ -128,6 +128,8 @@ case class FuMorph(morphLib:Option[CiteLibrary], textLib:CiteLibrary, lang:Morph
 		(archivedFormVec ++ newFormVec).distinct.sortBy(_.lemma)
 	}
 
+	lazy val backupCex:String = morphCex.cex(lang, archivedFormVec, "fumorph", "temp", "#")
+
 	lazy val updateCex:String = morphCex.cex(lang, updatedForms, "fumorph", "temp", "#")
 
 	lazy val forms:Vector[CitableMorphology] = {
