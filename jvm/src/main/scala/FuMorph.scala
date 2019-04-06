@@ -25,7 +25,6 @@ case class FuMorph(morphLib:Option[CiteLibrary], textLib:CiteLibrary, lang:Morph
 	}
 
 	def archivedFormVec:Vector[Form] = {
-		println(s"got here")
 		this.morphLib match {
 			case Some(ml) => {
 				val collRepOption:Option[CiteCollectionRepository] = ml.collectionRepository
@@ -40,7 +39,7 @@ case class FuMorph(morphLib:Option[CiteLibrary], textLib:CiteLibrary, lang:Morph
 				}
 				val lgsProperties:Vector[Cite2Urn] = ml.collectionsForModel(lgsModel)
 				val ff:Vector[CitableMorphology] = morphCex.formsFromCiteObjects(ml)
-				println(s"\n\nff:\n\n${ff}\n\n")
+				//println(s"\n\nff:\n\n${ff}\n\n")
 				ff.map(_.form).distinct
 			}
 			case None => {
@@ -62,33 +61,8 @@ case class FuMorph(morphLib:Option[CiteLibrary], textLib:CiteLibrary, lang:Morph
 		}	
 	}
 
-
-
-	/*
-	lazy val lemmata:Vector[String] = {
-		collRepOption match {
-			case Some(cr) => {
-				val props:Vector[CitePropertyValue] = lemmaProperties.map( sfp => {
-					cr.data.data.filter(_.urn ~~ sfp)
-				}).flatten
-				lang match {
-					case Greek => {
-						val greekStrings:Vector[LiteraryGreekString] = {
-							props.map(p => LiteraryGreekString(p.propertyValue.asInstanceOf[String]))	
-						}
-						greekStrings.distinct.map(_.ucode)
-					}
-					case _ => {
-						props.map(p => p.propertyValue.asInstanceOf[String]).distinct
-					}
-				}
-			}
-			case None => { Vector[String]() }
-		}
-	}
-	*/
-
 	lazy val langCorpus:Option[Corpus] = {
+		println(s"Building a Corpus for '${lang.abbr}'…")
 		textLib.textRepository match {
 			case Some(tr) => {
 				val catEntries:Vector[CatalogEntry] = tr.catalog.texts.filter(_.lang == lang.abbr )
@@ -101,6 +75,7 @@ case class FuMorph(morphLib:Option[CiteLibrary], textLib:CiteLibrary, lang:Morph
 	}
 
 	lazy val unknownFormsCorpus:Corpus = {
+		println(s"Building a corpus of undocumented tokens…")
 		langCorpus match {
 			case Some(corp) => {
 				val nodes:Vector[CitableNode] = corp.nodes.filter( n => {
@@ -124,7 +99,16 @@ case class FuMorph(morphLib:Option[CiteLibrary], textLib:CiteLibrary, lang:Morph
 					}
 					CitableNode(u,t)
 				})
-				Corpus(nodes)
+				val texts:Vector[String] = nodes.map(_.text).distinct
+				println(s"${texts.size} distinct new forms.")
+				val newCorp:Corpus = {
+					val us:String = "urn:cts:fuTest:g.w.v:"
+					val newNodes = texts.zipWithIndex.map{ case(t,i) => {
+						CitableNode( CtsUrn(s"${us}${i}"), t)
+					}}
+					Corpus(newNodes)
+				}
+				newCorp
 			}
 			case None => {
 				Corpus(Vector[CitableNode]())
@@ -153,69 +137,11 @@ case class FuMorph(morphLib:Option[CiteLibrary], textLib:CiteLibrary, lang:Morph
 		}
 	}
 
-	lazy val morphRelations:CiteRelationSet = {
-		val relationUrn:Cite2Urn = Cite2Urn("urn:cite2:fumorph:verbs.v1:mayParse")
-		val triples:Vector[CiteTriple] = langCorpus.getOrElse(Corpus(Vector[CitableNode]())).nodes.map( n => {
-			val t:String = {
-				if (lang == Greek) {
-					normalizeGreek(n.text)
-				} else {
-					normalizeLatin(n.text)
-				}
-			}
-			println(s"finding morphs on: ${t}")
-			val formSet:Vector[Cite2Urn] = {
-				forms.filter( f => {
-					val formStr:String = {
-						if (lang == Greek) normalizeGreek(f.form.surfaceForm)
-						else normalizeLatin(f.form.surfaceForm)
-					}
-					formStr == t
-				}).map(_.urn)
-			}
-			println(s"got: ${formSet.size} formSets.")
-			formSet.map( fs => {
-				CiteTriple(n.urn, relationUrn, fs)
-			})
-		}).flatten
-		CiteRelationSet(triples.toSet)
-	}		
-
-	lazy val lexRelations:CiteRelationSet = {
-		val relationUrn:Cite2Urn = Cite2Urn("urn:cite2:fumorph:verbs.v1:maybeLemma")
-		val triples:Vector[CiteTriple] = langCorpus.getOrElse(Corpus(Vector[CitableNode]())).nodes.map( n => {
-			val t:String = {
-				if (lang == Greek) {
-					val ng:String = normalizeGreek(n.text)
-					if (ng.size == 0) { "" }
-					else {
-						val beta:String = LiteraryGreekString(ng).ascii
-						beta.replaceAll("[')(/=+]","")
-					}
-				} else {
-					normalizeLatin(n.text)
-				}
-			}
-			println(s"finding lex for: ${t}")
-			val lexSet:Vector[Cite2Urn] = {
-				lexIndex.filter( ll => {
-					( ll.split("#")(1) == t)
-				}).map( ll => {
-					val uStr:String = ll.split("#")(0)
-					Cite2Urn(uStr)
-				})
-			}
-			lexSet.map( fs => {
-				CiteTriple(n.urn, relationUrn, fs)
-			})
-		}).flatten
-		CiteRelationSet(triples.toSet)
-	}
-
 
 /* Normalize Strings for matching */
 
 	def normalizeGreek(s:String):String = {
+		//println(s"""normalizing "${s}".""")
 		// remove punctuation
 		val puncStr:String = s.replaceAll(punctuation,"")
 		// fix elision
@@ -223,12 +149,14 @@ case class FuMorph(morphLib:Option[CiteLibrary], textLib:CiteLibrary, lang:Morph
 			if (puncStr.size < 1) {
 				false
 			} else {
-				puncStr.last.toString.matches("['ʼ‘’’]")
+				puncStr.last.toString.matches("['ʼ‘’’᾽]")
 			}
 		}
 		val emendedStr:String = {
 			if (elided) {
-				LiteraryGreekString(puncStr).ucode.dropRight(1).replaceAll("#","") + "'"
+				val lgs = LiteraryGreekString(puncStr).ucode.dropRight(1).replaceAll("#","") + "'"
+				//println(s"lgs = ${lgs} ")
+				lgs
 			} else {
 				puncStr
 			}
@@ -236,7 +164,7 @@ case class FuMorph(morphLib:Option[CiteLibrary], textLib:CiteLibrary, lang:Morph
 		// make unicode
 		val acuteString:String = {
 			if (emendedStr.size < 1) { "" }
-			else { LiteraryGreekString(emendedStr).ascii.replaceAll("\\\\","/").replaceAll("\\+","") }
+			else { LiteraryGreekString(emendedStr).ascii.replaceAll("\\\\","/") }
 		}
 		val sigmaString:String = {
 			if (acuteString.size < 1) { "" }
@@ -252,6 +180,7 @@ case class FuMorph(morphLib:Option[CiteLibrary], textLib:CiteLibrary, lang:Morph
 				} else { s }
 			}
 		}
+		//println(s"""normalized "${finalString}".""")
 		finalString
 	}
 

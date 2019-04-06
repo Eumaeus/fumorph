@@ -42,10 +42,13 @@ def showMe(v:Any):Unit = {
 }
 
 val lexIndex = loadFile("cex/greekIdx.txt").filter(_.split("#").size == 2)
-val mlib = loadLibrary("cex/test.cex")
+//val mlib = loadLibrary("cex/fullTest.cex")
+val mlib = loadLibrary("cex/new.cex")
 //val mlib = loadLibrary("cex/greekMorph.cex")
-val tlib = loadLibrary("cex/little_greek.cex")
+val tlib = loadLibrary("cex/candaules.cex")
+//val tlib = loadLibrary("cex/elided_greek.cex")
 
 val fum:FuMorph = FuMorph(Some(mlib), tlib, Greek, lexIndex)
+//val fum:FuMorph = FuMorph(None, tlib, Greek, lexIndex)
 
 

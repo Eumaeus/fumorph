@@ -22,7 +22,7 @@ class MorphCexSpec extends FlatSpec {
 			info = "some info"
 		)
 		val fm:MorphCex = new MorphCex(Greek)
-		val cex:String = fm.cex(Greek, fvf, "fumorph", "temp", "#")
+		val cex:String = fm.cex(Greek, fvf, "fumorph", "temp", "#", true)
 		println(cex)
 	}
 
@@ -50,7 +50,7 @@ class MorphCexSpec extends FlatSpec {
 			info = "some info"
 		)
 		val fm:MorphCex = new MorphCex(Greek)
-		val cex:String = fm.cex(Greek, Vector(fvf1,fvf2), "fumorph", "temp", "#")
+		val cex:String = fm.cex(Greek, Vector(fvf1,fvf2), "fumorph", "temp", "#", true)
 		println(cex)
 	}
 
@@ -62,7 +62,7 @@ class MorphCexSpec extends FlatSpec {
 			info = "some info"
 		)
 		val fm:MorphCex = new MorphCex(Greek)
-		val cex:String = fm.cex(Greek, indeclf, "fumorph", "temp", "#")
+		val cex:String = fm.cex(Greek, indeclf, "fumorph", "temp", "#", true)
 
 	}
 
@@ -81,7 +81,7 @@ class MorphCexSpec extends FlatSpec {
 		)
 		val fv:Vector[InvalidForm] = Vector(indeclf1, indeclf2)
 		val fm:MorphCex = new MorphCex(Greek)
-		val cex:String  = fm.cex(Greek, fv, "fumorph", "temp", "#")
+		val cex:String  = fm.cex(Greek, fv, "fumorph", "temp", "#", true)
 		println(cex)
 
 	}
@@ -95,7 +95,7 @@ class MorphCexSpec extends FlatSpec {
 			info = "some info"
 		)
 		val fm:MorphCex = new MorphCex(Greek)
-		val cex:String = fm.cex(Greek, form, "fumorph", "temp", "#")
+		val cex:String = fm.cex(Greek, form, "fumorph", "temp", "#", true)
 		println(cex)
 	}
 
@@ -110,7 +110,7 @@ class MorphCexSpec extends FlatSpec {
 			info = "some info"
 		)
 		val fm:MorphCex = new MorphCex(Greek)
-		val cex:String = fm.cex(Greek, form, "fumorph", "temp", "#")
+		val cex:String = fm.cex(Greek, form, "fumorph", "temp", "#", true)
 		println(cex)
 	}
 	 
@@ -126,7 +126,7 @@ class MorphCexSpec extends FlatSpec {
 			info = "some info"
 		)
 		val fm:MorphCex = new MorphCex(Greek)
-		val cex:String = fm.cex(Greek, form, "fumorph", "temp", "#")
+		val cex:String = fm.cex(Greek, form, "fumorph", "temp", "#", true)
 		println(cex)
 	}
 
@@ -141,7 +141,7 @@ class MorphCexSpec extends FlatSpec {
 			info = "some info"
 		)
 		val fm:MorphCex = new MorphCex(Greek)
-		val cex:String = fm.cex(Greek, form, "fumorph", "temp", "#")
+		val cex:String = fm.cex(Greek, form, "fumorph", "temp", "#", true)
 		println(cex)
 	}
 
@@ -156,7 +156,7 @@ class MorphCexSpec extends FlatSpec {
 			info = "some info"
 		)
 		val fm:MorphCex = new MorphCex(Greek)
-		val cex:String = fm.cex(Greek, form, "fumorph", "temp", "#")
+		val cex:String = fm.cex(Greek, form, "fumorph", "temp", "#", true)
 		println(cex)
 	}
 
@@ -171,7 +171,7 @@ class MorphCexSpec extends FlatSpec {
 			info = "some info"
 		)
 		val fm:MorphCex = new MorphCex(Greek)
-		val cex:String = fm.cex(Greek, form, "fumorph", "temp", "#")
+		val cex:String = fm.cex(Greek, form, "fumorph", "temp", "#", true)
 		println(cex)
 	}
 
@@ -186,7 +186,7 @@ class MorphCexSpec extends FlatSpec {
 			info = "some info"
 		)
 		val fm:MorphCex = new MorphCex(Latin)
-		val cex:String = fm.cex(Latin, form, "fumorph", "temp", "#")
+		val cex:String = fm.cex(Latin, form, "fumorph", "temp", "#", true)
 		println(cex)
 	}
 
@@ -201,7 +201,7 @@ class MorphCexSpec extends FlatSpec {
 			info = "some info"
 		)
 		val fm:MorphCex = new MorphCex(Greek)
-		val cex:String = fm.cex(Greek, form, "fumorph", "temp", "#")
+		val cex:String = fm.cex(Greek, form, "fumorph", "temp", "#", true)
 		println(cex)
 	}
 
@@ -216,7 +216,7 @@ class MorphCexSpec extends FlatSpec {
 			info = "some info"
 		)
 		val fm:MorphCex = new MorphCex(Greek)
-		val cex:String = fm.cex(Greek, form, "fumorph", "temp", "#")
+		val cex:String = fm.cex(Greek, form, "fumorph", "temp", "#", true)
 		println(cex)
 	}
 
@@ -229,7 +229,7 @@ class MorphCexSpec extends FlatSpec {
 			info = "some info"
 		)
 		val fm:MorphCex = new MorphCex(Greek)
-		val cex:String = fm.cex(Greek, form, "fumorph", "temp", "#")
+		val cex:String = fm.cex(Greek, form, "fumorph", "temp", "#", true)
 		println(cex)
 	}
 
@@ -243,14 +243,14 @@ class MorphCexSpec extends FlatSpec {
 			info = "some info"
 		)
 		val fm:MorphCex = new MorphCex(Latin)
-		val cex:String = fm.cex(Latin, form, "fumorph", "temp", "#")
+		val cex:String = fm.cex(Latin, form, "fumorph", "temp", "#", true)
 		println(cex)
 	}
 
 	it should "allow the export of a ParticipleForm" in {
 		val form:ParticipleForm = ParticipleForm(lang = Greek, surfaceForm = "οἰκουμένην", lemma = Some("οἰκέω"), tense = Present, voice = Passive, gender = Feminine, grammaticalCase = Accusative, grammaticalNumber = Singular, info = "some info" ) 
 		val fm:MorphCex = new MorphCex(Greek)
-		val cex:String = fm.cex(Latin, form, "fumorph", "temp", "#")
+		val cex:String = fm.cex(Latin, form, "fumorph", "temp", "#", true)
 		println(cex)
 	}
 

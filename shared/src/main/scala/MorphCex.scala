@@ -229,13 +229,12 @@ case class MorphCex(lang:MorphLanguage) {
 		})	
 	}
 
-
-	def cex(lang:MorphLanguage, form:Form, nameSpace:String, versionName:String, delimiter:String):String = {
-		cex(lang, Vector(form), nameSpace, versionName, delimiter)
+	def cex(lang:MorphLanguage, form:Form, nameSpace:String, versionName:String, delimiter:String, standalone:Boolean):String = {
+		cex(lang, Vector(form), nameSpace, versionName, delimiter, standalone)
 	}
 	
-	def cex(lang:MorphLanguage, formVec:Vector[Form], nameSpace:String = "fumorph", versionName:String = "temp", delimiter:String = "#"):String = {
-
+	def cex(lang:MorphLanguage, formVec:Vector[Form], nameSpace:String = "fumorph", versionName:String = "temp", delimiter:String = "#", standalone:Boolean = true):String = {
+		println(s"""\nGenerating CEX…""")
 		val groupVec:Vector[(Serializable, Vector[Form])] = groupForms(formVec)
 
 		val catalog:Vector[String] = {
@@ -265,6 +264,7 @@ case class MorphCex(lang:MorphLanguage) {
 		}
 
 		val cexVec:Vector[String] = groupVec.map( gv => {
+			println(s"""\nMaking collection ${gv._1}…""")
 			val formType:Serializable = gv._1
 			val header:String = cexHeader(formType, delimiter)
 			val dataVec:Vector[String] = gv._2.map( f => {
@@ -365,13 +365,13 @@ case class MorphCex(lang:MorphLanguage) {
 	}
 
 	def formsFromCiteObjects(lib:CiteLibrary, lang:MorphLanguage = lang):Vector[CitableMorphology] = {
-		println(s"Got here: formsFromCiteObjects")
+		//println(s"Got here: formsFromCiteObjects")
 		lib.collectionRepository match {
 			case Some(cr) => {
 				// Get collections for each category
 					val objsInvalidForm:Vector[CitableMorphology] = {
 						val colls:Vector[Cite2Urn] = lib.collectionsForModel(Cite2Urn("urn:cite2:cite:datamodels.v1:InvalidForm"))
-						println(s"\n\ncolls:\n\n${colls}\n\n")
+						//println(s"\n\ncolls:\n\n${colls}\n\n")
 					 	val urns:Vector[Cite2Urn] = colls.map( c => {
 					 		cr.collectionsMap(c)
 					 	}).flatten

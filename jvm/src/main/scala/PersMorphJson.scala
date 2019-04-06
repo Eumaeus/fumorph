@@ -89,24 +89,27 @@ import cats.syntax.either._
 	def getMorphJson(str:String, lang:MorphLanguage):String = {
 		try {
 			if ( (lang == Greek) | (lang == Latin)) {	
-
+				//println(s"""\n\ngetMorphJson starting with "${str}" """)
 				val gStr:String = {
 					if (lang == Greek) {
 						val elided:Boolean = {
 							str.last.toString.matches("['ʼ‘’’]")
 						}
+						//println(s"elided = ${elided}")
 						val gs:LiteraryGreekString = LiteraryGreekString(str)
 						if (elided) {
 							val emended:String = gs.ascii.replaceAll("#","") + "'"
-							LiteraryGreekString(emended).ucode
+							//println( s""" emended = ${emended} """)
+							LiteraryGreekString(emended).ascii.replaceAll("'+","%27")
 						} else {
-							LiteraryGreekString(gs.ascii.replaceAll("#","").replaceAll("\\\\","/").replaceAll("\\+","")).ucode
+							LiteraryGreekString(gs.ascii.replaceAll("#","").replaceAll("\\\\","/")).ascii
 						}
 					} else {
 						str
 					}
 				}
-
+				//println(s""" gStr = " ${gStr} " """)
+				//println(s""" \n\n ${PerseusMorphService(gStr, lang).url} \n""")
 				val raw:String = scala.io.Source.fromURL(PerseusMorphService(gStr, lang).url).mkString
 				raw
 			} else { "" }
@@ -141,12 +144,12 @@ import cats.syntax.either._
 				val str:String = {
 					if (lang == Greek) {
 						val elided:Boolean = {
-							s.last.toString.matches("['ʼ‘’’]")
+							s.last.toString.matches("['ʼ‘’’᾽]")
 						}
 						val gs:LiteraryGreekString = LiteraryGreekString(s)
 						if (elided) {
-							val emended:String = gs.ascii.replaceAll("#","") + "%27"
-							emended
+							val emended:String = gs.ascii.replaceAll("#","") + "'"
+							emended.replaceAll("'+", "%27")
 						} else {
 							gs.ascii.replaceAll("#","").replaceAll("\\\\","/")
 						}
@@ -154,7 +157,7 @@ import cats.syntax.either._
 						s
 					}
 				}
-				println(s""" … (${lang.abbr}) "${str}" >> "${str}" """)
+				//println(s""" … (${lang.abbr}) "${str}" >> "${str}" """)
 				val morph:String = getMorphJson(str, lang)
 				if (morph.size < 10) {
 					None
@@ -344,6 +347,32 @@ import cats.syntax.either._
 									makeInfo(inf)
 								)
 							} else {
+								new InvalidForm(
+									pe.lang,
+									pe.surfaceForm,
+									pe.lexLemma,
+									inf.toString	
+								)
+							}
+						}
+						case "irregular" => {
+							//println("got irreg")
+							val gender:Option[Gender] = getGender(inf.gend.getOrElse(""))
+							val grammaticalCase:Option[GrammaticalCase] = getCase(inf.grammaticalCase.getOrElse(""))
+							val grammaticalNumber:Option[GrammaticalNumber] = getNumber(inf.grammaticalNum.getOrElse(""))
+							if ( (gender != None) & (grammaticalCase != None) & (grammaticalNumber != None) ) {
+								//println("making pronoun")
+								new PronounForm(
+									pe.lang, 
+									pe.surfaceForm, 
+									pe.lexLemma, 
+									gender.get, 
+									grammaticalCase.get, 
+									grammaticalNumber.get, 
+									makeInfo(inf)
+								)
+							} else {
+								//println("failed test")
 								new InvalidForm(
 									pe.lang,
 									pe.surfaceForm,
