@@ -67,7 +67,13 @@ case class FuMorph(morphLib:Option[CiteLibrary], textLib:CiteLibrary, lang:Morph
 			case Some(tr) => {
 				val catEntries:Vector[CatalogEntry] = tr.catalog.texts.filter(_.lang == lang.abbr )
 				val urns:Vector[CtsUrn] = catEntries.map(_.urn)
-				val newCorp:Corpus = tr.corpus ~~ urns
+				val newNodes:Vector[CitableNode] = {
+					tr.corpus.nodes.filter(n => {
+						urns.contains(n.urn.dropPassage)
+					})
+				}
+				val newCorp = Corpus(newNodes)
+				println(s"Built Corpus of ${newCorp.size} passages of '${lang.abbr}'.")
 				Some(newCorp)
 			}
 			case None => None
@@ -97,6 +103,7 @@ case class FuMorph(morphLib:Option[CiteLibrary], textLib:CiteLibrary, lang:Morph
 							normalizeLatin(n.text)
 						}
 					}
+					println(s"${t}")
 					CitableNode(u,t)
 				})
 				val texts:Vector[String] = nodes.map(_.text).distinct

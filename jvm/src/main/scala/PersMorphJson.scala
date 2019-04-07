@@ -157,7 +157,7 @@ import cats.syntax.either._
 						s
 					}
 				}
-				//println(s""" … (${lang.abbr}) "${str}" >> "${str}" """)
+				println(s""" … (${lang.abbr}) "${str}" >> "${str}" """)
 				val morph:String = getMorphJson(str, lang)
 				if (morph.size < 10) {
 					None

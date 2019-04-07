@@ -1,5 +1,7 @@
 # morphjson: release notes
 
+**0.10.1**: Better feecback on long analyses.
+
 **0.10.0**: Added method to serialize archived forms to CEX.
 
 **0.9.1**:  Innumerable minor fixes for publication.

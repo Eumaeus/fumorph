@@ -45,7 +45,7 @@ val lexIndex = loadFile("cex/greekIdx.txt").filter(_.split("#").size == 2)
 //val mlib = loadLibrary("cex/fullTest.cex")
 val mlib = loadLibrary("cex/backupCex.cex")
 //val mlib = loadLibrary("cex/greekMorph.cex")
-val tlib = loadLibrary("cex/candaules.cex")
+val tlib = loadLibrary("cex/hdt_1_greek.cex")
 //val tlib = loadLibrary("cex/elided_greek.cex")
 
 val fum:FuMorph = FuMorph(Some(mlib), tlib, Greek, lexIndex)
