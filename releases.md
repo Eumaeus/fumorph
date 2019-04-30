@@ -1,5 +1,15 @@
 # morphjson: release notes
 
+**0.12.0**: Added MorphTextAligner object.
+
+**0.11.4**: Corrected bug caused by Perseus failing to report gender for adjectives that can be masculine, feminine, or neuter.
+
+**0.11.3**: Corrected bug caused by Perseus reporting "voice" for Latin participles only when they are Perfect.
+
+**0.11.2**: Sanitizing Perseus Morphological JSON.
+
+**0.11.0**: Total re-work of analysis processes for 100x speedup.
+
 **0.10.1**: Better feecback on long analyses.
 
 **0.10.0**: Added method to serialize archived forms to CEX.

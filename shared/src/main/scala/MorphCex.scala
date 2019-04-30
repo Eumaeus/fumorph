@@ -363,6 +363,7 @@ case class MorphCex(lang:MorphLanguage) {
 			case _ => InvalidForm
 		}
 	}
+	
 
 	def formsFromCiteObjects(lib:CiteLibrary, lang:MorphLanguage = lang):Vector[CitableMorphology] = {
 		//println(s"Got here: formsFromCiteObjects")
@@ -830,6 +831,15 @@ case class MorphCex(lang:MorphLanguage) {
 		}
 	}
 
+def citableFormsFromForms(forms:Vector[Form]):Vector[CitableMorphology] = {
+	  val nameSpace:String = "fumorph"
+	  val versionName:String = "temp"
+		forms.map( f => {
+			val urn:Cite2Urn = UrnGenerator.get(nameSpace, f.typeName, versionName, forms.indexOf(f))
+			CitableMorphology(urn, f)
+		})
+}	
+
 	def greekifySurfaceForm(lang:MorphLanguage, s:String):String = {
 		if (lang == Greek) {
 			val lgs:LiteraryGreekString = LiteraryGreekString(s.replaceAll("%27","'"))
@@ -969,6 +979,7 @@ urn:cite2:cite:datamodels.v1:lgs${delimiter}Literary Greek String${delimiter}Ide
 			case "ablative" => { Ablative }
 			case "masculine" => { Masculine }
 			case "feminine" => { Feminine }
+			case "masculine, feminine, neuter" => { MascFemNeuter }
 			case "neuter" => { Neuter }
 			case "singular" => { Singular }
 			case "dual" => { Dual }

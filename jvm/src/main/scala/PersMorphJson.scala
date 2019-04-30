@@ -110,7 +110,7 @@ import cats.syntax.either._
 				}
 				//println(s""" gStr = " ${gStr} " """)
 				//println(s""" \n\n ${PerseusMorphService(gStr, lang).url} \n""")
-				val raw:String = scala.io.Source.fromURL(PerseusMorphService(gStr, lang).url).mkString
+				val raw:String = scala.io.Source.fromURL(PerseusMorphService(gStr, lang).url).mkString.replaceAll("#","")
 				raw
 			} else { "" }
 		} catch {
@@ -175,6 +175,7 @@ import cats.syntax.either._
 			case "masculine" => Some(Masculine)
 			case "feminine" => Some(Feminine)
 			case "neuter" => Some(Neuter)
+			case "mfn" => Some(MascFemNeuter)
 			case _ => None
 		}
 	}
@@ -259,6 +260,7 @@ import cats.syntax.either._
 		}
 		val fv:Vector[Form] = pe.inflections.map( inf => {
 			val info:String = makeInfo(inf)
+			println(s"\ninf.partOfSpeech: ${inf.partOfSpeech}.")
 			inf.partOfSpeech match {
 				case Some(pos) => {
 					pos match {
@@ -287,7 +289,7 @@ import cats.syntax.either._
 								}
 							} else {
 								val gender:Option[Gender] = getGender(inf.gend.getOrElse(""))
-								val grammaticalCase:Option[GrammaticalCase] = getCase(inf.grammaticalCase.getOrElse(""))
+								val grammaticalCase:Option[GrammaticalCase] = getCase(inf.grammaticalCase.getOrElse("nominative"))
 								val grammaticalNumber:Option[GrammaticalNumber] = getNumber(inf.grammaticalNum.getOrElse(""))
 								if ( (gender != None) & (grammaticalCase != None) & (grammaticalNumber != None) ) {
 									new NounForm(
@@ -507,10 +509,12 @@ import cats.syntax.either._
 						}
 						case "verb participle" => {
 							val tense:Option[Tense] = getTense(inf.tense.getOrElse(""))
-							val voice:Option[Voice] = getVoice(inf.voice.getOrElse(""))
-							val gender:Option[Gender] = getGender(inf.gend.getOrElse(""))
+							val voice:Option[Voice] = getVoice(inf.voice.getOrElse("active"))
+							val gender:Option[Gender] = getGender(inf.gend.getOrElse("mfn"))
 							val grammaticalCase:Option[GrammaticalCase] = getCase(inf.grammaticalCase.getOrElse(""))
 							val grammaticalNumber:Option[GrammaticalNumber] = getNumber(inf.grammaticalNum.getOrElse(""))
+							println(s"\ntense: ${tense}\nvoice: ${voice}\ngender: ${gender}\ngrammaticalCase: ${grammaticalCase}\ngrammaticalNumber: ${grammaticalNumber}\n"
+							)
 							if ( (gender != None) & (grammaticalCase != None) & (grammaticalNumber != None) & (tense != None) & (voice != None) ) {
 								new ParticipleForm(
 									pe.lang,
@@ -542,12 +546,22 @@ import cats.syntax.either._
 								info
 							)
 						}
+
 						case "particle" => {
 							new IndeclinableForm(
 								pe.lang,
 								pe.surfaceForm,
 								pe.lexLemma,
 								Particle,
+								inf.toString	
+							)
+						}
+						case "exclamation" => {
+							new IndeclinableForm(
+								pe.lang,
+								pe.surfaceForm,
+								pe.lexLemma,
+								Interjection,
 								inf.toString	
 							)
 						}

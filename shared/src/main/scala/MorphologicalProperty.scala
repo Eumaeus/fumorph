@@ -86,7 +86,12 @@ case object Neuter extends Gender {
 	val short:String = "n"
 	override def toString = long
 }
-
+case object MascFemNeuter extends Gender {
+	val long:String = "masculine, feminine, neuter"
+	val abbr:String = "masc.,fem.,neut."
+	val short:String = "mfn"
+	override def toString = long
+}
 /* Number */
 
 sealed trait GrammaticalNumber extends MorphologicalProperty {

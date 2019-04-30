@@ -10,11 +10,13 @@ import edu.holycross.shot.citeobj._
 
 
 @JSExportAll
-case class FuMorph(morphLib:Option[CiteLibrary], textLib:CiteLibrary, lang:MorphLanguage, lexIndex:Vector[String] = Vector[String]() ) {
+case class FuMorph(morphLib:Option[CiteLibrary], textLib:CiteLibrary, lang:MorphLanguage) {
+
+	println(s"Building FuMorph for '${lang.abbr}'.")
 
 	val morphCex:MorphCex = MorphCex(lang)
 
-   private val punctuation:String = """[\[\])(·⸁.,·;;   "?·!–—⸂⸃]"""
+  private val punctuation:String = """[\[\])(·⸁.,·;;   "?·!–—⸂⸃]"""
 
 	private val morphModel = Cite2Urn("urn:cite2:cite:datamodels.v1:fumorph")
 	private val lgsModel = Cite2Urn("urn:cite2:cite:datamodels.v1:lgs")
@@ -24,7 +26,10 @@ case class FuMorph(morphLib:Option[CiteLibrary], textLib:CiteLibrary, lang:Morph
 		Vector(1,2,3)
 	}
 
-	def archivedFormVec:Vector[Form] = {
+	/*
+	*  Builds Forms from CITE Collections
+	*/
+	def archivedFormVec:Vector[CitableMorphology] = {
 		this.morphLib match {
 			case Some(ml) => {
 				val collRepOption:Option[CiteCollectionRepository] = ml.collectionRepository
@@ -40,24 +45,32 @@ case class FuMorph(morphLib:Option[CiteLibrary], textLib:CiteLibrary, lang:Morph
 				val lgsProperties:Vector[Cite2Urn] = ml.collectionsForModel(lgsModel)
 				val ff:Vector[CitableMorphology] = morphCex.formsFromCiteObjects(ml)
 				//println(s"\n\nff:\n\n${ff}\n\n")
-				ff.map(_.form).distinct
+				//ff.map(_.form).distinct
+				ff
 			}
 			case None => {
 				println(s"morphLib: None : ${morphLib}")
-				Vector[Form]()
+				Vector[CitableMorphology]()
 			}
 		}
 	}
 	
+	lazy val lemmaMap:Map[String,Vector[CitableMorphology]] = {
+		archivedFormVec.groupBy(_.form.lemma.getOrElse("<no lemma>"))
+	}
+
+	lazy val surfaceFormMap:Map[String,Vector[CitableMorphology]] = {
+		archivedFormVec.groupBy(_.form.surfaceForm)
+	}
 	
 
 	val archivedForms:Vector[String] = {
 		if (lang == Greek) {
 			archivedFormVec.map( f => {
-				LiteraryGreekString(f.surfaceForm).ucode
+				LiteraryGreekString(f.form.surfaceForm).ucode
 			}).distinct
 		} else {
-			archivedFormVec.map(_.surfaceForm).distinct
+			archivedFormVec.map(_.form.surfaceForm).distinct
 		}	
 	}
 
@@ -131,13 +144,13 @@ case class FuMorph(morphLib:Option[CiteLibrary], textLib:CiteLibrary, lang:Morph
 		PerseusParser.toForms(newPersForms)
 	}
 
-	lazy val updatedForms:Vector[Form] = {
-		(archivedFormVec ++ newFormVec).distinct.sortBy(_.lemma)
+	lazy val updatedForms:Vector[CitableMorphology] = {
+		(archivedFormVec ++ morphCex.citableFormsFromForms(newFormVec)).distinct.sortBy(_.form.lemma)
 	}
 
-	lazy val backupCex:String = morphCex.cex(lang, archivedFormVec, "fumorph", "temp", "#")
+	lazy val backupCex:String = morphCex.cex(lang, archivedFormVec.map(_.form), "fumorph", "temp", "#")
 
-	lazy val updateCex:String = morphCex.cex(lang, updatedForms, "fumorph", "temp", "#")
+	lazy val updateCex:String = morphCex.cex(lang, updatedForms.map(_.form), "fumorph", "temp", "#")
 
 	lazy val forms:Vector[CitableMorphology] = {
 		morphLib match {
