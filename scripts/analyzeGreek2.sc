@@ -45,13 +45,18 @@ val morphHtml:String = {
 	"""	
 }
 
-val htmlFilePath:String = "/Users/cblackwell/Desktop/"
+val htmlFilePath:String = "/Users/cblackwell/Dropbox/CITE/scala/morphReader/target/scala-2.12/classes/"
 val htmlFileName:String = "iliad_10_demo.html"
 val htmlPageTitle:String = "<i>Iliad</i> 10.1–10.50"
 val htmlPageDesc:String = "Hover for a quick view. Click to fix a view; click again to return to hovering. Compressed lexicon entries are linked to the lexicon. Resize the columns by grabbing the divider near the top."
 
-val htmlOpenTemplate:String = loadFile("jvm/src/test/resources/html_1page_template1.html").mkString("\n")
-val htmlCloseTemplate:String = loadFile("jvm/src/test/resources/html_1page_template2.html").mkString("\n")
+//val htmlOpenTemplate:String = loadFile("jvm/src/test/resources/html_1page_template1.html").mkString("\n")
+//val htmlCloseTemplate:String = loadFile("jvm/src/test/resources/html_1page_template2.html").mkString("\n")
+
+val htmlOpenTemplate:String = loadFile("jvm/src/test/resources/html_template1.html").mkString("\n")
+val htmlCloseTemplate:String = loadFile("jvm/src/test/resources/html_template2.html").mkString("\n")
+
+
 val appCssFile:String = loadFile("/Users/cblackwell/Dropbox/CITE/scala/morphReader/target/scala-2.12/classes/reader.css").mkString("\n")
 val jquiCssFile:String = loadFile("/Users/cblackwell/Dropbox/CITE/scala/morphReader/target/scala-2.12/classes/jquery-ui.min.css").mkString("\n")
 val jqJsFile:String = loadFile("/Users/cblackwell/Dropbox/CITE/scala/morphReader/target/scala-2.12/classes/jquery-3.4.0.min.js").mkString("\n")
