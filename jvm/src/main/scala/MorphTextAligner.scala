@@ -8,9 +8,34 @@ import edu.holycross.shot.citerelation._
 import edu.holycross.shot.scm._
 import edu.holycross.shot.citeobj._
 
-case class ShortDef(urn:Cite2Urn, lemma:String, presentationLemma:String, definition:String)
-case class MorphWithLex(morph:CitableMorphology, defs:Vector[ShortDef])
-case class MorphPair(text:CtsUrn, morph:Vector[MorphWithLex])
+case class ShortDef(urn:Cite2Urn, lemma:String, presentationLemma:String, definition:String) {
+	val html:String = {
+		s"""
+<div class="fumorph_shortDef" data-lexicon-urn="${urn}">
+	<span class="fumorph_shortDef_lemma">${presentationLemma}</span>
+	<span class="fumorph_shortDef_definition">${definition.take(400)}</span>
+</div>	
+		"""	
+	}
+}
+case class MorphWithLex(morph:CitableMorphology, defs:Vector[ShortDef]) {
+	val html:String = {
+		val defString:String = defs.map(_.html).mkString("\n")
+	   s"""
+	   <div class="fumorph_morphWithLex">
+	   	${morph.html}
+	   	<div class="fumorph_defs">${defString}</div>
+	   </div>
+		"""
+	}
+}
+case class MorphPair(text:CtsUrn, morph:Vector[MorphWithLex]) {
+	val html:String = s"""
+		<div class="fumorph_alignedMorphology" data-textUrn="${text}">
+			${morph.map(_.html).mkString("\n")}
+		</div>
+	"""
+}
 
 case class LexIndex(entries:Map[String,Vector[ShortDef]])
 object LexIndex {
@@ -250,6 +275,7 @@ case class MorphTextAligner(lang:MorphLanguage, textLib:CiteLibrary, morphLib:Fu
 		morphPairs
 	}
 
+	
 
 
 

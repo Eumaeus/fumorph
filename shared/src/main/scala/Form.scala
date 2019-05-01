@@ -8,6 +8,7 @@ abstract class Form {
 	val lang:MorphLanguage
 	val info:String
 	val typeName:String
+	val html:String
 }
 
 trait DeclinableForm {
@@ -25,7 +26,13 @@ trait DegreeableForm {
 	val degree: Degree
 }
 
-case class CitableMorphology(urn:Cite2Urn, form:Form)
+case class CitableMorphology(urn:Cite2Urn, form:Form) {
+	val html:String = s"""
+	<div class="fumorph_citableMorphology" data-morph-urn="${urn}">
+		${form.html}
+	</div>
+	"""
+}
 
 case class InvalidForm(lang:MorphLanguage, surfaceForm:String, lemma:Option[String], info:String = "") extends Form {
 	override def toString = {
@@ -34,6 +41,22 @@ case class InvalidForm(lang:MorphLanguage, surfaceForm:String, lemma:Option[Stri
 
 	def toPos = {
 		s"x--------"
+	}
+
+	val html:String = {
+		val lemmaStr:String ={
+			lemma match {
+				case Some(l) => s"""<span class="fumorph_lemma">${l}</span>"""
+				case None => ""
+			}
+		}
+		s"""
+		<div class="fumorph_form">
+			<span class="fumorph_surfaceForm">${this.surfaceForm.toString}</span>
+			${lemmaStr}
+			<span class="fumorph_info">${info}</span>
+		</div>
+		"""
 	}
 
 	val typeName:String = "InvalidForm"
@@ -50,6 +73,24 @@ case class FiniteVerbForm(lang:MorphLanguage, surfaceForm:String, lemma:Option[S
 		s"v${person.short}${grammaticalNumber.short}${tense.short}${voice.short}${mood.short}---"
 	}
 
+	val html:String = {
+		val lemmaStr:String ={
+			lemma match {
+				case Some(l) => s"""<span class="fumorph_lemma">${l}</span>"""
+				case None => ""
+			}
+		}
+		s"""
+		<div class="fumorph_form">
+			<span class="fumorph_surfaceForm">${this.surfaceForm.toString}</span>
+			${lemmaStr}
+			<span class="fumorph_formType">finite verb</span>
+			<span class="fumorph_parse">${person.abbr} ${grammaticalNumber.abbr}, ${tense.abbr} ${voice.abbr} ${mood.abbr}</span>
+			<span class="fumorph_info">${info}</span>
+		</div>
+		"""
+	}
+
 	val typeName:String = "FiniteVerbForm"
 
 }
@@ -64,6 +105,23 @@ case class IndeclinableForm(lang:MorphLanguage, surfaceForm:String, lemma:Option
 		s"${pos.short}--------"
 	}
 
+	val html:String = {
+		val lemmaStr:String ={
+			lemma match {
+				case Some(l) => s"""<span class="fumorph_lemma">${l}</span>"""
+				case None => ""
+			}
+		}
+		s"""
+		<div class="fumorph_form">
+			<span class="fumorph_surfaceForm">${this.surfaceForm.toString}</span>
+			${lemmaStr}
+			<span class="fumorph_formType">indeclinable form</span>
+			<span class="fumorph_info">${info}</span>
+		</div>
+		"""
+	}
+
 	val typeName:String = "IndeclinableForm"
 }
 
@@ -75,6 +133,24 @@ case class NounForm(lang:MorphLanguage, surfaceForm:String, lemma:Option[String]
 
 	def toPos = {
 		s"n-${grammaticalNumber.short}---${gender.short}${grammaticalCase.short}-"
+	}
+
+	val html:String = {
+		val lemmaStr:String ={
+			lemma match {
+				case Some(l) => s"""<span class="fumorph_lemma">${l}</span>"""
+				case None => ""
+			}
+		}
+		s"""
+		<div class="fumorph_form">
+			<span class="fumorph_surfaceForm">${this.surfaceForm.toString}</span>
+			${lemmaStr}
+			<span class="fumorph_formType">noun</span>
+			<span class="fumorph_parse">${gender.abbr}, ${grammaticalCase.abbr}, ${grammaticalNumber.abbr}</span>
+			<span class="fumorph_info">${info}</span>
+		</div>
+		"""
 	}
 
 	val typeName:String = "NounForm"
@@ -91,6 +167,24 @@ case class AdjectiveForm(lang:MorphLanguage, surfaceForm:String, lemma:Option[St
 		s"a-${grammaticalNumber.short}---${gender.short}${grammaticalCase.short}${degree.short}"
 	}
 
+	val html:String = {
+		val lemmaStr:String ={
+			lemma match {
+				case Some(l) => s"""<span class="fumorph_lemma">${l}</span>"""
+				case None => ""
+			}
+		}
+		s"""
+		<div class="fumorph_form">
+			<span class="fumorph_surfaceForm">${this.surfaceForm.toString}</span>
+			${lemmaStr}
+			<span class="fumorph_formType">adjective</span>
+			<span class="fumorph_parse">${gender.abbr}, ${grammaticalCase.abbr}, ${grammaticalNumber.abbr}</span>
+			<span class="fumorph_info">${info}</span>
+		</div>
+		"""
+	}
+
 	val typeName:String = "AdjectiveForm"
 
 }
@@ -103,6 +197,24 @@ case class PronounForm(lang:MorphLanguage, surfaceForm:String, lemma:Option[Stri
 
 	def toPos = {
 		s"p-${grammaticalNumber.short}---${gender.short}${grammaticalCase.short}-"
+	}
+
+	val html:String = {
+		val lemmaStr:String ={
+			lemma match {
+				case Some(l) => s"""<span class="fumorph_lemma">${l}</span>"""
+				case None => ""
+			}
+		}
+		s"""
+		<div class="fumorph_form">
+			<span class="fumorph_surfaceForm">${this.surfaceForm.toString}</span>
+			${lemmaStr}
+			<span class="fumorph_formType">pronoun</span>
+			<span class="fumorph_parse">${gender.abbr}, ${grammaticalCase.abbr}, ${grammaticalNumber.abbr}</span>
+			<span class="fumorph_info">${info}</span>
+		</div>
+		"""
 	}
 
 	val typeName:String = "PronounForm"
@@ -118,6 +230,24 @@ case class ArticleForm(lang:MorphLanguage, surfaceForm:String, lemma:Option[Stri
 		s"l-${grammaticalNumber.short}---${gender.short}${grammaticalCase.short}-"
 	}
 
+	val html:String = {
+		val lemmaStr:String ={
+			lemma match {
+				case Some(l) => s"""<span class="fumorph_lemma">${l}</span>"""
+				case None => ""
+			}
+		}
+		s"""
+		<div class="fumorph_form">
+			<span class="fumorph_surfaceForm">${this.surfaceForm.toString}</span>
+			${lemmaStr}
+			<span class="fumorph_formType">article</span>
+			<span class="fumorph_parse">${gender.abbr}, ${grammaticalCase.abbr}, ${grammaticalNumber.abbr}</span>
+			<span class="fumorph_info">${info}</span>
+		</div>
+		"""
+	}
+
 	val typeName:String = "ArticleForm"
 }
 
@@ -129,6 +259,24 @@ case class AdverbForm(lang:MorphLanguage, surfaceForm:String, lemma:Option[Strin
 
 	def toPos = {
 		s"d-------${degree.short}"
+	}
+
+	val html:String = {
+		val lemmaStr:String ={
+			lemma match {
+				case Some(l) => s"""<span class="fumorph_lemma">${l}</span>"""
+				case None => ""
+			}
+		}
+		s"""
+		<div class="fumorph_form">
+			<span class="fumorph_surfaceForm">${this.surfaceForm.toString}</span>
+			${lemmaStr}
+			<span class="fumorph_formType">adverb</span>
+			<span class="fumorph_parse">${degree.abbr} degree</span>
+			<span class="fumorph_info">${info}</span>
+		</div>
+		"""
 	}
 
 	val typeName:String = "AdverbForm"
@@ -145,6 +293,24 @@ case class InfinitiveForm(lang:MorphLanguage, surfaceForm:String, lemma:Option[S
 		s"v--${tense.short}${voice.short}n---"
 	}
 
+	val html:String = {
+		val lemmaStr:String ={
+			lemma match {
+				case Some(l) => s"""<span class="fumorph_lemma">${l}</span>"""
+				case None => ""
+			}
+		}
+		s"""
+		<div class="fumorph_form">
+			<span class="fumorph_surfaceForm">${this.surfaceForm.toString}</span>
+			${lemmaStr}
+			<span class="fumorph_formType">infinitive</span>
+			<span class="fumorph_parse">${tense.abbr} ${voice.abbr}</span>
+			<span class="fumorph_info">${info}</span>
+		</div>
+		"""
+	}
+
 	val typeName:String = "InfinitiveForm"
 }
 
@@ -156,6 +322,24 @@ case class ParticipleForm(lang:MorphLanguage, surfaceForm:String, lemma:Option[S
 
 	def toPos = {
 		s"v-${grammaticalNumber.short}${tense.short}${voice.short}p${gender.short}${grammaticalCase.short}-"
+	}
+
+	val html:String = {
+		val lemmaStr:String ={
+			lemma match {
+				case Some(l) => s"""<span class="fumorph_lemma">${l}</span>"""
+				case None => ""
+			}
+		}
+		s"""
+		<div class="fumorph_form">
+			<span class="fumorph_surfaceForm">${this.surfaceForm.toString}</span>
+			${lemmaStr}
+			<span class="fumorph_formType">participle</span>
+			<span class="fumorph_parse">${tense.abbr} ${voice.abbr} participle, ${gender.abbr} ${grammaticalCase.abbr} ${grammaticalNumber.abbr}</span>
+			<span class="fumorph_info">${info}</span>
+		</div>
+		"""
 	}
 
 	val typeName:String = "ParticipleForm"
@@ -171,6 +355,24 @@ case class VerbalAdjectiveForm(lang:MorphLanguage, surfaceForm:String, lemma:Opt
 		s"a-${grammaticalNumber.short}---${gender.short}${grammaticalCase.short}-"
 	}
 
+	val html:String = {
+		val lemmaStr:String ={
+			lemma match {
+				case Some(l) => s"""<span class="fumorph_lemma">${l}</span>"""
+				case None => ""
+			}
+		}
+		s"""
+		<div class="fumorph_form">
+			<span class="fumorph_surfaceForm">${this.surfaceForm.toString}</span>
+			${lemmaStr}
+			<span class="fumorph_formType">verbal adjective</span>
+			<span class="fumorph_parse">${gender.abbr}, ${grammaticalCase.abbr}, ${grammaticalNumber.abbr}</span>
+			<span class="fumorph_info">${info}</span>
+		</div>
+		"""
+	}
+
 	val typeName:String = "VerbalAdjectiveForm"
 }
 
@@ -182,6 +384,24 @@ case class GerundForm(lang:MorphLanguage, surfaceForm:String, lemma:Option[Strin
 
 	def toPos = {
 		s"n-${grammaticalNumber.short}---${gender.short}${grammaticalCase.short}-"
+	}
+
+	val html:String = {
+		val lemmaStr:String ={
+			lemma match {
+				case Some(l) => s"""<span class="fumorph_lemma">${l}</span>"""
+				case None => ""
+			}
+		}
+		s"""
+		<div class="fumorph_form">
+			<span class="fumorph_surfaceForm">${this.surfaceForm.toString}</span>
+			${lemmaStr}
+			<span class="fumorph_formType">gerund</span>
+			<span class="fumorph_parse">${gender.abbr}, ${grammaticalCase.abbr}, ${grammaticalNumber.abbr}</span>
+			<span class="fumorph_info">${info}</span>
+		</div>
+		"""
 	}
 
 	val typeName:String = "GerundForm"
@@ -197,6 +417,24 @@ case class GerundiveForm(lang:MorphLanguage, surfaceForm:String, lemma:Option[St
 		s"a-${grammaticalNumber.short}---${gender.short}${grammaticalCase.short}-"
 	}
 
+	val html:String = {
+		val lemmaStr:String ={
+			lemma match {
+				case Some(l) => s"""<span class="fumorph_lemma">${l}</span>"""
+				case None => ""
+			}
+		}
+		s"""
+		<div class="fumorph_form">
+			<span class="fumorph_surfaceForm">${this.surfaceForm.toString}</span>
+			${lemmaStr}
+			<span class="fumorph_formType">gerundive</span>
+			<span class="fumorph_parse">${gender.abbr}, ${grammaticalCase.abbr}, ${grammaticalNumber.abbr}</span>
+			<span class="fumorph_info">${info}</span>
+		</div>
+		"""
+	}
+
 	val typeName:String = "GerundiveForm"
 
 }
@@ -209,6 +447,24 @@ case class SupineForm(lang:MorphLanguage, surfaceForm:String, lemma:Option[Strin
 
 	def toPos = {
 		s"n-${grammaticalNumber.short}---${gender.short}${grammaticalCase.short}-"
+	}
+
+	val html:String = {
+		val lemmaStr:String ={
+			lemma match {
+				case Some(l) => s"""<span class="fumorph_lemma">${l}</span>"""
+				case None => ""
+			}
+		}
+		s"""
+		<div class="fumorph_form">
+			<span class="fumorph_surfaceForm">${this.surfaceForm.toString}</span>
+			${lemmaStr}
+			<span class="fumorph_formType">supine</span>
+			<span class="fumorph_parse">${gender.abbr}, ${grammaticalCase.abbr}, ${grammaticalNumber.abbr}</span>
+			<span class="fumorph_info">${info}</span>
+		</div>
+		"""
 	}
 
 	val typeName:String = "SupineForm"
