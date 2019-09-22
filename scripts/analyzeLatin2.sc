@@ -20,10 +20,8 @@ def loadFile(fp:String):Vector[String] = {
 
 def saveString(s:String, filePath:String , fileName:String):Unit = {
 	val pw = new PrintWriter(new File(filePath + fileName))
-	for (line <- s.lines){
-		pw.append(line)
-		pw.append("\n")
-	}
+	pw.append(s)
+	pw.append("\n")
 	pw.close
 }
 
@@ -46,8 +44,8 @@ val morphHtml:String = {
 }
 
 val htmlFilePath:String = "/Users/cblackwell/Desktop/"
-val htmlFileName:String = "propertius_1_demo.html"
-val htmlPageTitle:String = "<i>Carmina</i> 1.1–1.3"
+val htmlFileName:String = "catullus_64.html"
+val htmlPageTitle:String = "Catullus <i>Carmina</i>: 64"
 val htmlPageDesc:String = "Hover for a quick view. Click to fix a view; click again to return to hovering. Compressed lexicon entries are linked to the lexicon. Resize the columns by grabbing the divider near the top."
 
 val htmlOpenTemplate:String = loadFile("jvm/src/test/resources/html_1page_template1.html").mkString("\n")
@@ -83,3 +81,5 @@ val html:String = {
 }
 
 saveString(html, htmlFilePath, htmlFileName)
+
+println(s"\n\n---------\nSaved '${htmlFilePath}${htmlFileName}'.\n---------")

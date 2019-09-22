@@ -1,19 +1,18 @@
-
 import scala.io.Source
 import java.io._
 import java.util.Calendar
 import scala.collection.mutable.LinkedHashMap
-import edu.holycross.shot.scm._
-import edu.holycross.shot.cite._
-import edu.holycross.shot.ohco2._
-import edu.holycross.shot.greek._
 import scala.io.StdIn.readLine
 import scala.collection.mutable._
 import edu.furman.classics.fumorph._
 import java.util.Calendar
+import edu.holycross.shot.scm._
+import edu.holycross.shot.cite._
+import edu.holycross.shot.ohco2._
+import edu.holycross.shot.greek._
 
 def loadLibrary(fp:String):CiteLibrary = {
-	val library = CiteLibrary(Source.fromFile(fp).getLines.mkString("\n"),"#",",")
+	val library = CiteLibrary(Source.fromFile(fp).getLines.mkString("\n"))
 	library
 }
 
@@ -28,7 +27,7 @@ val lexiconFile:String = "jvm/src/test/resources/small_lsj_short.cex"
 
 val lexIdxPath = "jvm/src/test/resources/new_greek_index.txt"
 val morphLibFile:String = "/Users/cblackwell/Dropbox/CITE/scala/cexshop/morphology/grc_morphology.cex"
-val textLibrary:String = "/cite/scala/cexshop/cex/iliad_ten_intro.cex"
+val textLibrary:String = "/cite/scala/cexshop/cex/diogenes_menoeceus.cex"
 val lexiconFile:String = "jvm/src/test/resources/lsj_short.cex"
 
 

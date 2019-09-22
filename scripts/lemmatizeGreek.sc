@@ -60,16 +60,14 @@ def showMe(v:Any):Unit = {
 }
 
 def loadLibrary(fp:String):CiteLibrary = {
-	val library = CiteLibrary(Source.fromFile(fp).getLines.mkString("\n"),"#",",")
+	val library = CiteLibrary(Source.fromFile(fp).getLines.mkString("\n"))
 	library
 }
 
 def saveString(s:String, fileName:String):Unit = {
 	val pw = new PrintWriter(new File(fileName))
-	for (line <- s.lines){
-		pw.append(line)
+		pw.append(s)
 		pw.append("\n")
-	}
 	pw.close
 }
 
@@ -83,8 +81,8 @@ val lexiconFile:String = "jvm/src/test/resources/small_lsj_short.cex"
 */
 
 val lexIdxPath = "jvm/src/test/resources/new_greek_index.txt"
-val morphLibFile:String = "jvm/src/test/resources/john_morphology_grc.cex"
-val textLibrary:String = "jvm/src/test/resources/john_tokenized.cex"
+val morphLibFile:String = "/Users/cblackwell/Dropbox/CITE/scala/cexshop/morphology/grc_morphology.cex"
+val textLibrary:String = "/cite/scala/cexshop/cex/diogenes_menoeceus.cex"
 val lexiconFile:String = "jvm/src/test/resources/lsj_short.cex"
 
 

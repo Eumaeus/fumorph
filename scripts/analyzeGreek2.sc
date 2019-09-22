@@ -20,10 +20,8 @@ def loadFile(fp:String):Vector[String] = {
 
 def saveString(s:String, filePath:String , fileName:String):Unit = {
 	val pw = new PrintWriter(new File(filePath + fileName))
-	for (line <- s.lines){
-		pw.append(line)
-		pw.append("\n")
-	}
+	pw.append(s)
+	pw.append("\n")
 	pw.close
 }
 
@@ -45,16 +43,19 @@ val morphHtml:String = {
 	"""	
 }
 
-val htmlFilePath:String = "/Users/cblackwell/Dropbox/CITE/scala/morphReader/target/scala-2.12/classes/"
-val htmlFileName:String = "iliad_10_demo.html"
-val htmlPageTitle:String = "<i>Iliad</i> 10.1–10.50"
+val textDisplayTitle:String = "Diogenes Laertius Book 10, Epistle to Menoeceus"
+val htmlFilePath:String = "/Users/cblackwell/Desktop/"
+val htmlFileName:String = "diogenes_menoeceus.html"
+val htmlPageTitle:String = textDisplayTitle
 val htmlPageDesc:String = "Hover for a quick view. Click to fix a view; click again to return to hovering. Compressed lexicon entries are linked to the lexicon. Resize the columns by grabbing the divider near the top."
 
 //val htmlOpenTemplate:String = loadFile("jvm/src/test/resources/html_1page_template1.html").mkString("\n")
 //val htmlCloseTemplate:String = loadFile("jvm/src/test/resources/html_1page_template2.html").mkString("\n")
 
-val htmlOpenTemplate:String = loadFile("jvm/src/test/resources/html_template1.html").mkString("\n")
-val htmlCloseTemplate:String = loadFile("jvm/src/test/resources/html_template2.html").mkString("\n")
+//val htmlOpenTemplate:String = loadFile("jvm/src/test/resources/html_template1.html").mkString("\n")
+//val htmlCloseTemplate:String = loadFile("jvm/src/test/resources/html_template2.html").mkString("\n")
+val htmlOpenTemplate:String = loadFile("jvm/src/test/resources/html_1page_template1.html").mkString("\n")
+val htmlCloseTemplate:String = loadFile("jvm/src/test/resources/html_1page_template2.html").mkString("\n")
 
 
 val appCssFile:String = loadFile("/Users/cblackwell/Dropbox/CITE/scala/morphReader/target/scala-2.12/classes/reader.css").mkString("\n")
@@ -67,8 +68,6 @@ val htmlOpen:String = {
 		htmlOpenTemplate.replaceAll("APP-CSS-HERE", appCssFile).replaceAll("JQUI-CSS-HERE", jquiCssFile).replaceAll("PAGE-TITLE-HERE", htmlPageTitle).replaceAll("PAGE-DESC-HERE",htmlPageDesc)
 }
 
-println(s"\n got here \n")
-
 val htmlClose:String = {
 	//htmlCloseTemplate
 		val s1:String = htmlCloseTemplate.replaceAllLiterally("JQ-JS-HERE",jqJsFile)
@@ -79,12 +78,10 @@ println(s"\n got here s3\n")
 		s3
 }
 
-
-println(s"\n got here \n")
-
-
 val html:String = {
 	Vector(htmlOpen,morphHtml, corpusHtml, htmlClose).mkString("\n\n")
 }
 
 saveString(html, htmlFilePath, htmlFileName)
+
+println(s"\n\n---------\nSaved '${htmlFilePath}${htmlFileName}'.\n---------")

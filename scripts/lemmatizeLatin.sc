@@ -12,9 +12,63 @@ import scala.collection.mutable._
 import edu.furman.classics.fumorph._
 import java.util.Calendar
 
+def collapseNodes(c:Corpus, exemplar:String = "_merged"):Corpus = {
+	// check for validity
+	val isOkay:Boolean = {
+		val uniformDepth:Boolean = {
+			c.nodes.map( _.urn.citationDepth).distinct.size == 1
+		}
+		val deeperThanOne:Boolean = {
+			c.nodes.head.urn.citationDepth.head > 1
+		}
+		uniformDepth & deeperThanOne
+	}	
+	if (isOkay == false) throw new Exception(s"Nodes needs to be at the same citation depth, and that depth must be > 1.")
+		
+	/* Example of how to use groupBy in Scala without losing object order */
+	val grouped:Vector[(CtsUrn, Vector[(CitableNode,Int)])] = {
+		c.nodes.zipWithIndex.groupBy(_._1.urn.collapsePassageBy(1)).toVector
+	}
+	val sorted1:Vector[(CtsUrn, Vector[(CitableNode,Int)])] = {
+		grouped.map( g => {
+			val u = g._1
+			val v = g._2.sortBy(_._2)
+			(u, v)
+		})
+	}
+	val sorted2:Vector[(CtsUrn, Vector[(CitableNode,Int)])] = {
+		grouped.sortBy(_._2.head._2)
+	}
+	
+	val newNodes:Vector[CitableNode] = {
+		sorted2.map( g => {
+			val exemp:String = g._1.exemplar + exemplar
+			val u:CtsUrn = g._1.dropExemplar.addExemplar(exemp)
+			val t:String = g._2.map(_._1.text).mkString(" ")
+			CitableNode(u,t)
+		})
+	}
+	Corpus(newNodes)	
+}
+
+def showMe(v:Any):Unit = {
+	v match {
+		case _:Vector[Any] => println(s"""----\n${v.asInstanceOf[Vector[Any]].mkString("\n")}\n----""")
+		case _:Iterable[Any] => println(s"""----\n${v.asInstanceOf[Iterable[Any]].mkString("\n")}\n----""")
+		case _ => println(s"-----\n${v}\n----")
+	}
+}
+
 def loadLibrary(fp:String):CiteLibrary = {
 	val library = CiteLibrary(Source.fromFile(fp).getLines.mkString("\n"))
 	library
+}
+
+def saveString(s:String, fileName:String):Unit = {
+	val pw = new PrintWriter(new File(fileName))
+		pw.append(s)
+		pw.append("\n")
+	pw.close
 }
 
 val lang = Latin
@@ -57,8 +111,4 @@ def analyze:Unit = {
 	println(s"${results.size}")
 	val endTime:Long = Calendar.getInstance().getTimeInMillis()
 	println(s"Completed in: ${(endTime - startTime)/1000} seconds.")
-	println(s"""Results in object "mta".""")
 }
-
-
-

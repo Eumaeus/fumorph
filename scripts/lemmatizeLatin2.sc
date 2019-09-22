@@ -77,4 +77,4 @@ val cexString:String = {
 }
 
 
-saveString(cexString,"scripts/lemmatized_text.txt")
+saveString(cexString,"/Users/cblackwell/Desktop/lemmatized_latin.txt")
